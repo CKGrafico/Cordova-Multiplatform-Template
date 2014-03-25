@@ -1,5 +1,5 @@
 (function(g){
-	var app = {
+	g.app = {
 		// Application Constructor
 		initialize: function() {
 			this.bindEvents();
@@ -33,7 +33,7 @@
 		},
 
 		// Set platform class if is necessary
-		setPlatform() {
+		setPlatform: function() {
 			if(g.platform) {
 				var d = document.getElementById("#afui");
 				d.className = d.className + g.platform;
