@@ -1,4 +1,11 @@
-Cordova-Base-Ember-Multiplatform
+Base project for mobile apps with HTML5
 ================================
 
-Cordova project with Ember and  it's multiplatform
+#Technology
+- [Apache Cordova](https://cordova.apache.org/)
+- [Intel App Framework](http://app-framework-software.intel.com/)
+
+#Collaborators
+- [Jorge Casar](http://twitter.com/jorgecasar)
+- [Oriol Torras](http://twitter.com/uriusfurius)
+- [Quique Fdez](http://twitter.com/ckgrafico)
