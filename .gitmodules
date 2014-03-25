@@ -1,0 +1,3 @@
+[submodule "base/project"]
+	path = base/project
+	url = https://github.com/CKGrafico/Frontend-Framework.git
