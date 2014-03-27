@@ -1,7 +1,0 @@
-{
-	"name": "app",
-
-	"dependencies": {
-		"intel-appframework": "2.1.0",
-	}
-}

@@ -11,15 +11,16 @@
 - Bower.json
 	+ intel-appframework
 
-###Create new project
-1. Clone the repository (*)
-2. Open console in your repository folder
-4. Execute: node install (*)
-5. Execute: node create path
-	Example: node create "C:/Users/MyUser/Desktop/newproject"
-6. This copy all files from ./base to this new folder
+###Setup first time
+1. Clone this repo
+2. Go to repo_folder/create in console
+3. Execute: npm install
 
-Note: (*) Only the first time.
+###Create new project
+1. Go to repo_folder in console
+5. Execute: node create path
+	- Example: node create "C:/Users/MyUser/Desktop/newproject"
+6. This copy all files from ./base to this new folder
 
 ###Collaborators
 - [Jorge Casar](http://twitter.com/jorgecasar)
