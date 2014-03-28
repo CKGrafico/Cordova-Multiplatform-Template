@@ -26,3 +26,6 @@
 - [Jorge Casar](http://twitter.com/jorgecasar)
 - [Oriol Torras](http://twitter.com/uriusfurius)
 - [Quique Fdez](http://twitter.com/ckgrafico)
+
+###More info
+You can check our [Step by step](https://github.com/CKGrafico/Cordova-BaseProject-Multiplatform/blob/master/STEPBYSTEP.md) guide.
