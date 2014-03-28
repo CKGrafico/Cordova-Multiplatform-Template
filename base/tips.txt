@@ -1,2 +1,0 @@
-git submodule deinit asubmodule    
-git rm asubmodule
