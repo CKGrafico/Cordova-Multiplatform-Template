@@ -1,13 +1,3 @@
-[submodule "base/project"]
-	path = base/project
-	url = https://github.com/CKGrafico/Frontend-Framework.git
-[submodule "base/project2"]
-	path = base/project2
-	url = https://github.com/CKGrafico/Frontend-Framework.git branch = Cordova-BaseProject-Multiplatform
-[submodule "base/project3"]
-	path = base/project3
-	url = https://github.com/CKGrafico/Frontend-Framework.git
-	branch = Cordova-BaseProject-Multiplatform
 [submodule "base/debug"]
 	path = base/debug
 	url = https://github.com/CKGrafico/Frontend-Framework.git
