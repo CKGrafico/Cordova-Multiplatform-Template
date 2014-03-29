@@ -1,4 +1,0 @@
-[submodule "base"]
-	path = base
-	url = https://github.com/CKGrafico/Frontend-Framework
-	branch = Cordova-BaseProject-Multiplatform
