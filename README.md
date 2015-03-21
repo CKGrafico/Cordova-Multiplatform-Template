@@ -18,7 +18,7 @@ Yes! Because [Apache Cordova Tools](https://www.visualstudio.com/en-us/cordova-v
 - [TypeScript](http://typescriptlang.com/)
 
 ### TypeScript??
-Yes! But remember that all JavaScript is valid TypeScript, don't worry. And... [Angular 2.0: built on typescript](http://blogs.msdn.com/b/typescript/archive/2015/03/05/angular-2-0-built-on-typescript.aspx).
+Yes! But remember that: all JavaScript is valid TypeScript, don't worry. And... [Angular 2.0: built on typescript](http://blogs.msdn.com/b/typescript/archive/2015/03/05/angular-2-0-built-on-typescript.aspx).
 
 ###Setup first time
 

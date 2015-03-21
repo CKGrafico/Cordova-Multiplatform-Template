@@ -1,0 +1,8 @@
+App/bld/
+App/bin/
+App/*.sln.ide
+App/Gulp/node_modules
+App/Gulp/.ntvs_analysis.dat
+App/Appp.v14.suo
+App/*.jsproj.user
+App/.vs/
