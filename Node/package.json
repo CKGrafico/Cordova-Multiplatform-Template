@@ -18,7 +18,6 @@
     "gulp-util": "*",
     "gulp-usemin": "~0.3.2",
     "run-sequence": "~1.0.1"
-    
   },
   "main": "gulpfile.js"
 }
