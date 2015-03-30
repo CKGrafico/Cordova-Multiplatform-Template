@@ -1,0 +1,35 @@
+{
+	"name": "App",
+	"dependencies": {
+		"ionic": "*",
+		"DefinitelyTyped": "*"
+	},
+	"overrides": {
+		"ionic": {
+			"main": [ "**/ionic.bundle.js", "**/ionic.css" ]
+		},
+		"angular": {
+			"ignore": true
+		},
+		"angular-animate": {
+			"ignore": true
+		},
+		"angular-sanitize": {
+			"ignore": true
+		},
+		"angular-ui-router": {
+			"ignore": true
+		},
+		"DefinitelyTyped": {
+			"main": [
+				"angularjs/angular.d.ts",
+				"angular-ui-router/angular-ui-router.d.ts",
+				"cordova/cordova.d.ts",
+				"cordova-ionic/cordova-ionic.d.ts  "
+			]
+		}
+
+	}
+}
+
+

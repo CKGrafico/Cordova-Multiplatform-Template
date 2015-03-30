@@ -1,5 +1,6 @@
 ﻿var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var mainBowerFiles = require('main-bower-files');
 
 var files = {
 	build: 'build/**/*.*',
@@ -17,6 +18,7 @@ var files = {
 var paths = {
 	build: 'build',
 	css: 'css',
+	ts: 'ts',
 	project: '../App/',
 	scss: 'scss'
 };
@@ -40,8 +42,25 @@ gulp.task('sass', function(){
 		.pipe(gulp.dest(paths.project + paths.css));
 });
 
+// Install bower dependencies
+gulp.task('bower.install', function () {
+	return plugins.bower();
+});
+
+// Filter node packages
+gulp.task('bower',['bower.install'], function () {
+	gulp.src(mainBowerFiles('**/*.js'))
+		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib'));
+	
+	gulp.src(mainBowerFiles('**/*.d.ts'))
+		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib/typings'));
+
+	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']))
+		.pipe(gulp.dest(paths.project + '/' + paths.scss));
+});
+
 // Inject JS & CSS Files
-gulp.task('inject', function() {
+gulp.task('inject',['bower'], function() {
 	return gulp.src(paths.project + files.index)
 		.pipe(plugins.inject(
 			gulp.src(getCorrectPaths(paths.project, files.filePaths), { read: false }),

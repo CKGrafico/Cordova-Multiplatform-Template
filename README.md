@@ -7,7 +7,7 @@
 - [Visual Studio](http://visualstudio.com/free)
 
 ### Visual Studio??
-Yes! Because [Apache Cordova Tools](https://www.visualstudio.com/en-us/cordova-vs.aspx) and integration with Visual Studio, help us a lot creating apps with Apache Cordova. A LOT.. ant it's free (Visual Studio Community)
+Yes! Because [Apache Cordova Tools](https://www.visualstudio.com/en-us/cordova-vs.aspx) and integration with Visual Studio, help us a lot creating apps with Apache Cordova. A LOT.. and it's free (Visual Studio Community)
 
 ###Dependencies
 - [GulpJS](http://gulpjs.com)
