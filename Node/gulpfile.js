@@ -54,9 +54,12 @@ gulp.task('bower',['bower.install'], function () {
 	
 	gulp.src(mainBowerFiles('**/*.d.ts'))
 		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib/typings'));
+	
+	gulp.src(mainBowerFiles('**/fonts/**.*'))
+		.pipe(gulp.dest(paths.project + '/fonts/lib'));
 
 	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']))
-		.pipe(gulp.dest(paths.project + '/' + paths.scss));
+		.pipe(gulp.dest(paths.project + '/' + paths.scss + '/lib'));
 });
 
 // Inject JS & CSS Files

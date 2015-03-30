@@ -6,7 +6,7 @@
 	},
 	"overrides": {
 		"ionic": {
-			"main": [ "**/ionic.bundle.js", "**/ionic.css" ]
+			"main": [ "**/ionic.bundle.js", "**/ionic.css", "**/release/fonts/**.*" ]
 		},
 		"angular": {
 			"ignore": true
