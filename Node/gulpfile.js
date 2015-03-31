@@ -7,10 +7,10 @@ var files = {
 	buildJS: 'build/code.js',
 	buildCSS: 'build/styles.css',
 	css: 'css/**/*.css',
-	filePaths: ['css/**/*.css', 'js/Config.js', 'js/Services/*.js', 'js/Models/*.js', 'js/Interfaces/*.js', 'js/Directives/*.js', 'js/Filters/*.js', 'js/Controllers/Base/*.js', 'js/Controllers/*.js', 'js/App.js'],
+	filePaths: ['css/**/*.css', 'ts/lib/**/*.js', 'ts/Config.js', 'ts/Services/*.js', 'ts/Models/*.js', 'ts/Interfaces/*.js', 'ts/Directives/*.js', 'ts/Filters/*.js', 'ts/Controllers/Base/*.js', 'ts/Controllers/*.js', 'ts/App.js'],
 	index: 'index.html',
     indexBkp: 'index.html.bkp',
-    js: 'js/**/*.js',
+    js: 'ts/**/*.js',
 	scss: 'scss/*.scss',
 	scssAll: 'scss/**/*.scss'
 };
@@ -49,16 +49,16 @@ gulp.task('bower.install', function () {
 
 // Filter node packages
 gulp.task('bower',['bower.install'], function () {
-	gulp.src(mainBowerFiles('**/*.js'))
+	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib'));
 	
-	gulp.src(mainBowerFiles('**/*.d.ts'))
+	gulp.src(mainBowerFiles('**/*.d.ts'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib/typings'));
 	
-	gulp.src(mainBowerFiles('**/fonts/**.*'))
+	gulp.src(mainBowerFiles('**/fonts/**.*'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + '/fonts/lib'));
 
-	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']))
+	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + '/' + paths.scss + '/lib'));
 });
 

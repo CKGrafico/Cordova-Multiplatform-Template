@@ -23,9 +23,11 @@
 		"DefinitelyTyped": {
 			"main": [
 				"angularjs/angular.d.ts",
+				"jquery/jquery.d.ts",
+				"ionic/ionic.d.ts",
 				"angular-ui-router/angular-ui-router.d.ts",
-				"cordova/cordova.d.ts",
-				"cordova-ionic/cordova-ionic.d.ts  "
+				"cordova/**/*.ts",
+				"cordova-ionic/**/*.ts"
 			]
 		}
 
