@@ -6,6 +6,7 @@ App/*.jsproj.user
 App/.vs/
 App/ts/lib
 App/ts/**/*.js
+App/ts/**/*.map
 App/fonts/lib
 App/scss/lib
 Node/node_modules
