@@ -21,9 +21,9 @@ module App {
 
         $stateProvider
             .state('main', {
-				//url: '/main',
+				url: '/main',
 				//controller: 'mainController',
-				//templateUrl: 'templates/wrappers/main.html'
+				templateUrl: 'templates/wrappers/main.html'
 			}
 		)
     }

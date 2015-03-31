@@ -116,9 +116,11 @@
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.woff" />
     <Content Include="scripts\index.js" />
     <Content Include="scss\lib\ionic\release\css\ionic.css" />
+    <Content Include="templates\content\main.html" />
     <Content Include="templates\content\left.html" />
     <Content Include="templates\partials\header.html" />
     <Content Include="templates\partials\footer.html" />
+    <Content Include="templates\wrappers\main.html" />
     <Content Include="templates\wrappers\left.html" />
     <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
     <Folder Include="css\" />
