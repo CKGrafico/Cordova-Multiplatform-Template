@@ -121,7 +121,6 @@
     <Content Include="templates\partials\footer.html" />
     <Content Include="templates\wrappers\left.html" />
     <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
-    <Content Include="ts\platformOverrides.js" />
     <Folder Include="css\" />
     <Folder Include="images\" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
@@ -228,6 +227,7 @@
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\cordova\plugins\Vibration.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\cordova\plugins\WebSQL.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="ts\platformOverrides.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
