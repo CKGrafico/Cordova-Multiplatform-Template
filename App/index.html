@@ -1,19 +1,48 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>App</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<title>My App</title>
 
-    <!-- App references -->
-    <link href="css/index.css" rel="stylesheet" />
+	<!-- build:css build/styles.css -->
+	<!-- inject:css -->
+
+	<!-- endinject -->
+	<!-- endbuild -->
 </head>
 <body>
-    <p>Hello, your application is ready!</p>
 
-    <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
+	<ion-side-menus>
+		<!-- Left Menu -->
+		<ion-side-menu side="left">
+			<div ng-include src="'templates/wrapper/left.html'"></div>
+		</ion-side-menu>
 
-    <script src="scripts/index.js"></script>
+		<!-- Main content -->
+		<ion-side-menu-content>
+			<!-- Global Header -->
+			<div ng-include src="'templates/partials/header.html'"></div>
+
+			<!-- Page -->
+			<ion-nav-view></ion-nav-view>
+
+			<!-- Footer -->
+			<div ng-include src="'templates/partials/footer.html'"></div>
+		</ion-side-menu-content>
+
+	</ion-side-menus>
+
+	<!-- JS dependencies -->
+	<script src="cordova.js"></script>
+	<script src="ts/platformOverrides.js"></script>
+
+	<!-- build:js build/code.js -->
+	<!-- inject:js -->
+
+	<script src="ts/lib/ionic/release/js/ionic.bundle.js"></script>
+
+	<!-- endinject -->
+	<!-- endbuild -->
 </body>
 </html>
