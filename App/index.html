@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -7,8 +7,8 @@
 
 	<!-- build:css build/styles.css -->
 	<!-- inject:css -->
-
-	<!-- endinject -->
+     <link rel="stylesheet" href="css/main.css">
+    <!-- endinject -->
 	<!-- endbuild -->
 </head>
 <body>
@@ -16,7 +16,7 @@
 	<ion-side-menus>
 		<!-- Left Menu -->
 		<ion-side-menu side="left">
-			<div ng-include src="'templates/wrapper/left.html'"></div>
+			<div ng-include src="'templates/wrappers/left.html'"></div>
 		</ion-side-menu>
 
 		<!-- Main content -->
@@ -41,6 +41,8 @@
 	<!-- inject:js -->
 
 	<script src="ts/lib/ionic/release/js/ionic.bundle.js"></script>
+
+	<script src="ts/Controllers/navigationController.js"></script>
 
 	<script src="ts/App.js"></script>
 

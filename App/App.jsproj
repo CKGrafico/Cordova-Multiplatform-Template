@@ -110,12 +110,14 @@
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="css\main.css" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.eot" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.svg" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.ttf" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.woff" />
     <Content Include="scripts\index.js" />
     <Content Include="scss\lib\ionic\release\css\ionic.css" />
+    <Content Include="scss\main.scss" />
     <Content Include="templates\content\main.html" />
     <Content Include="templates\content\left.html" />
     <Content Include="templates\partials\header.html" />
@@ -123,7 +125,6 @@
     <Content Include="templates\wrappers\main.html" />
     <Content Include="templates\wrappers\left.html" />
     <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
-    <Folder Include="css\" />
     <Folder Include="images\" />
     <Content Include="merges\android\scripts\android2.3-jscompat.js" />
     <Content Include="merges\android\scripts\platformOverrides.js" />
@@ -202,8 +203,9 @@
     <Content Include="res\screens\wp8\SplashScreenImage.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="ts\App.ts" />
-    <TypeScriptCompile Include="ts\Import.ts" />
+    <TypeScriptCompile Include="ts\app.ts" />
+    <TypeScriptCompile Include="ts\controllers\navigationController.ts" />
+    <TypeScriptCompile Include="ts\imports.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\angular-ui-router\angular-ui-router.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\cordova-ionic\cordova-ionic.d.ts" />

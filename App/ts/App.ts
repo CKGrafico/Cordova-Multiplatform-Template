@@ -1,4 +1,4 @@
-﻿// <reference path="imports.ts" />
+﻿/// <reference path="imports.ts" />
 
 module App {
     'use strict';
@@ -7,6 +7,7 @@ module App {
 
     function onDeviceReady() {
         angular.module('App', ['ionic'])
+            .controller('navigationController', App.NavigationController)
             .config(['$stateProvider', '$urlRouterProvider', states])
             .config(['$compileProvider', function ($compileProvider) {
 			$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
