@@ -59,6 +59,10 @@ gulp.task('bower',['bower.install'], function () {
 		.pipe(gulp.dest(paths.project + '/fonts/lib'));
 
 	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']), { base: 'bower_components' })
+		.pipe(plugins.minifyCss({ keepSpecialComments: 0 })) // Because sass import fails with variables in comments
+		.pipe(plugins.rename(function (path) {
+			path.extname = ".scss"
+		}))
 		.pipe(gulp.dest(paths.project + '/' + paths.scss + '/lib'));
 });
 
