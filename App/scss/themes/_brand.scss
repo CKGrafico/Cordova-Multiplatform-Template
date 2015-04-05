@@ -50,7 +50,7 @@ $darken: 20%;
 }
 
 .tabs {
-	&.tabs-brand {
+	&.tabs-brand, &.tabs-striped.tabs-brand .tabs {
 		background-color: $Color-Brand-main;
 		border-color: darken($Color-Brand-main, $darken);
 		color: $Color-Foreground-light;

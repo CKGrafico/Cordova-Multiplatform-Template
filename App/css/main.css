@@ -7687,14 +7687,14 @@ body, .ionic-body {
     background: none;
     border-color: transparent; }
 
-.tabs.tabs-brand {
+.tabs.tabs-brand, .tabs.tabs-striped.tabs-brand .tabs {
   background-color: #046dfb;
   border-color: #024197;
   color: #FFFFFF; }
-  .tabs.tabs-brand .tab-item .badge {
+  .tabs.tabs-brand .tab-item .badge, .tabs.tabs-striped.tabs-brand .tabs .tab-item .badge {
     background-color: #FFFFFF;
     color: #046dfb; }
-  .tabs.tabs-brand .tab-item.active.tab-item-brand {
+  .tabs.tabs-brand .tab-item.active.tab-item-brand, .tabs.tabs-striped.tabs-brand .tabs .tab-item.active.tab-item-brand {
     color: #046dfb; }
 .tabs .tab-item .badge.badge-brand, .tabs .badge.badge-brand {
   background-color: #046dfb;

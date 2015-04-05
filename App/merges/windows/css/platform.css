@@ -1,7 +1,6 @@
 ﻿/* Transform buttons right in action bar*/
 ion-header-bar .buttons-right {
     background-color: #FFF;
-    color: #046dfb !important;
     position: absolute !important;
     top: 93vh !important;
     left: 0;
@@ -14,11 +13,7 @@ ion-header-bar .buttons-right .right-buttons {
     margin: 0 auto;
 }
 
-ion-header-bar .buttons-right .right-buttons .button {
-    color: #046dfb !important;
-}
-
-.title.title-center.header-item {
+.title.title-left.header-item {
     left: 0 !important;
     transform: none !important;
     width: 100%;
