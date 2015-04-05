@@ -1,6 +1,8 @@
 ##Base project for Multiplatform HTML5 Applications
 ================================
 
+![Example UI](http://i.imgur.com/WVcmzGT.png)
+
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)
 - [Ionic Framework](http://ionicframework.com/)
