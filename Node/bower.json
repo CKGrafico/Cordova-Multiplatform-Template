@@ -2,7 +2,8 @@
   "name": "App",
   "dependencies": {
     "ionic": "1.0.0-rc.2",
-    "DefinitelyTyped": "*"
+    "DefinitelyTyped": "*",
+    "ionic-typescript-definitions": "*"
   },
   "overrides": {
     "ionic": {
@@ -24,21 +25,23 @@
     "angular-ui-router": {
       "ignore": true
     },
-    "DefinitelyTyped": {
+	"DefinitelyTyped": {
+	"main": [
+		"angularjs/angular.d.ts",
+		"jquery/jquery.d.ts",
+		"ionic/ionic.d.ts",
+		"angular-ui-router/angular-ui-router.d.ts",
+		"cordova/**/*.ts",
+		"cordova-ionic/**/*.ts"
+	]
+	},
+	"ionic-typescript-definitions": {
       "main": [
-        "angularjs/angular.d.ts",
-        "jquery/jquery.d.ts",
-        "ionic/ionic.d.ts",
-        "angular-ui-router/angular-ui-router.d.ts",
-        "cordova/**/*.ts",
-        "cordova-ionic/**/*.ts"
+        "**/ionic.d.ts"
       ]
     }
   },
   "resolutions": {
-    "angular": ">= 1.1.5",
-    "angular-animate": "1.3.13",
-    "angular-sanitize": "1.3.13",
-    "angular-ui-router": "0.2.13"
+    "angular": ">= 1.1.5"
   }
 }

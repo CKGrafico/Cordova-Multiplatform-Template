@@ -7,13 +7,27 @@
 
 	<!-- build:css build/styles.css -->
 	<!-- inject:css -->
-      <link rel="stylesheet" href="css/main.css">
-     <!-- endinject -->
+       <link rel="stylesheet" href="css/main.css">
+       <link rel="stylesheet" href="css/platform.css">
+      <!-- endinject -->
 	<!-- endbuild -->
 </head>
 <body>
 
-    <div ng-include src="'templates/partials/wrapper.html'"></div>
+    <ion-side-menus enable-menu-with-back-views="false">
+
+        <!-- Center content -->
+        <ion-side-menu-content>
+            <div ng-include src="'templates/partials/wrapper.html'"></div>
+        </ion-side-menu-content>
+
+        <!-- Left menu -->
+        <ion-side-menu side="left" >
+            <div ng-include src="'templates/pages/left.html'"></div>
+        </ion-side-menu>
+    </ion-side-menus>
+
+    
 
 	<!-- JS dependencies -->
 	<script src="cordova.js"></script>

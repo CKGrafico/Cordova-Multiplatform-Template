@@ -114,11 +114,19 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="css\main.css" />
+    <Content Include="css\platform.css" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.eot" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.svg" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.ttf" />
     <Content Include="fonts\lib\ionic\release\fonts\ionicons.woff" />
     <Content Include="index.html" />
+    <Content Include="merges\android\css\platform.css" />
+    <Content Include="merges\android\templates\partials\tabs.html" />
+    <Content Include="merges\android\templates\partials\wrapper.html" />
+    <Content Include="merges\ios\templates\partials\tabs.html" />
+    <Content Include="merges\ios\templates\partials\wrapper.html" />
+    <Content Include="merges\windows\templates\partials\tabs.html" />
+    <Content Include="merges\windows\templates\partials\wrapper.html" />
     <Content Include="merges\windows\ts\platformOverrides.js" />
     <Content Include="res\icons\android\icon-36-ldpi.png" />
     <Content Include="res\icons\android\icon-48-mdpi.png" />
@@ -179,16 +187,15 @@
     <Content Include="scss\helpers\_variables.scss" />
     <Content Include="scss\lib\ionic\release\css\ionic.scss" />
     <Content Include="scss\main.scss" />
+    <Content Include="scss\platform.scss" />
     <Content Include="scss\themes\_brand.scss" />
-    <Content Include="templates\content\left.html" />
-    <Content Include="templates\content\main.html" />
-    <Content Include="templates\partials\footer.html" />
+    <Content Include="templates\pages\left.html" />
+    <Content Include="templates\pages\page2.html" />
     <Content Include="templates\partials\tabs.html" />
     <Content Include="templates\partials\wrapper.html" />
-    <Content Include="templates\wrappers\page1.html" />
-    <Content Include="templates\wrappers\left.html" />
-    <Content Include="templates\wrappers\home2.html" />
-    <Content Include="templates\wrappers\home.html" />
+    <Content Include="templates\pages\page1.html" />
+    <Content Include="templates\pages\home2.html" />
+    <Content Include="templates\pages\home.html" />
     <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
   </ItemGroup>
   <ItemGroup>
@@ -220,10 +227,10 @@
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\cordova\plugins\Vibration.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\cordova\plugins\WebSQL.d.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\jquery\jquery.d.ts" />
+    <TypeScriptCompile Include="ts\lib\typings\ionic-typescript-definitions\beta14\ionic.d.ts" />
     <TypeScriptCompile Include="ts\platformOverrides.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="merges\android\" />
     <Folder Include="scss\pages\" />
   </ItemGroup>
   <PropertyGroup>

@@ -8,42 +8,40 @@ module App {
 
         public static $inject = [
             '$scope',
-            '$ionicSideMenuDelegate'
+            '$ionicHistory',
+            '$ionicNavBarDelegate'
         ];
 
         constructor(
             private $scope: /*PYApp.INavigationScope*/ any,
-            private $ionicSideMenuDelegate: /*Ionic.ISideMenuDelegate*/ any
+            private $ionicHistory: Ionic.IHistory,
+            private $ionicNavBarDelegate: /*Ionic.ISideMenuDelegate*/ any
             ) {
-
-            this.$scope.toggleMenu = () => this.toggleMenu();
-            this.$scope.goBack = () => this.goBack();
-            this.$scope.needBack = false;
             document.addEventListener('backbutton', e => this.checkBack(e), false);
+
+            $scope.setNavTitle = function (title) {
+                $ionicNavBarDelegate.title(title);
+            }
+
             
         }
 
-        // Show or hide menu
-        public toggleMenu(): void {
-            this.$ionicSideMenuDelegate.toggleLeft();
-        }
-
         public goBack(): void {
-            //this.$ionicHistory.goBack();
+            this.$ionicHistory.goBack();
         }
 
         public checkBack(e: Event) {
-            //var page = this.$ionicHistory.currentStateName();
-            //if (page === 'main') {
-            //    var nav: any = navigator;
-            //    if (nav.app && nav.app.exitApp) {
-            //        nav.app.exitApp();
-            //    } else {
-            //        window.close();
-            //    }
-            //} else {
-            //    this.goBack();
-            //}
+            var page = this.$ionicHistory.currentStateName();
+            if (page === 'main') {
+                var nav: any = navigator;
+                if (nav.app && nav.app.exitApp) {
+                    nav.app.exitApp();
+                } else {
+                    window.close();
+                }
+            } else {
+                this.goBack();
+            }
         }
     }
 } 
