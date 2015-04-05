@@ -125,6 +125,7 @@
     <Content Include="merges\android\templates\partials\wrapper.html" />
     <Content Include="merges\ios\templates\partials\tabs.html" />
     <Content Include="merges\ios\templates\partials\wrapper.html" />
+    <Content Include="merges\windows\css\platform.css" />
     <Content Include="merges\windows\templates\partials\tabs.html" />
     <Content Include="merges\windows\templates\partials\wrapper.html" />
     <Content Include="merges\windows\ts\platformOverrides.js" />

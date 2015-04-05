@@ -19,7 +19,7 @@ module App {
         }
 
         private exampleAction() {
-            this.$scope.property = this.$scope.property === 'Void' ? 'Click' : 'Void';
+            this.$scope.property = 'Clicked';
         }
     }
 } 
