@@ -1,0 +1,1 @@
+C:\Datos\Github\Cordova-BaseProject-Multiplatform\Node\obj\Debug\Node.njsprojResolveAssemblyReference.cache

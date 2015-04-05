@@ -100,75 +100,49 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>b4a2e93c-162f-4932-917d-dd840a6ad0ef</ProjectGuid>
-  </PropertyGroup>
-  <PropertyGroup>
-    <DefaultReferenceGroup>Implicit (Multi-Device Apps)</DefaultReferenceGroup>
+    <ProjectGuid>fd8e1fbf-41ad-4f6b-ba83-1a14beb04ff2</ProjectGuid>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0'">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="css\main.css" />
-    <Content Include="fonts\lib\ionic\release\fonts\ionicons.eot" />
-    <Content Include="fonts\lib\ionic\release\fonts\ionicons.svg" />
-    <Content Include="fonts\lib\ionic\release\fonts\ionicons.ttf" />
-    <Content Include="fonts\lib\ionic\release\fonts\ionicons.woff" />
-    <Content Include="scripts\index.js" />
-    <Content Include="scss\lib\ionic\release\css\ionic.css" />
-    <Content Include="scss\main.scss" />
-    <Content Include="templates\content\main.html" />
-    <Content Include="templates\content\left.html" />
-    <Content Include="templates\partials\header.html" />
-    <Content Include="templates\partials\footer.html" />
-    <Content Include="templates\wrappers\main.html" />
-    <Content Include="templates\wrappers\left.html" />
-    <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
-    <Folder Include="images\" />
-    <Content Include="merges\android\scripts\android2.3-jscompat.js" />
-    <Content Include="merges\android\scripts\platformOverrides.js" />
-    <Folder Include="merges\ios\" />
-    <Content Include="merges\windows\scripts\platformOverrides.js" />
-    <Content Include="merges\windows\scripts\winstore-jscompat.js" />
-    <Folder Include="merges\wp8\" />
-    <Folder Include="res\icons\android\" />
-    <Folder Include="res\icons\ios\" />
-    <Folder Include="res\icons\wp8\" />
-    <Folder Include="res\icons\windows\" />
-    <Folder Include="res\screens\android\" />
-    <Folder Include="res\screens\ios\" />
-    <Folder Include="res\screens\windows\" />
-    <Folder Include="res\screens\wp8\" />
+    <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="config.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="css\main.css" />
+    <Content Include="fonts\lib\ionic\release\fonts\ionicons.eot" />
+    <Content Include="fonts\lib\ionic\release\fonts\ionicons.svg" />
+    <Content Include="fonts\lib\ionic\release\fonts\ionicons.ttf" />
+    <Content Include="fonts\lib\ionic\release\fonts\ionicons.woff" />
     <Content Include="index.html" />
+    <Content Include="merges\windows\ts\platformOverrides.js" />
     <Content Include="res\icons\android\icon-36-ldpi.png" />
     <Content Include="res\icons\android\icon-48-mdpi.png" />
     <Content Include="res\icons\android\icon-72-hdpi.png" />
     <Content Include="res\icons\android\icon-96-xhdpi.png" />
-    <Content Include="res\icons\ios\icon-40.png" />
     <Content Include="res\icons\ios\icon-40-2x.png" />
-    <Content Include="res\icons\ios\icon-50.png" />
+    <Content Include="res\icons\ios\icon-40.png" />
     <Content Include="res\icons\ios\icon-50-2x.png" />
-    <Content Include="res\icons\ios\icon-57.png" />
+    <Content Include="res\icons\ios\icon-50.png" />
     <Content Include="res\icons\ios\icon-57-2x.png" />
-    <Content Include="res\icons\ios\icon-60.png" />
+    <Content Include="res\icons\ios\icon-57.png" />
     <Content Include="res\icons\ios\icon-60-2x.png" />
     <Content Include="res\icons\ios\icon-60-3x.png" />
-    <Content Include="res\icons\ios\icon-72.png" />
+    <Content Include="res\icons\ios\icon-60.png" />
     <Content Include="res\icons\ios\icon-72-2x.png" />
-    <Content Include="res\icons\ios\icon-76.png" />
+    <Content Include="res\icons\ios\icon-72.png" />
     <Content Include="res\icons\ios\icon-76-2x.png" />
-    <Content Include="res\icons\ios\icon-small.png" />
+    <Content Include="res\icons\ios\icon-76.png" />
     <Content Include="res\icons\ios\icon-small-2x.png" />
+    <Content Include="res\icons\ios\icon-small.png" />
     <Content Include="res\icons\windows\Square150x150Logo.scale-100.png" />
+    <Content Include="res\icons\windows\Square150x150Logo.scale-240.png" />
     <Content Include="res\icons\windows\Square30x30Logo.scale-100.png" />
     <Content Include="res\icons\windows\Square310x310Logo.scale-100.png" />
-    <Content Include="res\icons\windows\Square150x150Logo.scale-240.png" />
     <Content Include="res\icons\windows\Square44x44Logo.scale-240.png" />
     <Content Include="res\icons\windows\Square70x70Logo.scale-100.png" />
     <Content Include="res\icons\windows\Square71x71Logo.scale-240.png" />
@@ -187,23 +161,38 @@
     <Content Include="res\screens\android\screen-mdpi-portrait.png" />
     <Content Include="res\screens\android\screen-xhdpi-landscape.png" />
     <Content Include="res\screens\android\screen-xhdpi-portrait.png" />
-    <Content Include="res\screens\ios\screen-ipad-landscape.png" />
     <Content Include="res\screens\ios\screen-ipad-landscape-2x.png" />
-    <Content Include="res\screens\ios\screen-ipad-portrait.png" />
+    <Content Include="res\screens\ios\screen-ipad-landscape.png" />
     <Content Include="res\screens\ios\screen-ipad-portrait-2x.png" />
+    <Content Include="res\screens\ios\screen-ipad-portrait.png" />
     <Content Include="res\screens\ios\screen-iphone-568h-2x.png" />
     <Content Include="res\screens\ios\screen-iphone-landscape-736h.png" />
-    <Content Include="res\screens\ios\screen-iphone-portrait.png" />
     <Content Include="res\screens\ios\screen-iphone-portrait-2x.png" />
     <Content Include="res\screens\ios\screen-iphone-portrait-667h.png" />
     <Content Include="res\screens\ios\screen-iphone-portrait-736h.png" />
+    <Content Include="res\screens\ios\screen-iphone-portrait.png" />
     <Content Include="res\screens\windows\SplashScreen.scale-100.png" />
     <Content Include="res\screens\windows\SplashScreen.scale-240.png" />
     <Content Include="res\screens\windows\SplashScreenPhone.scale-240.png" />
     <Content Include="res\screens\wp8\SplashScreenImage.jpg" />
+    <Content Include="scripts\index.js" />
+    <Content Include="scss\helpers\_variables.scss" />
+    <Content Include="scss\lib\ionic\release\css\ionic.scss" />
+    <Content Include="scss\main.scss" />
+    <Content Include="scss\themes\_brand.scss" />
+    <Content Include="templates\content\left.html" />
+    <Content Include="templates\content\main.html" />
+    <Content Include="templates\partials\footer.html" />
+    <Content Include="templates\partials\tabs.html" />
+    <Content Include="templates\partials\wrapper.html" />
+    <Content Include="templates\wrappers\page1.html" />
+    <Content Include="templates\wrappers\left.html" />
+    <Content Include="templates\wrappers\home2.html" />
+    <Content Include="templates\wrappers\home.html" />
+    <Content Include="ts\lib\ionic\release\js\ionic.bundle.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="ts\app.ts" />
+    <TypeScriptCompile Include="ts\App.ts" />
     <TypeScriptCompile Include="ts\controllers\navigationController.ts" />
     <TypeScriptCompile Include="ts\imports.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\angular-ui-router\angular-ui-router.d.ts" />
@@ -234,7 +223,8 @@
     <TypeScriptCompile Include="ts\platformOverrides.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
+    <Folder Include="merges\android\" />
+    <Folder Include="scss\pages\" />
   </ItemGroup>
   <PropertyGroup>
     <TypeScriptToolsVersion>1.4</TypeScriptToolsVersion>

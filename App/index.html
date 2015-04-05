@@ -7,36 +7,18 @@
 
 	<!-- build:css build/styles.css -->
 	<!-- inject:css -->
-     <link rel="stylesheet" href="css/main.css">
-    <!-- endinject -->
+      <link rel="stylesheet" href="css/main.css">
+     <!-- endinject -->
 	<!-- endbuild -->
 </head>
 <body>
 
-	<ion-side-menus>
-		<!-- Left Menu -->
-		<ion-side-menu side="left">
-			<div ng-include src="'templates/wrappers/left.html'"></div>
-		</ion-side-menu>
-
-		<!-- Main content -->
-		<ion-side-menu-content>
-			<!-- Global Header -->
-			<div ng-include src="'templates/partials/header.html'"></div>
-
-			<!-- Page -->
-			<ion-nav-view></ion-nav-view>
-
-			<!-- Footer -->
-			<div ng-include src="'templates/partials/footer.html'"></div>
-		</ion-side-menu-content>
-
-	</ion-side-menus>
+    <div ng-include src="'templates/partials/wrapper.html'"></div>
 
 	<!-- JS dependencies -->
 	<script src="cordova.js"></script>
 	<script src="ts/platformOverrides.js"></script>
-
+    
 	<!-- build:js build/code.js -->
 	<!-- inject:js -->
 

@@ -19,7 +19,7 @@
 	"gulp-usemin": "~0.3.2",
 	"gulp-bower": "*",
 	"main-bower-files": "*",
-    "run-sequence": "~1.0.1"
+	"run-sequence": "~1.0.1"
   },
   "main": "gulpfile.js"
 }

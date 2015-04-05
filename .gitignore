@@ -1,4 +1,5 @@
 App/bld/
+.vs/
 App/bin/
 App/*.sln.ide
 App/Appp.v14.suo

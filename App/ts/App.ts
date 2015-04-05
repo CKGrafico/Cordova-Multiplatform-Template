@@ -18,14 +18,40 @@ module App {
 
     // Configure routes
     function states($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider): void {
-        $urlRouterProvider.otherwise('/main');
 
         $stateProvider
-            .state('main', {
-				url: '/main',
-				//controller: 'mainController',
-				templateUrl: 'templates/wrappers/main.html'
-			}
-		)
+        .state('tabs', {
+            url: "/tab",
+            abstract: true,
+            templateUrl: "templates/partials/tabs.html"
+        })
+
+       .state('tabs.home', {
+            url: "/home",
+            views: {
+                'home-tab': {
+                    templateUrl: "templates/wrappers/home.html"
+                }
+            }
+        })
+        .state('tabs.facts', {
+            url: "/facts",
+            views: {
+                'home-tab': {
+                    templateUrl: "templates/wrappers/home2.html"
+                }
+            }
+        })
+
+        .state('tabs.page1', {
+            url: "/page1",
+            views: {
+                'page1-tab': {
+                    templateUrl: "templates/wrappers/page1.html"
+                }
+            }
+        })
+
+        $urlRouterProvider.otherwise("/tab/home");
     }
 }
