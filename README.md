@@ -1,8 +1,7 @@
 ##Base project for Multiplatform HTML5 Applications
 ================================
 
-### Development branch
-https://github.com/CKGrafico/Cordova-BaseProject-Multiplatform/tree/development
+![Example UI](http://i.imgur.com/WVcmzGT.png)
 
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)
