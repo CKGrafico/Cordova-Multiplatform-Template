@@ -46,31 +46,31 @@ module App {
                 }
             }
         })
-        .state('tabs.home2', {
-            url: "/home2",
+        .state('tabs.scroll', {
+            url: "/scroll",
             views: {
                 'home-tab': {
-                    templateUrl: "templates/pages/home2.html"
+                    templateUrl: "templates/pages/scroll.html"
                 }
             }
         })
 
-        // Page1 Views
-        .state('tabs.page1', {
-            url: "/page1",
+        // actions Views
+        .state('tabs.actions', {
+            url: "/actions",
             views: {
-                'page1-tab': {
-                    templateUrl: "templates/pages/page1.html"
+                'actions-tab': {
+                    templateUrl: "templates/pages/actions.html"
                 }
             }
         })
 
-        // Page2 Views
-        .state('tabs.page21', {
-            url: "/page2",
+        // buttons Views
+        .state('tabs.buttons1', {
+            url: "/buttons",
             views: {
-                'page2-tab': {
-                    templateUrl: "templates/pages/page2.html"
+                'buttons-tab': {
+                    templateUrl: "templates/pages/buttons.html"
                 }
             }
         })
