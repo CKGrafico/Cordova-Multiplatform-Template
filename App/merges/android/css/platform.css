@@ -1,0 +1,7 @@
+﻿.back-text {
+    display: none !important;
+}
+
+ion-header-bar .buttons-right .right-buttons .button {
+    color: #FFF !important;
+}
