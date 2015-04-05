@@ -183,7 +183,6 @@
     <Content Include="res\screens\windows\SplashScreen.scale-240.png" />
     <Content Include="res\screens\windows\SplashScreenPhone.scale-240.png" />
     <Content Include="res\screens\wp8\SplashScreenImage.jpg" />
-    <Content Include="scripts\index.js" />
     <Content Include="scss\helpers\_variables.scss" />
     <Content Include="scss\lib\ionic\release\css\ionic.scss" />
     <Content Include="scss\main.scss" />
@@ -200,6 +199,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ts\App.ts" />
+    <TypeScriptCompile Include="ts\controllers\actionsController.ts" />
     <TypeScriptCompile Include="ts\controllers\navigationController.ts" />
     <TypeScriptCompile Include="ts\imports.ts" />
     <TypeScriptCompile Include="ts\lib\typings\DefinitelyTyped\angular-ui-router\angular-ui-router.d.ts" />

@@ -8,6 +8,7 @@ module App {
     function onDeviceReady() {
         angular.module('App', ['ionic'])
             .controller('navigationController', App.NavigationController)
+            .controller('actionsController', App.ActionsController)
             .config(['$stateProvider', '$urlRouterProvider', states])
             .config(['$compileProvider', function ($compileProvider) {
 			$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
@@ -60,13 +61,14 @@ module App {
             url: "/actions",
             views: {
                 'actions-tab': {
+                    controller: 'actionsController',
                     templateUrl: "templates/pages/actions.html"
                 }
             }
         })
 
         // buttons Views
-        .state('tabs.buttons1', {
+        .state('tabs.buttons', {
             url: "/buttons",
             views: {
                 'buttons-tab': {

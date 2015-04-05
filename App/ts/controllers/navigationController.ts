@@ -9,21 +9,14 @@ module App {
         public static $inject = [
             '$scope',
             '$ionicHistory',
-            '$ionicNavBarDelegate'
         ];
 
         constructor(
-            private $scope: /*PYApp.INavigationScope*/ any,
-            private $ionicHistory: Ionic.IHistory,
-            private $ionicNavBarDelegate: /*Ionic.ISideMenuDelegate*/ any
+            private $scope: ng.IScope,
+            private $ionicHistory: Ionic.IHistory
             ) {
+
             document.addEventListener('backbutton', e => this.checkBack(e), false);
-
-            $scope.setNavTitle = function (title) {
-                $ionicNavBarDelegate.title(title);
-            }
-
-            
         }
 
         public goBack(): void {
