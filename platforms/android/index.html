@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>Android</title>
+
+    <link href="../../App/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../App/merges/android/css/platform.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+        <ion-side-menus enable-menu-with-back-views="false">
+
+            <!-- Center content -->
+            <ion-side-menu-content>
+                <div ng-include src="'templates/partials/wrapper.html'"></div>
+            </ion-side-menu-content>
+
+            <!-- Left menu -->
+            <ion-side-menu side="left" expose-aside-when="large">
+                <div ng-include src="'templates/pages/left.html'"></div>
+            </ion-side-menu>
+        </ion-side-menus>
+
+
+
+        <!-- JS dependencies -->
+        <script src="../../App/merges/android/ts/platformOverrides.js"></script>
+
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+        <script src="../../App/ts/lib/ionic/release/js/ionic.bundle.js"></script>
+
+        <script src="../../App/ts/controllers/actionsController.js"></script>
+
+        <script src="../../App/ts/controllers/navigationController.js"></script>
+
+        <script src="../../App/ts/App.js"></script>
+        <script>window.platform = 'android'; </script>
+        <script src="../nginclude.js"></script>
+
+</body>
+</html>
