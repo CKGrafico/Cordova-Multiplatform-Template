@@ -1,0 +1,6 @@
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\\extension.vsixmanifest
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\\thumbnail.PNG
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\\__TemplateIcon.ico
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\ProjectTemplates\\Template Files.zip
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\\license.txt
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova_Multiplatform_Template\0.1\ProjectTemplates\\Template_Files.zip

@@ -1,0 +1,10 @@
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\thumbnail.PNG
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\__TemplateIcon.ico
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\Cordova-Multiplatform-Template.vsix
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\extension.vsixmanifest
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\obj\Debug\Cordova-Multiplatform-Template.csprojResolveAssemblyReference.cache
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\obj\Debug\Cordova-Multiplatform-Template.dll
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\obj\Debug\Cordova-Multiplatform-Template.pdb
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\obj\Debug\extension.vsixmanifest
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\license.txt
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio\Templates\Cordova-Multiplatform-Template\bin\Debug\ProjectTemplates\Template Files.zip

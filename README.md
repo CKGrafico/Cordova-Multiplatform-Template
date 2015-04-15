@@ -2,8 +2,10 @@
 ================================
 
 Check our demo page  http://cordova-multiplatform-template.js.org  
+[Download template for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 
 ![Example UI](http://i.imgur.com/WVcmzGT.png)
+
 
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)
