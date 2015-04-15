@@ -5,9 +5,7 @@ App/*.sln.ide
 App/Appp.v14.suo
 App/*.jsproj.user
 App/.vs/
-App/ts/lib
-App/ts/**/*.js
-App/ts/**/*.map
+
 App/fonts/lib
 App/scss/lib
 Node/node_modules
