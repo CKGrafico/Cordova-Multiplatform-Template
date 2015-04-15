@@ -8,7 +8,8 @@ App/.vs/
 App/ts/lib
 App/ts/**/*.js
 App/ts/**/*.map
-
+App/fonts/lib
+App/scss/lib
 Node/node_modules
 Node/.ntvs_analysis.dat
 Node/.ntvs_analysis.dat.temp
