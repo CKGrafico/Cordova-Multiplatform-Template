@@ -4,7 +4,11 @@ var App;
     'use strict';
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        angular.module('App', ['ionic']).controller('navigationController', App.NavigationController).controller('actionsController', App.ActionsController).config(['$stateProvider', '$urlRouterProvider', states]).config(['$compileProvider', function ($compileProvider) {
+        angular.module('App', ['ionic']).controller('navigationController', App.NavigationController)
+            .controller('actionsController', App.ActionsController).config(['$stateProvider', '$urlRouterProvider', states])
+            .config(['$httpProvider', httpInterceptor])
+            .run(['$rootScope', '$ionicLoading', httpInterceptorActions])
+            .config(['$compileProvider', function ($compileProvider) {
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
         }]);
         angular.bootstrap(document.querySelector('body'), ['App']);

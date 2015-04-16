@@ -2,8 +2,10 @@
             (function () {
                 angular.module('App', ['ionic'])
                 	.controller('navigationController', App.NavigationController)
-                	.controller('actionsController', App.ActionsController).
-                    config(function($provide){
+                	.controller('actionsController', App.ActionsController)
+                    .config(['$httpProvider', httpInterceptor])
+                    .run(['$rootScope', '$ionicLoading', httpInterceptorActions])
+                    .config(function($provide){
                         $provide.decorator('ngIncludeDirective', ['$delegate', function ($delegate) {
                             //$delegate is array of all ng-click directive
                             //in this case first one is angular buildin ng-click
@@ -153,5 +155,32 @@
 			        });
 			        $urlRouterProvider.otherwise("/tab/home");
 			    }
+
+                 // Configure interceptor
+                function httpInterceptor($httpProvider) {
+                    $httpProvider.interceptors.push(function ($rootScope) {
+                        return {
+                            request: function (config) {
+                                $rootScope.$broadcast('loading:show')
+                                return config
+                            },
+                            response: function (response) {
+                                $rootScope.$broadcast('loading:hide')
+                                return response
+                            }
+                        }
+                    })
+                }
+
+                // Configure interceptor actions
+                function httpInterceptorActions($rootScope, $ionicLoading) {
+                    $rootScope.$on('loading:show', function () {
+                        $ionicLoading.show({ templateUrl: "../../App/templates/partials/loading.html"})
+                    })
+
+                    $rootScope.$on('loading:hide', function () {
+                        $ionicLoading.hide()
+                    })
+                }
             })();
 })();

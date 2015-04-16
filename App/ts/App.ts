@@ -9,7 +9,9 @@ module App {
         angular.module('App', ['ionic'])
             .controller('navigationController', App.NavigationController)
             .controller('actionsController', App.ActionsController)
-            .config(['$stateProvider', '$urlRouterProvider', states])
+            .config(['$stateProvider', '$urlRouterProvider', statesConfiguration])
+            .config(['$httpProvider', httpInterceptor])
+            .run(['$rootScope', '$ionicLoading', httpInterceptorActions])
             .config(['$compileProvider', function ($compileProvider) {
 			$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
 		}]);
@@ -18,7 +20,7 @@ module App {
     }
 
     // Configure routes
-    function states($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider): void {
+    function statesConfiguration($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider): void {
 
         $stateProvider
         // Tabs Menu
@@ -78,5 +80,32 @@ module App {
         })
 
         $urlRouterProvider.otherwise("/tab/home");
+    }
+
+    // Configure interceptor
+    function httpInterceptor($httpProvider: ng.IHttpProvider) {
+        $httpProvider.interceptors.push(function ($rootScope) {
+            return {
+                request: function (config) {
+                    $rootScope.$broadcast('loading:show')
+                    return config
+                },
+                response: function (response) {
+                    $rootScope.$broadcast('loading:hide')
+                    return response
+                }
+            }
+        })
+    }
+
+    // Configure interceptor actions
+    function httpInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: Ionic.ILoading) {
+        $rootScope.$on('loading:show', function () {
+            $ionicLoading.show({ templateUrl: "templates/partials/loading.html"})
+        })
+
+        $rootScope.$on('loading:hide', function () {
+            $ionicLoading.hide()
+        })
     }
 }
