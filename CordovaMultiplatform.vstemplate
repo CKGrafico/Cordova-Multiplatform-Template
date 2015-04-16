@@ -10,7 +10,7 @@
         <ProvideDefaultName>true</ProvideDefaultName>
         <LocationField>Enabled</LocationField>
         <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
-        <Icon>Visual Studio Template\__TemplateIcon.ico</Icon>
+        <Icon>__TemplateIcon.ico</Icon>
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>
