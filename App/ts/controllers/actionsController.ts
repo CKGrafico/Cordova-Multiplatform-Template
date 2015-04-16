@@ -8,14 +8,21 @@ module App {
 
         public static $inject = [
             '$scope',
+            '$http'
         ];
 
         constructor(
-            private $scope: any
+            private $scope: any,
+            private $http: any
             ) {
 
             $scope.exampleAction = () => this.exampleAction();
             $scope.property = 'Void';
+
+            $http.jsonp('http://api.openbeerdatabase.com/v1/breweries.json?callback=JSON_CALLBACK').then(function (result) {
+                var a = result.data.breweries
+            })
+
         }
 
         private exampleAction() {

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Cordova_Multiplatform_Template..a4cf3f3f-aa92-4409-9824-bad447a7f6a0" Version="0.2" Language="en-US" Publisher="CKGrafico" />
+    <DisplayName>Cordova Multiplatform Template</DisplayName>
+    <Description xml:space="preserve">HTML5 Apps for [Windows, IOS, Android] with Apache Cordova more info http://cordova-multiplatform-template.js.org/</Description>
+    <MoreInfo>http://cordova-multiplatform-template.js.org/</MoreInfo>
+    <License>license.txt</License>
+    <Icon>__TemplateIcon.ico</Icon>
+    <PreviewImage>thumbnail.PNG</PreviewImage>
+    <Tags>cordova, phonegap, html5, javascript apps, angularjs, typescript, bower, npm, gulp</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\cordova.zip" />
+  </Assets>
+</PackageManifest>

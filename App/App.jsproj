@@ -191,6 +191,7 @@
     <Content Include="scss\themes\_brand.scss" />
     <Content Include="templates\pages\left.html" />
     <Content Include="templates\pages\buttons.html" />
+    <Content Include="templates\partials\loading.html" />
     <Content Include="templates\partials\tabs.html" />
     <Content Include="templates\partials\wrapper.html" />
     <Content Include="templates\pages\actions.html" />
