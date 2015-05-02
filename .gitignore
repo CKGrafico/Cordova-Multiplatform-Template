@@ -10,9 +10,9 @@ App/ts/**/*.js
 App/ts/**/*.map
 App/fonts/lib
 App/scss/lib
-Node/node_modules
-Node/.ntvs_analysis.dat
-Node/.ntvs_analysis.dat.temp
-Node/bower_components
+Tasks/node_modules
+Tasks/.ntvs_analysis.dat
+Tasks/.ntvs_analysis.dat.temp
+Tasks/bower_components
 Visual Studio Template/bin/
 Visual Studio Template/obj/
