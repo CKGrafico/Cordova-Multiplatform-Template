@@ -18,7 +18,8 @@
     "gulp-util": "*",
 	"gulp-usemin": "~0.3.2",
 	"gulp-bower": "*",
-	"main-bower-files": "*",
+    "main-bower-files": "*",
+    "gulp-typescript": "*",
 	"run-sequence": "~1.0.1"
   },
   "main": "gulpfile.js"

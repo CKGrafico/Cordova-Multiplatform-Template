@@ -37,7 +37,7 @@
 	},
 	"ionic-typescript-definitions": {
       "main": [
-        "**/ionic.d.ts"
+        "**/beta14/ionic.d.ts"
       ]
     }
   },

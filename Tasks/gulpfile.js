@@ -1,99 +1,114 @@
-﻿// TODO UPdate this
-//var gulp = require('gulp');
-//var plugins = require('gulp-load-plugins')();
-//var mainBowerFiles = require('main-bower-files');
+﻿/// <binding BeforeBuild='default' />
+var gulp = require('gulp');
+var plugins = require('gulp-load-plugins')();
+var mainBowerFiles = require('main-bower-files');
 
-//var files = {
-//	build: 'build/**/*.*',
-//	buildJS: 'build/code.js',
-//	buildCSS: 'build/styles.css',
-//	css: 'css/**/*.css',
-//	filePaths: ['css/**/*.css', 'ts/lib/**/*.js', 'ts/Config.js', 'ts/Services/*.js', 'ts/Models/*.js', 'ts/Interfaces/*.js', 'ts/Directives/*.js', 'ts/Filters/*.js', 'ts/Controllers/Base/*.js', 'ts/Controllers/*.js', 'ts/App.js'],
-//	index: 'index.html',
-//    indexBkp: 'index.html.bkp',
-//    js: 'ts/**/*.js',
-//	scss: 'scss/*.scss',
-//	scssAll: 'scss/**/*.scss'
-//};
+var files = {
+    filePaths: ['css/**/*.css', 'js/lib/**/*.js', 'js/Config.js', 'js/Services/*.js', 'js/Models/*.js', 'js/Interfaces/*.js', 'js/Directives/*.js', 'js/Filters/*.js', 'js/Controllers/Base/*.js', 'js/Controllers/*.js', 'js/App.js'],
+    index: 'index.html',
+    indexBkp: 'index.html.bkp',
+    scss: 'scss/*.scss',
+    ts: 'ts/**/*.ts'
+};
 
-//var paths = {
-//	build: 'build',
-//	css: 'css',
-//	ts: 'ts',
-//	project: '../App/',
-//	scss: 'scss'
-//};
+var paths = {
+	build: 'build',
+	css: 'css',
+    project: '../App/',
+    scss: 'scss',
+    ts: 'ts',
+    js: 'js',
+    www: 'www'
+};
 
-//function getCorrectPaths(folder, files) {
-//    var cfiles = [];
-//    for (var i = 0; i < files.length; i++) {
-//        cfiles.push(folder + files[i]);
-//    }
-    
-//    return cfiles;
-//}
+function getCorrectPaths(folder, files) {
+    var cfiles = [];
+    for (var i = 0; i < files.length; i++) {
+        cfiles.push(folder + files[i]);
+    }
+    return cfiles;
+}
 
-//// Compile Sass
-//gulp.task('sass', function(){
-//	return gulp.src(paths.project + files.scss)
-//		.pipe(plugins.sass())
-//		.pipe(plugins.autoprefixer({
-//		    browsers: ['last 2 version', 'android 4']
-//		}))
-//		.pipe(gulp.dest(paths.project + paths.css));
-//});
+// Tasks
+gulp.task('initialize', ['initialize.bower', 'default.inject']);
+gulp.task('default', ['default.inject', 'default.scss', 'default.ts']);
+//gulp.task('build', ['default', 'build.buildFiles']);
 
-//// Install bower dependencies
-//gulp.task('bower.install', function () {
-//	return plugins.bower();
-//});
 
-//// Filter node packages
-//gulp.task('bower',['bower.install'], function () {
-//	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
-//		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib'));
+
+// Filter node packages
+gulp.task('initialize.bower',['initialize.bower.install'], function () {
+	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
+		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
 	
-//	gulp.src(mainBowerFiles('**/*.d.ts'), { base: 'bower_components' })
-//		.pipe(gulp.dest(paths.project + '/' + paths.ts + '/lib/typings'));
+	gulp.src(mainBowerFiles('**/*.d.ts'), { base: 'bower_components' })
+		.pipe(gulp.dest(paths.project + paths.ts + '/lib/typings'));
 	
-//	gulp.src(mainBowerFiles('**/fonts/**.*'), { base: 'bower_components' })
-//		.pipe(gulp.dest(paths.project + '/fonts/lib'));
+	gulp.src(mainBowerFiles('**/fonts/**.*'), { base: 'bower_components' })
+		.pipe(gulp.dest(paths.project + paths.www + '/fonts/lib'));
 
-//	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']), { base: 'bower_components' })
-//		.pipe(plugins.minifyCss({ keepSpecialComments: 0 })) // Because sass import fails with variables in comments
-//		.pipe(plugins.rename(function (path) {
-//			path.extname = ".scss"
-//		}))
-//		.pipe(gulp.dest(paths.project + '/' + paths.scss + '/lib'));
-//});
+	return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']), { base: 'bower_components' })
+		.pipe(plugins.minifyCss({ keepSpecialComments: 0 })) // Because sass import fails with variables in comments
+		.pipe(plugins.rename(function (path) {
+			path.extname = ".scss"
+		}))
+		.pipe(gulp.dest(paths.project + '/' + paths.scss + '/lib'));
+});
 
-//// Inject JS & CSS Files
-//gulp.task('inject',['bower'], function() {
-//	return gulp.src(paths.project + files.index)
-//		.pipe(plugins.inject(
-//			gulp.src(getCorrectPaths(paths.project, files.filePaths), { read: false }),
-//			{
-//				transform: function (filepath) {
-//					if (filepath.indexOf('.js') > -1) {
-//						return '<script src="' + filepath.replace(paths.project, '').substring(1) + '"></script>'
-//					}
-//					// Css
-//					return ' <link rel="stylesheet" href="' + filepath.replace(paths.project, '').substring(1) + '">'
-//				}
-//			}
-//		))
-//		.pipe(gulp.dest(paths.project));
-//});
+// Install bower dependencies
+gulp.task('initialize.bower.install', function () {
+    return plugins.bower();
+});
+
+// Inject JS & CSS Files
+gulp.task('default.inject', function() {
+	return gulp.src(paths.project + paths.www + '/' + files.index)
+		.pipe(plugins.inject(
+			gulp.src(getCorrectPaths(paths.project + paths.www + '/', files.filePaths), { read: false }),
+			{
+				transform: function (filepath) {
+					if (filepath.indexOf('.js') > -1) {
+						return '<script src="' + filepath.replace(paths.project + paths.www + '/', '').substring(1) + '"></script>'
+					}
+					// Css
+					return ' <link rel="stylesheet" href="' + filepath.replace(paths.project + paths.www + '/', '').substring(1) + '">'
+				}
+			}
+		))
+		.pipe(gulp.dest(paths.project + paths.www));
+});
+
+
+// Compile Sass
+gulp.task('default.scss', function () {
+    return gulp.src(paths.project + files.scss)
+		.pipe(plugins.sass())
+		.pipe(plugins.autoprefixer({
+        browsers: ['last 2 version', 'android 4']
+    }))
+		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.css));
+});
+
+
+// Compile Typescript
+gulp.task('default.ts', function () {
+    return gulp.src(paths.project + files.ts)
+        .pipe(plugins.typescript({
+            declarationFiles: true,
+            noExternalResolve: true
+    }))
+        .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js));
+});
 
 //// Celan specific folders
 //gulp.task('clear', function () {
 
 //	// If exist indexBkp replace normal index and delete this
-//	gulp.src(paths.project + files.indexBkp)
+//	gulp.src(paths.project + paths.www + files.indexBkp)
 //		.pipe(plugins.rename(files.index))
 //		.pipe(gulp.dest(paths.project)); 
 
-//	return gulp.src(paths.project + files.build, { read: false })
+//	return gulp.src(paths.project + paths.www + files.build, { read: false })
 //	   .pipe(plugins.clean({ force: true }));
 //});
 
@@ -130,6 +145,3 @@
 //	gulp.watch(paths.project + files.scssAll, ['sass', 'inject']);
 //});
 
-//gulp.task('default', ['clear', 'inject', 'sass']);
-//gulp.task('build', ['default', 'buildFiles']);
-//

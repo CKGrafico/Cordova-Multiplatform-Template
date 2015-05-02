@@ -6,9 +6,10 @@ App/Appp.v14.suo
 App/*.jsproj.user
 App/.vs/
 App/ts/lib
-App/ts/**/*.js
-App/ts/**/*.map
-App/fonts/lib
+App/platforms
+App/www/js/**/*.js
+App/www/js/**/*.map
+App/www/fonts/lib
 App/scss/lib
 Tasks/node_modules
 Tasks/.ntvs_analysis.dat
