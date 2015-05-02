@@ -4,7 +4,7 @@
 
 **Visual Studio Template direct link:** [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 
-**Visual Studio 2015 RC or higher*(COMMING SOON)*:** [Last release on branch Master](https://github.com/CKGrafico/Cordova-Multiplatform-Template/releases)
+**Visual Studio 2015 RC or higher:** [Last release on branch Master](https://github.com/CKGrafico/Cordova-Multiplatform-Template/releases)
 
 **Visual Studio 2015 CTP 6 or lower:** [Branch dev-VS13-VS15](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/dev-VS13-VS15)
 
