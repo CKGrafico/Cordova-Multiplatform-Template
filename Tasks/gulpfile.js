@@ -32,7 +32,7 @@ function getCorrectPaths(folder, files) {
 // Tasks
 gulp.task('initialize', ['initialize.bower', 'default.inject']);
 gulp.task('default', ['default.inject', 'default.scss', 'default.ts']);
-//gulp.task('build', ['default', 'build.buildFiles']);
+//gulp.task('build', ['build.buildFiles']);
 
 
 
@@ -113,35 +113,28 @@ gulp.task('default.ts', function () {
 //});
 
 //// Build Files
-//gulp.task('buildFiles', function() {
+//gulp.task('build.buildFiles', ['default'], function() {
 //	// Save index
-//	gulp.src(paths.project + files.index)
+//	gulp.src(paths.project + paths.www + '/' + files.index)
 //		.pipe(plugins.clone())
 //		.pipe(plugins.rename(files.indexBkp))
-//		.pipe(gulp.dest(paths.project));
+//		.pipe(gulp.dest(paths.project + paths.www));
 
 //	// Build files
-//	gulp.src(paths.project + files.index)
+//	gulp.src(paths.project + paths.www + '/' + files.index)
 //		.pipe(plugins.usemin(
 //			{
 //				css: [plugins.minifyCss()],
 //				js: [plugins.uglify()]
 //			}
 //		))
-//		.pipe(gulp.dest(paths.project));
+//		.pipe(gulp.dest(paths.project + paths.www));
 	
-//	gulp.src(paths.project + files.buildJS)
-//		.pipe(plugins.uglify())
-//		.pipe(gulp.dest(paths.project + paths.build));
+//	//gulp.src(paths.project + files.buildJS)
+//	//	.pipe(plugins.uglify())
+//	//	.pipe(gulp.dest(paths.project + paths.build));
 
 //	return gulp.src(paths.project + files.buildCSS)
 //		.pipe(plugins.minifyCss())
 //		.pipe(gulp.dest(paths.project + paths.build));
 //});
-
-//// Init watch
-//gulp.task('watch', function () {
-//	gulp.watch(paths.project + files.js, ['inject']);
-//	gulp.watch(paths.project + files.scssAll, ['sass', 'inject']);
-//});
-

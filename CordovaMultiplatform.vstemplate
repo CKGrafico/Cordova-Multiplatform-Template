@@ -5,12 +5,14 @@
         <Description>HTML5 Apps for [Windows, IOS, Android] with Apache Cordova more info http://cordova-multiplatform-template.js.org/</Description>
         <ProjectType>TypeScript</ProjectType>
         <SortOrder>1000</SortOrder>
-        <CreateNewFolder>true</CreateNewFolder>
-        <DefaultName>Cordova Multiplatform Template</DefaultName>
+        <DefaultName>CordovaMultiplatformTemplate</DefaultName>
         <ProvideDefaultName>true</ProvideDefaultName>
-        <LocationField>Enabled</LocationField>
-        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
         <Icon>__TemplateIcon.ico</Icon>
+        <CreateNewFolder>false</CreateNewFolder>
+        <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+        <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+        <TargetPlatformName>Windows</TargetPlatformName>
+        <CreateInPlace>true</CreateInPlace>
     </TemplateData>
     <TemplateContent>
         <ProjectCollection>
@@ -18,7 +20,7 @@
                 App\Cordova_App.vstemplate
             </ProjectTemplateLink>
             <ProjectTemplateLink ProjectName="Node">
-                Node\Cordova_Node.vstemplate
+                Tasks\Cordova_Node.vstemplate
             </ProjectTemplateLink>
         </ProjectCollection>
     </TemplateContent>
