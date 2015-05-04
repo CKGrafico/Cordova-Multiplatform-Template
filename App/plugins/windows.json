@@ -6,6 +6,10 @@
     "config_munge": {
         "files": {}
     },
-    "installed_plugins": {},
+    "installed_plugins": {
+        "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "App"
+        }
+    },
     "dependent_plugins": {}
 }

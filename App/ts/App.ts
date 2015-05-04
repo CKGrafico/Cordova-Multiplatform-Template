@@ -6,6 +6,12 @@ module App {
     document.addEventListener("deviceready", onDeviceReady, false);
 
     function onDeviceReady() {
+        // TODO Improve this
+        var statusBar = window['StatusBar'];
+        statusBar.backgroundColorByHexString('#f8f8f8');
+        statusBar.styleDefault();
+        statusBar.show();
+
         angular.module('App', ['ionic'])
             .controller('navigationController', App.NavigationController)
             .controller('actionsController', App.ActionsController)
