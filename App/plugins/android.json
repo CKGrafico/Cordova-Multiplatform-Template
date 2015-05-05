@@ -4,7 +4,13 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": []
+                }
+            }
+        }
     },
     "installed_plugins": {},
     "dependent_plugins": {}

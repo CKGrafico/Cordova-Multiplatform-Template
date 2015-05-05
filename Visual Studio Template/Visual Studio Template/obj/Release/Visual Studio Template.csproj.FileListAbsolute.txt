@@ -1,3 +1,4 @@
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Release\ProjectTemplates\Apache Cordova Apps\2015.zip
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Release\license.txt
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Release\thumbnail.PNG
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Release\__TemplateIcon.ico
@@ -7,4 +8,3 @@ C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Stu
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Release\Visual Studio Template.dll
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Release\Visual Studio Template.pdb
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Release\extension.vsixmanifest
-C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Release\ProjectTemplates\Apache Cordova Apps\CordovaMultiplatform.zip

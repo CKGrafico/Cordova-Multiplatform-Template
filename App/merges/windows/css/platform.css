@@ -1,6 +1,6 @@
 ﻿/* Transform buttons right in action bar*/
 ion-header-bar .buttons-right {
-    background-color: #FFF;
+    background-color: #f8f8f8;
     position: absolute !important;
     top: 93vh !important;
     left: 0;
@@ -10,11 +10,40 @@ ion-header-bar .buttons-right {
 }
 
 ion-header-bar .buttons-right .right-buttons {
-    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    padding: 0 5px;
+
 }
 
 .title.title-left.header-item {
     left: 0 !important;
     transform: none !important;
     width: 100%;
+}
+.tabs-top > .tabs, .tabs-top.tabs {
+    top: 10px !important;
+}
+
+ion-content.has-tabs-top {
+    top: 60px !important;
+}
+
+ion-tabs .icon::before{
+    font-size: 0.8em;
+}
+
+ion-tabs .tab-title {
+    font-size: 1.2em;
+    display: block;
+    margin-top: -0.6em;
+}
+
+.tab-nav.tabs {
+    padding: 0 5%;
+}
+
+ion-nav-bar, ion-nav-bar ion-header-bar, ion-nav-bar ion-header-bar .title {
+    height: 10px !important;
 }
