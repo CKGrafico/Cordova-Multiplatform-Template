@@ -9,6 +9,7 @@ var App;
     'use strict';
     document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
+        // TODO Improve this
         var statusBar = window['StatusBar'];
         statusBar.backgroundColorByHexString('#f8f8f8');
         statusBar.styleDefault();

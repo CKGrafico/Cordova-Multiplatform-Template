@@ -90,5 +90,4 @@
   <platform name="wp8">
     <splash src="res/screens/wp8/SplashScreenImage.jpg" width="480" height="800" />
   </platform>
-  <vs:plugin name="org.apache.cordova.statusbar" version="0.1.10" />
 </widget>
