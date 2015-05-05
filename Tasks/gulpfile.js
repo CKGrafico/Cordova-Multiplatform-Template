@@ -37,7 +37,7 @@ gulp.task('default', ['default.inject', 'default.scss', 'default.ts']);
 
 
 // Filter node packages
-gulp.task('initialize.bower',['initialize.bower.install'], function () {
+gulp.task('initialize:bower',['initialize.bower.install'], function () {
 	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
 	
@@ -56,12 +56,12 @@ gulp.task('initialize.bower',['initialize.bower.install'], function () {
 });
 
 // Install bower dependencies
-gulp.task('initialize.bower.install', function () {
+gulp.task('initialize:bower.install', function () {
     return plugins.bower();
 });
 
 // Inject JS & CSS Files
-gulp.task('default.inject', function() {
+gulp.task('default:inject', function() {
 	return gulp.src(paths.project + paths.www + '/' + files.index)
 		.pipe(plugins.inject(
 			gulp.src(getCorrectPaths(paths.project + paths.www + '/', files.filePaths), { read: false }),
@@ -80,7 +80,7 @@ gulp.task('default.inject', function() {
 
 
 // Compile Sass
-gulp.task('default.scss', function () {
+gulp.task('default:scss', function () {
     return gulp.src(paths.project + files.scss)
 		.pipe(plugins.sass())
 		.pipe(plugins.autoprefixer({
@@ -91,7 +91,7 @@ gulp.task('default.scss', function () {
 
 
 // Compile Typescript
-gulp.task('default.ts', function () {
+gulp.task('default:ts', function () {
     return gulp.src(paths.project + files.ts)
         .pipe(plugins.typescript({
             declarationFiles: true,
