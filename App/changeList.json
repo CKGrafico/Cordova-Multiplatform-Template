@@ -139,8 +139,7 @@
   "changedFiles": [
     "www\\scripts\\appBundle.js.map",
     "www\\scripts\\appBundle.js",
-    "plugins\\windows.json",
-    "merges\\windows\\templates\\partials\\wrapper.html"
+    "plugins\\windows.json"
   ],
   "deletedFiles": [],
   "addedPlugins": [],
