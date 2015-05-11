@@ -101,7 +101,7 @@ var App;
             });
         }
         ActionsController.prototype.exampleAction = function () {
-            this.$scope.property = 'Clicked';
+            this.$scope.property = 'Clicked2';
         };
         ActionsController.$inject = [
             '$scope',
@@ -116,12 +116,14 @@ var App;
 (function (App) {
     'use strict';
     var NavigationController = (function () {
-        function NavigationController($scope /*&ng.IScope*/, $ionicHistory) {
+        function NavigationController($scope /*&ng.IScope*/, $ionicHistory, $ionicTabsDelegate) {
             var _this = this;
             this.$scope = $scope;
             this.$ionicHistory = $ionicHistory;
+            this.$ionicTabsDelegate = $ionicTabsDelegate;
             document.addEventListener('backbutton', function (e) { return _this.checkBack(e); }, false);
             this.$scope.onSwipeLeft = function () { return _this.onSwipeLeft(); };
+            this.$scope.onSwipeRight = function () { return _this.onSwipeRight(); };
         }
         NavigationController.prototype.goBack = function () {
             this.$ionicHistory.goBack();
@@ -142,12 +144,15 @@ var App;
             }
         };
         NavigationController.prototype.onSwipeLeft = function () {
-            console.log('swipe');
-            this.goBack();
+            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() + 1);
+        };
+        NavigationController.prototype.onSwipeRight = function () {
+            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
         };
         NavigationController.$inject = [
             '$scope',
             '$ionicHistory',
+            '$ionicTabsDelegate'
         ];
         return NavigationController;
     })();

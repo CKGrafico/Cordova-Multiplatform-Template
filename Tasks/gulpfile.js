@@ -4,7 +4,7 @@ var plugins = require('gulp-load-plugins')();
 var mainBowerFiles = require('main-bower-files');
 
 var files = {
-    filePaths: ['css/**/*.css', 'js/lib/**/*.js', 'js/Config.js', 'js/Services/*.js', 'js/Models/*.js', 'js/Interfaces/*.js', 'js/Directives/*.js', 'js/Filters/*.js', 'js/Controllers/Base/*.js', 'js/Controllers/*.js', 'js/App.js'],
+    filePaths: ['css/**/*.css', 'scripts/lib/**/*.js', 'scripts/appbundle.js'],
     index: 'index.html',
     indexBkp: 'index.html.bkp',
     scss: 'scss/*.scss',
@@ -17,7 +17,7 @@ var paths = {
     project: '../App/',
     scss: 'scss',
     ts: 'ts',
-    js: 'js',
+    js: 'scripts',
     www: 'www'
 };
 
@@ -30,14 +30,14 @@ function getCorrectPaths(folder, files) {
 }
 
 // Tasks
-gulp.task('initialize', ['initialize.bower', 'default.inject']);
-gulp.task('default', ['default.inject', 'default.scss', 'default.ts']);
+gulp.task('initialize', ['initialize.bower', 'default:inject']);
+gulp.task('default', ['default:inject', 'default:scss']);
 //gulp.task('build', ['build.buildFiles']);
 
 
 
 // Filter node packages
-gulp.task('initialize:bower',['initialize.bower.install'], function () {
+gulp.task('initialize:bower',['initialize.bower:install'], function () {
 	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
 	
@@ -56,7 +56,7 @@ gulp.task('initialize:bower',['initialize.bower.install'], function () {
 });
 
 // Install bower dependencies
-gulp.task('initialize:bower.install', function () {
+gulp.task('initialize:bower:install', function () {
     return plugins.bower();
 });
 
@@ -90,15 +90,15 @@ gulp.task('default:scss', function () {
 });
 
 
-// Compile Typescript
-gulp.task('default:ts', function () {
-    return gulp.src(paths.project + files.ts)
-        .pipe(plugins.typescript({
-            declarationFiles: true,
-            noExternalResolve: true
-    }))
-        .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js));
-});
+//// Compile Typescript
+//gulp.task('default:ts', function () {
+//    return gulp.src(paths.project + files.ts)
+//        .pipe(plugins.typescript({
+//            declarationFiles: true,
+//            noExternalResolve: true
+//    }))
+//        .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js));
+//});
 
 //// Celan specific folders
 //gulp.task('clear', function () {
