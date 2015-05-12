@@ -11,8 +11,8 @@ https://nodejstools.codeplex.com/
 ###Install npm packages
 ![Instruction3](http://i.imgur.com/gKst68A.png)
 
-###Run bower task
-![Instruction4](http://i.imgur.com/b12Oz2S.png)
+###Run initialize task
+![Instruction4](http://i.imgur.com/EW5oK51.png)
 
 ### ~~Include 'lib' folders to the project // In future versions we will make this automatically~~
 
