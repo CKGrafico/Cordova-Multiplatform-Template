@@ -115,26 +115,26 @@
 			        $stateProvider.state('tabs', {
 			            url: "/tab",
 			            abstract: true,
-			            templateUrl: "../../App/merges/"+window.platform+"/templates/partials/tabs.html"
+			            templateUrl: "../../App/merges/"+window.platform+"/www/www/templates/partials/tabs.html"
 			        }).state('tabs.left', {
 			            url: "/left",
 			            views: {
 			                'left-tab': {
-			                    templateUrl: "../../App/templates/pages/left.html"
+			                    templateUrl: "../../App/www/templates/pages/left.html"
 			                }
 			            }
 			        }).state('tabs.home', {
 			            url: "/home",
 			            views: {
 			                'home-tab': {
-			                    templateUrl: "../../App/templates/pages/home.html"
+			                    templateUrl: "../../App/www/templates/pages/home.html"
 			                }
 			            }
 			        }).state('tabs.scroll', {
 			            url: "/scroll",
 			            views: {
 			                'home-tab': {
-			                    templateUrl: "../../App/templates/pages/scroll.html"
+			                    templateUrl: "../../App/www/templates/pages/scroll.html"
 			                }
 			            }
 			        }).state('tabs.actions', {
@@ -142,14 +142,14 @@
 			            views: {
 			                'actions-tab': {
 			                    controller: 'actionsController',
-			                    templateUrl: "../../App/templates/pages/actions.html"
+			                    templateUrl: "../../App/www/templates/pages/actions.html"
 			                }
 			            }
 			        }).state('tabs.buttons', {
 			            url: "/buttons",
 			            views: {
 			                'buttons-tab': {
-			                    templateUrl: "../../App/templates/pages/buttons.html"
+			                    templateUrl: "../../App/www/templates/pages/buttons.html"
 			                }
 			            }
 			        });
@@ -175,7 +175,7 @@
                 // Configure interceptor actions
                 function httpInterceptorActions($rootScope, $ionicLoading) {
                     $rootScope.$on('loading:show', function () {
-                        $ionicLoading.show({ templateUrl: "../../App/templates/partials/loading.html"})
+                        $ionicLoading.show({ templateUrl: "../../App/www/templates/partials/loading.html"})
                     })
 
                     $rootScope.$on('loading:hide', function () {
