@@ -9,14 +9,18 @@ module App {
         public static $inject = [
             '$scope',
             '$ionicHistory',
+            '$ionicTabsDelegate'
         ];
 
         constructor(
-            private $scope: ng.IScope,
-            private $ionicHistory: Ionic.IHistory
+            private $scope: any/*&ng.IScope*/,
+            private $ionicHistory: Ionic.IHistory,
+            private $ionicTabsDelegate: Ionic.ITabsDelegate
             ) {
 
             document.addEventListener('backbutton', e => this.checkBack(e), false);
+            this.$scope.onSwipeLeft = () => this.onSwipeLeft();
+            this.$scope.onSwipeRight = () => this.onSwipeRight();
         }
 
         public goBack(): void {
@@ -35,6 +39,14 @@ module App {
             } else {
                 this.goBack();
             }
+        }
+
+        public onSwipeLeft() {
+            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex()+1)
+        }
+
+        public onSwipeRight() {
+            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() -1)
         }
     }
 } 
