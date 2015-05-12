@@ -37,7 +37,7 @@ gulp.task('default', ['default:inject', 'default:scss']);
 
 
 // Filter node packages
-gulp.task('initialize:bower',['initialize.bower:install'], function () {
+gulp.task('initialize:bower',['initialize:bower:install'], function () {
 	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
 	
