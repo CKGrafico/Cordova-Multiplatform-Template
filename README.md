@@ -8,7 +8,7 @@
 
 **Visual Studio 2015 CTP 6 or lower:** [Branch dev-VS13-VS15](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/dev-VS13-VS15)
 
-![Example UI](http://i.imgur.com/WVcmzGT.png)
+![Example UI](http://i.imgur.com/se6A8Nq.png)
 
 
 ###Technology
