@@ -30,14 +30,14 @@ function getCorrectPaths(folder, files) {
 }
 
 // Tasks
-gulp.task('initialize', ['initialize.bower', 'default:inject']);
+gulp.task('initialize', ['initialize:bower', 'default:inject']);
 gulp.task('default', ['default:inject', 'default:scss']);
 //gulp.task('build', ['build.buildFiles']);
 
 
 
 // Filter node packages
-gulp.task('initialize:bower',['initialize.bower:install'], function () {
+gulp.task('initialize:bower',['initialize:bower:install'], function () {
 	gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
 		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
 	
