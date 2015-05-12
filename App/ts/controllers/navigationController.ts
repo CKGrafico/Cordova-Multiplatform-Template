@@ -29,7 +29,7 @@ module App {
 
         public checkBack(e: Event) {
             var page = this.$ionicHistory.currentStateName();
-            if (page === 'main') {
+            if (page === 'tabs.home') {
                 var nav: any = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();
