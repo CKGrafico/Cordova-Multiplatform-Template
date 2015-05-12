@@ -14,8 +14,7 @@ https://nodejstools.codeplex.com/
 ###Run bower task
 ![Instruction4](http://i.imgur.com/b12Oz2S.png)
 
-###Include 'lib' folders to the project // In future versions we will make this automatically.
-![Instruction4](http://i.imgur.com/W5Ysy70.png)
+### ~~Include 'lib' folders to the project // In future versions we will make this automatically~~
 
 ###Enjoy
 ![Instruction](http://i.imgur.com/DAG1g0x.png)
