@@ -10,7 +10,7 @@ App/platforms
 App/www/js/**/*.js
 App/www/js/**/*.map
 App/www/fonts/lib
-App/www/scripts
+
 App/scss/lib
 Tasks/node_modules
 Tasks/.ntvs_analysis.dat
