@@ -1,0 +1,13 @@
+﻿[ResourceMetadata]
+"ResourceId"			"filemap.scale-100"
+"ResourceDimensions"		"scale-100"
+
+[Files]
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\filemap.scale-100.pri"			"resources.pri"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\Wide310x150Logo.scale-100.png"			"images\Wide310x150Logo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\StoreLogo.scale-100.png"			"images\StoreLogo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\Square70x70Logo.scale-100.png"			"images\Square70x70Logo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\Square310x310Logo.scale-100.png"			"images\Square310x310Logo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\Square30x30Logo.scale-100.png"			"images\Square30x30Logo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\Square150x150Logo.scale-100.png"			"images\Square150x150Logo.scale-100.png"
+"C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\build\phone\bld\PackageLayout\images\SplashScreen.scale-100.png"			"images\SplashScreen.scale-100.png"

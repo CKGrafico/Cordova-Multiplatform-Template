@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget defaultlocale="en-US" id="io.cordova.myapp37fa9479f98a49f4a53ab78472334b16" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <preference name="windows-target-version" value="8.0" />
+    <icon height="150" src="res/icons/windows/Square150x150Logo.scale-100.png" width="150" />
+    <icon height="360" src="res/icons/windows/Square150x150Logo.scale-240.png" width="360" />
+    <icon height="30" src="res/icons/windows/Square30x30Logo.scale-100.png" width="30" />
+    <icon height="" src="res/icons/windows/Square310x310Logo.scale-100.png" width="" />
+    <icon height="106" src="res/icons/windows/Square44x44Logo.scale-240.png" width="106" />
+    <icon height="70" src="res/icons/windows/Square70x70Logo.scale-100.png" width="70" />
+    <icon height="170" src="res/icons/windows/Square71x71Logo.scale-240.png" width="170" />
+    <icon height="50" src="res/icons/windows/StoreLogo.scale-100.png" width="50" />
+    <icon height="120" src="res/icons/windows/StoreLogo.scale-240.png" width="120" />
+    <icon height="150" src="res/icons/windows/Wide310x150Logo.scale-100.png" width="310" />
+    <icon height="360" src="res/icons/windows/Wide310x150Logo.scale-240.png" width="744" />
+    <splash height="300" src="res/screens/windows/SplashScreen.scale-100.png" width="620" />
+    <splash height="1920" src="res/screens/windows/SplashScreen.scale-240.png" width="1152" />
+    <splash height="1920" src="res/screens/windows/SplashScreenPhone.scale-240.png" width="1152" />
+    <name>App</name>
+    <description>Multiplatform template</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">CKGrafico</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <vs:features />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="windows-target-version" value="8.1" />
+    <preference name="windows-phone-target-version" value="8.1" />
+</widget>

@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>My App</title>
+
+    <!-- build:css build/styles.css -->
+    <!-- inject:css -->
+                     <link rel="stylesheet" href="css/main.css">
+                     <link rel="stylesheet" href="css/platform.css">
+                    <!-- endinject -->
+    <!-- endbuild -->
+</head>
+<body>
+
+    <ion-side-menus enable-menu-with-back-views="false">
+
+        <!-- Center content -->
+        <ion-side-menu-content drag-content="false">
+            <div ng-include src="'templates/partials/wrapper.html'"></div>
+        </ion-side-menu-content>
+
+        <!-- Left menu -->
+        <ion-side-menu side="left" expose-aside-when="large">
+            <div ng-include src="'templates/pages/left.html'"></div>
+        </ion-side-menu>
+    </ion-side-menus>
+
+
+
+    <!-- JS dependencies -->
+    <script src="cordova.js"></script>
+    <script src="js/platformOverrides.js"></script>
+
+    <!-- build:js build/code.js -->
+    <!-- inject:js -->
+
+    <script src="scripts/lib/ionic/release/js/ionic.bundle.js"></script>
+
+    <script src="scripts/appbundle.js"></script>
+
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+</html>

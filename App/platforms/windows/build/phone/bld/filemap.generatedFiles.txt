@@ -1,0 +1,4 @@
+build\phone\bld\filemap.pri
+build\phone\bld\filemap.map.txt
+build\phone\bld\filemap.scale-100.pri
+build\phone\bld\filemap.scale-100.map.txt
