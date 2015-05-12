@@ -26,7 +26,7 @@ module App {
         }
 
         private exampleAction() {
-            this.$scope.property = 'Clicked2';
+            this.$scope.property = 'Clicked';
         }
     }
 } 
