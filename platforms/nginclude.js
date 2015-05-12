@@ -115,7 +115,7 @@
 			        $stateProvider.state('tabs', {
 			            url: "/tab",
 			            abstract: true,
-			            templateUrl: "../../App/merges/"+window.platform+"/www/templates/partials/tabs.html"
+			            templateUrl: "../../App/merges/"+window.platform+"/templates/partials/tabs.html"
 			        }).state('tabs.left', {
 			            url: "/left",
 			            views: {
