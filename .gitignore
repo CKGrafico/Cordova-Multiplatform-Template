@@ -10,8 +10,7 @@ App/platforms
 App/www/js/**/*.js
 App/www/js/**/*.map
 App/www/fonts/lib
-App/www/scripts/**/*.js
-App/www/scripts/**/*.map
+App/www/scripts
 App/scss/lib
 Tasks/node_modules
 Tasks/.ntvs_analysis.dat
@@ -19,3 +18,4 @@ Tasks/.ntvs_analysis.dat.temp
 Tasks/bower_components
 Visual Studio Template/bin/
 Visual Studio Template/obj/
+Tasks/.ntvs_analysis.dat.tmp
