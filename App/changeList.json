@@ -140,12 +140,15 @@
     "res\\screens\\android\\screen-xhdpi-landscape.png",
     "fonts\\lib\\ionic\\release\\fonts\\ionicons.ttf",
     "res\\icons\\windows\\Square44x44Logo.scale-240.png",
-    "res\\screens\\android\\screen-mdpi-portrait.png"
+    "res\\screens\\android\\screen-mdpi-portrait.png",
+    "www\\scripts\\appBundle.js.map",
+    "www\\scripts\\appBundle.js"
   ],
   "deletedFilesIos": [],
   "addedPluginsIos": [],
   "deletedPluginsIos": [],
   "changedFiles": [
+<<<<<<< HEAD
     "ts\\lib\\typings\\DefinitelyTyped\\cordova\\plugins\\DeviceMotion.d.ts",
     "ts\\App.ts",
     "ts\\lib\\typings\\ionic-typescript-definitions\\ionic.d.ts",
@@ -287,6 +290,14 @@
     "fonts\\lib\\ionic\\release\\fonts\\ionicons.ttf",
     "res\\icons\\windows\\Square44x44Logo.scale-240.png",
     "res\\screens\\android\\screen-mdpi-portrait.png"
+=======
+    "plugins\\windows.json",
+    "www\\scripts\\appBundle.js.map",
+    "www\\scripts\\appBundle.js",
+    "www\\index.html",
+    "www\\css\\main.css",
+    "www\\css\\platform.css"
+>>>>>>> master
   ],
   "deletedFiles": [],
   "addedPlugins": [],
