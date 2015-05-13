@@ -1,5 +1,4 @@
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\platforms.png
-C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\App.zip
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\license.txt
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\thumbnail.PNG
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\__TemplateIcon.ico
@@ -9,3 +8,4 @@ C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Stu
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.dll
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.pdb
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\extension.vsixmanifest
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Tasks.zip

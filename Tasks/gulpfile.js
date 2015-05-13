@@ -30,7 +30,7 @@ function getCorrectPaths(folder, files) {
 }
 
 // Tasks
-gulp.task('initialize', ['initialize:bower', 'default:inject']);
+gulp.task('initialize', ['initialize:bower', 'default:inject', 'default:inject']);
 gulp.task('default', ['default:inject', 'default:scss']);
 //gulp.task('build', ['build.buildFiles']);
 
@@ -90,16 +90,6 @@ gulp.task('default:scss', function () {
 });
 
 
-//// Compile Typescript
-//gulp.task('default:ts', function () {
-//    return gulp.src(paths.project + files.ts)
-//        .pipe(plugins.typescript({
-//            declarationFiles: true,
-//            noExternalResolve: true
-//    }))
-//        .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js));
-//});
-
 //// Celan specific folders
 //gulp.task('clear', function () {
 
@@ -113,12 +103,12 @@ gulp.task('default:scss', function () {
 //});
 
 //// Build Files
-//gulp.task('build.buildFiles', ['default'], function() {
+//gulp.task('build:buildFiles', ['default'], function() {
 //	// Save index
 //	gulp.src(paths.project + paths.www + '/' + files.index)
 //		.pipe(plugins.clone())
 //		.pipe(plugins.rename(files.indexBkp))
-//		.pipe(gulp.dest(paths.project + paths.www));
+//		.pipe(gulp.dest(paths.project));
 
 //	// Build files
 //	gulp.src(paths.project + paths.www + '/' + files.index)
@@ -130,9 +120,9 @@ gulp.task('default:scss', function () {
 //		))
 //		.pipe(gulp.dest(paths.project + paths.www));
 	
-//	//gulp.src(paths.project + files.buildJS)
-//	//	.pipe(plugins.uglify())
-//	//	.pipe(gulp.dest(paths.project + paths.build));
+//	gulp.src(paths.project + files.buildJS)
+//	    .pipe(plugins.uglify())
+//	.pipe(gulp.dest(paths.project + paths.build));
 
 //	return gulp.src(paths.project + files.buildCSS)
 //		.pipe(plugins.minifyCss())

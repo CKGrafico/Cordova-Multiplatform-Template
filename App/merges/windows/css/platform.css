@@ -9,12 +9,20 @@ ion-header-bar .buttons-right {
     margin: 0;
 }
 
-ion-header-bar .buttons-right .right-buttons {
-    position: absolute;
-    right: 0;
-    bottom: 7px;
-    padding: 0 5px;
+@media only screen and (orientation: landscape) {
 
+    ion-header-bar .buttons-right {
+        top: 89vh !important;
+        height: 12vh !important;
+    }
+}
+
+ion-header-bar .buttons-right .right-buttons {
+    bottom: 7px;
+    padding: 0 2px;
+    position: absolute;
+    right: 0px !important;
+    bottom: 1vh;
 }
 
 .title.title-left.header-item {

@@ -19,3 +19,5 @@ Tasks/bower_components
 Visual Studio Template/bin/
 Visual Studio Template/obj/
 Tasks/.ntvs_analysis.dat.tmp
+App/www/css/main.css
+App/www/css/platform.css

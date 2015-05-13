@@ -1,7 +1,7 @@
 {
   "name": "App",
   "dependencies": {
-    "ionic": "1.0.0-rc.2",
+    "ionic": "1.0.0",
     "DefinitelyTyped": "*",
     "ionic-typescript-definitions": "*"
   },

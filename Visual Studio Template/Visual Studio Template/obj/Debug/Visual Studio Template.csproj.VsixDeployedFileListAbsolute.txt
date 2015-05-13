@@ -4,3 +4,4 @@ C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafi
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.4\\thumbnail.PNG
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.4\\__TemplateIcon.ico
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.4\ProjectTemplates\Apache Cordova Apps\\App.zip
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.4\ProjectTemplates\Apache Cordova Apps\\Tasks.zip
