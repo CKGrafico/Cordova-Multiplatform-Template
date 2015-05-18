@@ -9,7 +9,7 @@ module App {
         angular.module('App', ['ionic'])
             .controller('navigationController', App.NavigationController)
             .controller('actionsController', App.ActionsController)
-            .config(['$stateProvider', '$urlRouterProvider', statesConfiguration])
+            .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration])
             .config(['$httpProvider', httpInterceptor])
             .run(['$rootScope', '$ionicLoading', httpInterceptorActions])
             .config(['$compileProvider', function ($compileProvider) {
@@ -20,7 +20,15 @@ module App {
     }
 
     // Configure routes
-    function statesConfiguration($stateProvider: ng.ui.IStateProvider, $urlRouterProvider: ng.ui.IUrlRouterProvider): void {
+    function statesConfiguration(
+        $stateProvider: ng.ui.IStateProvider,
+        $urlRouterProvider: ng.ui.IUrlRouterProvider,
+        $ionicConfigProvider: Ionic.IConfigProvider
+        ): void {
+
+    	// force native scroll
+        var configProvider: any = $ionicConfigProvider;
+        configProvider.scrolling.jsScrolling(false);
 
         $stateProvider
         // Tabs Menu
