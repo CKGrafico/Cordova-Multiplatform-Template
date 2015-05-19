@@ -1,6 +1,7 @@
 ﻿/// <binding BeforeBuild='default' />
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var runSequence = require('run-sequence');
 var mainBowerFiles = require('main-bower-files');
 
 var files = {
@@ -30,11 +31,13 @@ function getCorrectPaths(folder, files) {
 }
 
 // Tasks
-gulp.task('initialize', ['initialize:bower', 'default']);
-gulp.task('default', ['default:inject', 'default:scss']);
-//gulp.task('build', ['build.buildFiles']);
+gulp.task('default', function (callback) {
+    runSequence('default:scss', 'default:inject');
+});
 
-
+gulp.task('initialize', function (callback) {
+    runSequence('initialize:bower', 'default');
+});
 
 // Filter node packages
 gulp.task('initialize:bower',['initialize:bower:install'], function () {
@@ -78,7 +81,6 @@ gulp.task('default:inject', function() {
 		.pipe(gulp.dest(paths.project + paths.www));
 });
 
-
 // Compile Sass
 gulp.task('default:scss', function () {
     return gulp.src(paths.project + files.scss)
@@ -89,42 +91,4 @@ gulp.task('default:scss', function () {
 		.pipe(gulp.dest(paths.project + paths.www + '/' + paths.css));
 });
 
-
-//// Celan specific folders
-//gulp.task('clear', function () {
-
-//	// If exist indexBkp replace normal index and delete this
-//	gulp.src(paths.project + paths.www + files.indexBkp)
-//		.pipe(plugins.rename(files.index))
-//		.pipe(gulp.dest(paths.project)); 
-
-//	return gulp.src(paths.project + paths.www + files.build, { read: false })
-//	   .pipe(plugins.clean({ force: true }));
-//});
-
-//// Build Files
-//gulp.task('build:buildFiles', ['default'], function() {
-//	// Save index
-//	gulp.src(paths.project + paths.www + '/' + files.index)
-//		.pipe(plugins.clone())
-//		.pipe(plugins.rename(files.indexBkp))
-//		.pipe(gulp.dest(paths.project));
-
-//	// Build files
-//	gulp.src(paths.project + paths.www + '/' + files.index)
-//		.pipe(plugins.usemin(
-//			{
-//				css: [plugins.minifyCss()],
-//				js: [plugins.uglify()]
-//			}
-//		))
-//		.pipe(gulp.dest(paths.project + paths.www));
-	
-//	gulp.src(paths.project + files.buildJS)
-//	    .pipe(plugins.uglify())
-//	.pipe(gulp.dest(paths.project + paths.build));
-
-//	return gulp.src(paths.project + files.buildCSS)
-//		.pipe(plugins.minifyCss())
-//		.pipe(gulp.dest(paths.project + paths.build));
-//});
+// TODO Build

@@ -1,6 +1,6 @@
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="Cordova_Multiplatform_Template..a4cf3f3f-aa92-4409-9824-bad447a7f6a0" Version="0.5.3" Language="en-US" Publisher="CKGrafico" />
+    <Identity Id="Cordova_Multiplatform_Template..a4cf3f3f-aa92-4409-9824-bad447a7f6a0" Version="0.5.3.2" Language="en-US" Publisher="CKGrafico" />
     <DisplayName>Cordova Multiplatform Template</DisplayName>
     <Description xml:space="preserve">HTML5 Apps for [Windows, IOS, Android] with Apache Cordova more info -&gt; http://cordova-multiplatform-template.js.org</Description>
     <MoreInfo>http://cordova-multiplatform-template.js.org/</MoreInfo>
