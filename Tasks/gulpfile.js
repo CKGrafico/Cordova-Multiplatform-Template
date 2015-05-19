@@ -30,7 +30,7 @@ function getCorrectPaths(folder, files) {
 }
 
 // Tasks
-gulp.task('initialize', ['initialize:bower', 'default:inject', 'default:inject']);
+gulp.task('initialize', ['initialize:bower', 'default']);
 gulp.task('default', ['default:inject', 'default:scss']);
 //gulp.task('build', ['build.buildFiles']);
 

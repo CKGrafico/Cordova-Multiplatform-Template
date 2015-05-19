@@ -19,7 +19,7 @@
             <ProjectTemplateLink ProjectName="App">
                 App\Cordova_App.vstemplate
             </ProjectTemplateLink>
-            <ProjectTemplateLink ProjectName="Node">
+            <ProjectTemplateLink ProjectName="Tasks">
                 Tasks\Cordova_Node.vstemplate
             </ProjectTemplateLink>
         </ProjectCollection>
