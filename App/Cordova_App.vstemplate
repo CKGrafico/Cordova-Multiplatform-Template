@@ -20,7 +20,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="js" TargetFolderName="js">
+          <Folder Name="scripts" TargetFolderName="scripts">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -42,7 +42,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="js" TargetFolderName="js">
+          <Folder Name="scripts" TargetFolderName="scripts">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -144,6 +144,7 @@
         </Folder>
         <Folder Name="themes" TargetFolderName="themes">
           <ProjectItem ReplaceParameters="false" TargetFileName="_brand.scss">_brand.scss</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="_custom.scss">_brand.scss</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="false" TargetFileName="main.scss">main.scss</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="platform.scss">platform.scss</ProjectItem>
@@ -161,7 +162,9 @@
         <Folder Name="css" TargetFolderName="css" />
         <Folder Name="fonts" TargetFolderName="fonts" />
         <Folder Name="images" TargetFolderName="images" />
-        <Folder Name="js" TargetFolderName="js" />
+        <Folder Name="scripts" TargetFolderName="scripts">
+          <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
+        </Folder>
         <Folder Name="templates" TargetFolderName="templates">
           <Folder Name="pages" TargetFolderName="pages">
             <ProjectItem ReplaceParameters="true" TargetFileName="actions.html">actions.html</ProjectItem>
