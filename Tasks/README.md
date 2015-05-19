@@ -11,6 +11,9 @@ https://nodejstools.codeplex.com/
 ###Install npm packages
 ![Instruction3](http://i.imgur.com/gKst68A.png)
 
+###Build project
+(This compile TypeScript files before inject task)
+
 ###Run initialize task
 ![Instruction4](http://i.imgur.com/EW5oK51.png)
 
