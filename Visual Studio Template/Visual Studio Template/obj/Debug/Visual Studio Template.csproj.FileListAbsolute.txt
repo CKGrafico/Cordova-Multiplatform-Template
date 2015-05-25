@@ -8,4 +8,4 @@ C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Stu
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.dll
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.pdb
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\extension.vsixmanifest
-C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Cordova0531.zip
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\0541.zip

@@ -10,11 +10,11 @@ module App {
             .controller('navigationController', App.NavigationController)
             .controller('actionsController', App.ActionsController)
             .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration])
-            .config(['$httpProvider', httpInterceptor])
-            .run(['$rootScope', '$ionicLoading', httpInterceptorActions])
+            .config(['$httpProvider', httpLoadingInterceptor])
+            .run(['$rootScope', '$ionicLoading', httpLoadingInterceptorActions])
             .config(['$compileProvider', function ($compileProvider) {
-			$compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
-		}]);
+            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
+        }]);
 
         angular.bootstrap(document.querySelector('body'), ['App']);
     }
@@ -26,13 +26,13 @@ module App {
         $ionicConfigProvider: Ionic.IConfigProvider
         ): void {
 
-    	// force native scroll
+        // force native scroll
         var configProvider: any = $ionicConfigProvider;
         configProvider.scrolling.jsScrolling(false);
 
         $stateProvider
         // Tabs Menu
-        .state('tabs', {
+            .state('tabs', {
             url: "/tab",
             abstract: true,
             templateUrl: "templates/partials/tabs.html"
@@ -49,7 +49,7 @@ module App {
         })
         
         // Home Views
-       .state('tabs.home', {
+            .state('tabs.home', {
             url: "/home",
             views: {
                 'home-tab': {
@@ -57,7 +57,7 @@ module App {
                 }
             }
         })
-        .state('tabs.scroll', {
+            .state('tabs.scroll', {
             url: "/scroll",
             views: {
                 'home-tab': {
@@ -67,7 +67,7 @@ module App {
         })
 
         // actions Views
-        .state('tabs.actions', {
+            .state('tabs.actions', {
             url: "/actions",
             views: {
                 'actions-tab': {
@@ -78,7 +78,7 @@ module App {
         })
 
         // buttons Views
-        .state('tabs.buttons', {
+            .state('tabs.buttons', {
             url: "/buttons",
             views: {
                 'buttons-tab': {
@@ -91,8 +91,8 @@ module App {
     }
 
     // Configure interceptor
-    function httpInterceptor($httpProvider: ng.IHttpProvider) {
-        $httpProvider.interceptors.push(function ($rootScope) {
+    function httpLoadingInterceptor($httpProvider: ng.IHttpProvider) {
+        $httpProvider.interceptors.push(['$rootScope', function ($rootScope) {
             return {
                 request: function (config) {
                     $rootScope.$broadcast('loading:show')
@@ -103,13 +103,13 @@ module App {
                     return response
                 }
             }
-        })
+        }])
     }
 
     // Configure interceptor actions
-    function httpInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: Ionic.ILoading) {
+    function httpLoadingInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: Ionic.ILoading) {
         $rootScope.$on('loading:show', function () {
-            $ionicLoading.show({ templateUrl: "templates/partials/loading.html"})
+            $ionicLoading.show({ templateUrl: "templates/partials/loading.html" })
         })
 
         $rootScope.$on('loading:hide', function () {

@@ -20,7 +20,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
+          <Folder Name="js" TargetFolderName="js">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -42,7 +42,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
+          <Folder Name="js" TargetFolderName="js">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -162,7 +162,8 @@
         <Folder Name="css" TargetFolderName="css" />
         <Folder Name="fonts" TargetFolderName="fonts" />
         <Folder Name="images" TargetFolderName="images" />
-        <Folder Name="scripts" TargetFolderName="scripts">
+        <Folder Name="scripts" TargetFolderName="scripts" />
+        <Folder Name="js" TargetFolderName="js">
           <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
         </Folder>
         <Folder Name="templates" TargetFolderName="templates">
@@ -179,7 +180,7 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
           </Folder>
         </Folder>
-        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="20" TargetFileName="index.html">index.html</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="config.xml">config.xml</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="taco.json">taco.json</ProjectItem>
