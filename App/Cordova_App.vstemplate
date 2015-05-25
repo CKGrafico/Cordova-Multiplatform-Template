@@ -180,7 +180,7 @@
             <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
           </Folder>
         </Folder>
-        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="20" TargetFileName="index.html">index.html</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="config.xml">config.xml</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="taco.json">taco.json</ProjectItem>

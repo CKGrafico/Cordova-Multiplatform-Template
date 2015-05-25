@@ -17,7 +17,7 @@
       <ProjectItem ReplaceParameters="true" TargetFileName="bower.json">bower.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="gulpfile.js">gulpfile.js</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="README.md">README.md</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="10" TargetFileName="README.md">README.md</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
