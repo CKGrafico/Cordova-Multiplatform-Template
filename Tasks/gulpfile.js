@@ -36,7 +36,10 @@ gulp.task('default', function (callback) {
 });
 
 gulp.task('initialize', function (callback) {
-    runSequence('initialize:bower', 'default');
+    runSequence('initialize:bower');
+    // 1 Initialize
+    // 2 Build Visual Studio Project
+    // 3 Default
 });
 
 // Filter node packages
