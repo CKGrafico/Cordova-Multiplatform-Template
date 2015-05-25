@@ -20,7 +20,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
+          <Folder Name="js" TargetFolderName="js">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -42,7 +42,7 @@
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
           </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
+          <Folder Name="js" TargetFolderName="js">
             <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
           </Folder>
           <Folder Name="templates" TargetFolderName="templates">
@@ -162,7 +162,8 @@
         <Folder Name="css" TargetFolderName="css" />
         <Folder Name="fonts" TargetFolderName="fonts" />
         <Folder Name="images" TargetFolderName="images" />
-        <Folder Name="scripts" TargetFolderName="scripts">
+        <Folder Name="scripts" TargetFolderName="scripts" />
+        <Folder Name="js" TargetFolderName="js">
           <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
         </Folder>
         <Folder Name="templates" TargetFolderName="templates">
