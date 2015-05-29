@@ -21,3 +21,17 @@ Visual Studio Template/obj/
 Tasks/.ntvs_analysis.dat.tmp
 App/www/css/main.css
 App/www/css/platform.css
+
+App.sln
+_TemplateIcon.ico
+CordovaMultiplatform.vstemplate
+Visual Studio Template/
+Tasks/Cordova_Node.vstemplate
+Tasks/Tasks.njsproj
+App/App.jsproj
+App/Apps.jsproj.user
+App/changeList.json
+App/Cordova_App.vstemplate
+App/jsFileList.json
+App/Project_Readme.html
+App/taco.json
