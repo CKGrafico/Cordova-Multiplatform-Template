@@ -13,14 +13,18 @@ module App {
         ];
 
         constructor(
-            private $scope: any/*&ng.IScope*/,
+            private $scope: INavigationScope,
             private $ionicHistory: Ionic.IHistory,
             private $ionicTabsDelegate: Ionic.ITabsDelegate
             ) {
 
             document.addEventListener('backbutton', e => this.checkBack(e), false);
-            this.$scope.onSwipeLeft = () => this.onSwipeLeft();
-            this.$scope.onSwipeRight = () => this.onSwipeRight();
+            
+            // Swipe tabs for Windows Phone
+            if (ionic.Platform.isWindowsPhone()){
+                this.$scope.onSwipeLeft = () => this.onSwipeLeft();
+                this.$scope.onSwipeRight = () => this.onSwipeRight();
+            }
         }
 
         public goBack(): void {

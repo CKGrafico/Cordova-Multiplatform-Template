@@ -12,15 +12,15 @@ module App {
         ];
 
         constructor(
-            private $scope: any,
-            private $http: any
+            private $scope: IActionsScope,
+            private $http: ng.IHttpService
             ) {
 
             $scope.exampleAction = () => this.exampleAction();
             $scope.property = 'Void';
 
             $http.jsonp('http://api.openbeerdatabase.com/v1/breweries.json?callback=JSON_CALLBACK').then(function (result) {
-                var a = result.data.breweries
+                console.log(result);
             })
 
         }
