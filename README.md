@@ -2,7 +2,7 @@
 
 **Template demo for iOS, Android and Windows Phone:** http://cordova-multiplatform-template.js.org
 
-**Download Cordova/Phonegap project:** [Cordova](https://github.com/CKGrafico/Cordova-Multiplatform-Template/archive/master.zip)
+**Download Cordova/Phonegap project:** [Cordova](http://bit.ly/ck-cordova-zip)
 
 **Download Visual Studio 2015 RC template:** [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 
