@@ -5,11 +5,7 @@
 ![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg)
 ![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-<<<<<<< HEAD
-**Download Cordova/Phonegap project:** [Cordova](http://bit.ly/ck-cordova-zip)
-=======
 **[Demo](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone**
->>>>>>> development
 
 **[Download Zip](http://bit.ly/ck-cordova-zip) for Cordova/Phonegap project**
 
