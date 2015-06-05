@@ -1,12 +1,17 @@
 ##Cordova Multiplatform Template
 
-**Template demo for iOS, Android and Windows Phone:** http://cordova-multiplatform-template.js.org
+![issues](https://img.shields.io/github/issues/CKGrafico/Cordova-Multiplatform-Template.svg)
+![forks](https://img.shields.io/github/forks/CKGrafico/Cordova-Multiplatform-Template.svg)
+![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg)
+![license](https://img.shields.io/badge/license-MIT-blue.svg)
 
-**Download Cordova/Phonegap project:** [Cordova](http://bit.ly/ck-cordova-zip)
+**[Demo](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone**
 
-**Download Visual Studio 2015 RC template:** [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+**[Download Zip](http://bit.ly/ck-cordova-zip) for Cordova/Phonegap project**
 
-**Check installation instructions:** [Instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks)
+**[Download VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96) for Visual Studio 2015 RC** 
+
+**[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks) and follow first steps** 
 
 ![Example UI](http://i.imgur.com/se6A8Nq.png)
 
