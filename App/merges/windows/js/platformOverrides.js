@@ -8,3 +8,48 @@ window.CustomEvent = function () { var e = function (e, t) { var n; t = t || { b
 
 // Back button windows
 if (window.Windows && Windows.Phone && Windows.Phone.UI.Input.HardwareButtons && document.createEvent) { var newEvent = document.createEvent("Event"); newEvent.initEvent("backbutton", !0, !0), Windows.Phone.UI.Input.HardwareButtons.addEventListener("backpressed", function (n) { n.handled = !0, document.dispatchEvent(newEvent) }) }
+
+
+// Check appbar status maybe we will do this better in the future
+var onDeviceReady = function () {
+    window.requestAnimationFrame(checkScroll);
+}
+document.addEventListener("deviceready", onDeviceReady, false);
+
+var lastScroll = 0;
+var frame = 0;
+function checkScroll() {
+    if (frame === 30) {
+        frame = 0;
+        var s = document.querySelectorAll('.overflow-scroll');
+        var sum = 0;
+        if (s) {
+            // Check scroll position
+            for (var i = 0; i < s.length; i++) {
+                sum += s[i].scrollTop;
+            }
+
+            // Show or hide appbar + add event handler
+            var b = document.querySelectorAll('ion-header-bar .buttons-right');
+            for (var i = 0; i < s.length; i++) {
+                if (b[i]) {
+                    if (b[i].clicked === undefined) {
+                        b[i].clicked = false;
+                        b[i].addEventListener('click', function () {
+                            this.clicked = !this.clicked;
+                        }, false);
+                    }
+
+                    if (sum < 15 || b[i].clicked) {
+                        b[i].classList.remove('hidden');
+                    } else {
+                        b[i].classList.add('hidden');
+                    }
+                }
+            }
+            lastScroll = sum;
+        }
+    }
+    frame++;
+    requestAnimationFrame(checkScroll);
+}
