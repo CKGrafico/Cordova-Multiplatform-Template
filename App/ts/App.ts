@@ -5,7 +5,7 @@ module App {
 
     document.addEventListener("deviceready", onDeviceReady, false);
 
-    function onDeviceReady() {
+    export function onDeviceReady() {
         angular.module('App', ['ionic'])
             .controller('navigationController', App.NavigationController)
             .controller('actionsController', App.ActionsController)

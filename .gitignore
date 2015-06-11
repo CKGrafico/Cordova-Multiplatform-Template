@@ -16,12 +16,16 @@ Tasks/node_modules
 Tasks/.ntvs_analysis.dat
 Tasks/.ntvs_analysis.dat.temp
 Tasks/bower_components
+Test/node_modules
+Test/.ntvs_analysis.dat
+Test/.ntvs_analysis.dat.temp
+Test/bower_components
 Visual Studio Template/bin/
 Visual Studio Template/obj/
-Tasks/.ntvs_analysis.dat.tmp
 App/www/css/main.css
 App/www/css/platform.css
 
+<<<<<<< HEAD
 App.sln
 _TemplateIcon.ico
 CordovaMultiplatform.vstemplate
@@ -35,3 +39,6 @@ App/Cordova_App.vstemplate
 App/jsFileList.json
 App/Project_Readme.html
 App/taco.json
+=======
+>>>>>>> development
+*.njsproj
