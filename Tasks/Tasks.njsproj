@@ -32,6 +32,12 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
+  <PropertyGroup>
+   <!-- Specifies the directories which are ignored. Any paths which contain these directory names
+      will be ignored. The directory name must completely match and no wild cards are allowed
+   -->
+   <AnalysisIgnoredDirectories>bower_components;node_modules</AnalysisIgnoredDirectories>
+</PropertyGroup>
   <ItemGroup>
     <Content Include="bower.json" />
     <Content Include="package.json" />
