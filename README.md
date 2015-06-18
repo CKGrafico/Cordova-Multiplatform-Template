@@ -1,7 +1,7 @@
 ##Cordova Multiplatform Template
 
-[![downloads](https://img.shields.io/github/downloads/ckgrafico/cordova-multiplatform-template/latest/total.svg?label=Github◢)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/releases/latest)
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B3.5K-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+
+[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B4K-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 [![forks](https://img.shields.io/github/forks/CKGrafico/Cordova-Multiplatform-Template.svg?label=Forks)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/fork)
 [![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg?label=Stars)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/)
 [![issues](https://img.shields.io/github/issues/CKGrafico/Cordova-Multiplatform-Template.svg?label=Issues)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/issues)
