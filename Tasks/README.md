@@ -1,7 +1,9 @@
 ##Instructions
 
 ### FIRST OF ALL you need Cordova Tools
-https://msdn.microsoft.com/es-es/library/dn757054.aspx?f=255&MSPPError=-2147217396
+https://www.visualstudio.com/en-us/features/cordova-vs.aspx
+![Cordova comment](http://i.imgur.com/rfPEDIq.png)
+![Cordova Tools installation](http://i.imgur.com/Zg7t52q.png)
 
 ###Install NodeJS Tools for Visual Studio
 https://nodejstools.codeplex.com/
