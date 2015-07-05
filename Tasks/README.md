@@ -1,5 +1,4 @@
 ##Instructions
-================================
 
 ### FIRST OF ALL you need Cordova Tools
 https://msdn.microsoft.com/es-es/library/dn757054.aspx?f=255&MSPPError=-2147217396
