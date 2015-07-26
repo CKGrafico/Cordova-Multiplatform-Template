@@ -22,7 +22,7 @@
 
 ###Dependencies
 - [GulpJS](http://gulpjs.com)
-	- [NodeJS](http://nodejs.com)
+	- [NodeJS](http://nodejs.org)
 - [Ionic Framework](http://ionicframework.com/)
 	- [Angular < 2.0](http://angularjs.org)
 - [SASS](http://sass-lang.com/)
