@@ -43,3 +43,4 @@ C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafi
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.6\\__TemplateIcon.ico
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.6\ProjectTemplates\Apache Cordova Apps\\controlleras.zip
 C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.6\ProjectTemplates\Apache Cordova Apps\\Cordova-9_8_2015-15_37_14.zip
+C:\Users\Enrique\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.6\ProjectTemplates\Apache Cordova Apps\\Cordova-9_8_2015-15_55_6.zip
