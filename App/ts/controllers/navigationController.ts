@@ -5,7 +5,6 @@ module App {
 
     export class NavigationController {
 
-
         public static $inject = [
             '$scope',
             '$ionicHistory',
@@ -19,12 +18,6 @@ module App {
             ) {
 
             document.addEventListener('backbutton', e => this.checkBack(e), false);
-            
-            // Swipe tabs for Windows Phone
-            if (ionic.Platform.isWindowsPhone()){
-                this.$scope.onSwipeLeft = () => this.onSwipeLeft();
-                this.$scope.onSwipeRight = () => this.onSwipeRight();
-            }
         }
 
         public goBack(): void {
@@ -45,6 +38,7 @@ module App {
             }
         }
 
+        // On Windows phone
         public onSwipeLeft() {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex()+1)
         }
@@ -53,5 +47,8 @@ module App {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() -1)
         }
     }
+
+    angular.module('App').controller('navigationController', NavigationController);
+
 } 
 

@@ -4,18 +4,15 @@ module App {
     'use strict';
 
     document.addEventListener("deviceready", onDeviceReady, false);
+    angular.module('App', ['ionic'])
+        .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration])
+        .config(['$httpProvider', httpLoadingInterceptor])
+        .run(['$rootScope', '$ionicLoading', httpLoadingInterceptorActions])
+        .config(['$compileProvider', function ($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
+    }]);
 
     export function onDeviceReady() {
-        angular.module('App', ['ionic'])
-            .controller('navigationController', App.NavigationController)
-            .controller('actionsController', App.ActionsController)
-            .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration])
-            .config(['$httpProvider', httpLoadingInterceptor])
-            .run(['$rootScope', '$ionicLoading', httpLoadingInterceptorActions])
-            .config(['$compileProvider', function ($compileProvider) {
-            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
-        }]);
-
         angular.bootstrap(document.querySelector('body'), ['App']);
     }
 
@@ -71,7 +68,7 @@ module App {
             url: "/actions",
             views: {
                 'actions-tab': {
-                    controller: 'actionsController',
+                    controller: 'actionsController as vm',
                     templateUrl: "templates/pages/actions.html"
                 }
             }
