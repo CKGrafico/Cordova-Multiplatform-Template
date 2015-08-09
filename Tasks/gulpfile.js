@@ -52,6 +52,10 @@ gulp.task('build', function () {
     runSequence('build:js', 'build:clean');
 });
 
+gulp.task('zip', function () {
+    runSequence('zip:copy', 'zip:compress', 'zip:clean');
+});
+
 // Filter node packages
 gulp.task('initialize:bower', ['initialize:bower:install'], function () {
     gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
@@ -125,4 +129,59 @@ gulp.task('build:js', function () {
 gulp.task('build:clean', function () {
     return gulp.src(paths.project + paths.www + '/' + paths.js, { read: false })
         .pipe(plugins.clean({ force: true }));
+});
+
+// Create a Zip template for VS
+gulp.task('zip:copy', function () {
+    var dest = '../zipCreatorTemp';
+    gulp.src(['../__TemplateIcon.ico', '../LICENSE', '../*.md', '../*.sln', '../*.vstemplate'])
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest));
+        
+    gulp.src('../Tasks/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/Tasks'));
+        
+    gulp.src('../App/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App'));
+        
+    gulp.src('../App/merges/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/merges'));
+        
+    gulp.src('../App/plugins/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/plugins'));
+    
+    gulp.src('../App/res/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/res'));
+        
+    gulp.src('../App/scss/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/scss'));
+        
+    gulp.src('../App/ts/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/ts'));
+        
+    return gulp.src('../App/www/**/*.*')
+        .pipe(plugins.clone())
+        .pipe(gulp.dest(dest + '/App/www'));
+});
+
+gulp.task('zip:compress', function () {
+    var dest = '../zipCreatorTemp';
+    var d = new Date(Date.now());
+    var zip = 'Cordova-' + d.getDate() + '_' + (d.getMonth()+1) + '_' + d.getFullYear() + '-' + d.getHours() + '_' + d.getMinutes() + '_' + d.getSeconds();
+    return gulp.src(dest + '/**/*')
+        .pipe(plugins.zip(zip + '.zip'))
+        .pipe(gulp.dest('../'));
+});
+
+gulp.task('zip:clean', function () {
+    var dest = '../zipCreatorTemp';
+    return gulp.src(dest, {read: false})
+        .pipe(plugins.clean({force: true}))
 });

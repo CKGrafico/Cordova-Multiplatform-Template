@@ -15,8 +15,9 @@
     "gulp-autoprefixer": "*",
     "gulp-uglify": "*",
     "gulp-util": "*",
-	"gulp-usemin": "~0.3.2",
-	"gulp-bower": "*",
+    "gulp-usemin": "~0.3.2",
+    "gulp-bower": "*",
+    "gulp-zip": "*",
     "main-bower-files": "*",
     "gulp-typescript": "*",
 	"run-sequence": "~1.0.1"
