@@ -5,7 +5,7 @@ App/*.sln.ide
 App/Appp.v14.suo
 App/*.jsproj.user
 App/.vs/
-App/ts/lib
+App/scripts/lib
 App/platforms
 App/www/js/**/*.js
 App/www/js/**/*.map
@@ -25,3 +25,4 @@ Visual Studio Template/obj/
 App/www/css/main.css
 App/www/css/platform.css
 
+Test/obj/

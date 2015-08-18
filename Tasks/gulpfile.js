@@ -9,8 +9,9 @@ var files = {
     index: 'index.html',
     indexBkp: 'index.html.bkp',
     js: ['scripts/lib/**/*.js', 'scripts/appbundle.js'],
+    maps: ['scripts/appbundle.js.map'],
     scss: 'scss/*.scss',
-    ts: 'ts/**/*.ts'
+    ts: 'scripts/**/*.ts'
 };
 
 var paths = {
@@ -18,7 +19,7 @@ var paths = {
     css: 'css',
     project: '../App/',
     scss: 'scss',
-    ts: 'ts',
+    ts: 'scripts',
     js: 'scripts',
     www: 'www'
 };
@@ -113,7 +114,7 @@ gulp.task('build:js', function () {
     return gulp.src(paths.project + paths.www + '/' + files.index)
 		.pipe(plugins.inject(
         gulp.src(getCorrectPaths(paths.project + paths.www + '/', files.js))
-                .pipe(plugins.concat('js/build.min.js'))
+                .pipe(plugins.concat('scripts/build.min.js'))
                 .pipe(plugins.uglify())
                 .pipe(gulp.dest(paths.project + paths.www)),
 			{
@@ -127,7 +128,7 @@ gulp.task('build:js', function () {
 
 // Build Clean
 gulp.task('build:clean', function () {
-    return gulp.src(paths.project + paths.www + '/' + paths.js, { read: false })
+    return gulp.src(getCorrectPaths(paths.project + paths.www + '/', files.js, files.maps), { read: false })
         .pipe(plugins.clean({ force: true }));
 });
 
@@ -162,7 +163,7 @@ gulp.task('zip:copy', function () {
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/scss'));
         
-    gulp.src('../App/ts/**/*.*')
+    gulp.src('../App/scripts/**/*.*')
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/ts'));
         

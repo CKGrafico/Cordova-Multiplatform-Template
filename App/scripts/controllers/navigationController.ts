@@ -6,13 +6,11 @@ module App {
     export class NavigationController {
 
         public static $inject = [
-            '$scope',
             '$ionicHistory',
             '$ionicTabsDelegate'
         ];
 
         constructor(
-            private $scope: INavigationScope,
             private $ionicHistory: Ionic.IHistory,
             private $ionicTabsDelegate: Ionic.ITabsDelegate
             ) {

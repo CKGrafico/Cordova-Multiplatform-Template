@@ -6,14 +6,12 @@ module App {
     export class ActionsController {
 
         public static $inject = [
-            '$scope',
             '$http'
         ];
 
         private property: string = 'Void';
 
         constructor(
-            private $scope: IActionsScope,
             private $http: ng.IHttpService
             ) {
 
@@ -23,7 +21,7 @@ module App {
         }
 
         private exampleAction() {
-            this.property = 'Clicked';
+            this.property = 'Random ' + Math.floor(Math.random() * 100 + 1);
         }
     }
 
