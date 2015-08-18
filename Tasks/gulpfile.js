@@ -165,23 +165,27 @@ gulp.task('zip:copy', function () {
         
     gulp.src('../App/scripts/**/*.*')
         .pipe(plugins.clone())
-        .pipe(gulp.dest(dest + '/App/ts'));
+        .pipe(gulp.dest(dest + '/App/scripts'));
         
     return gulp.src('../App/www/**/*.*')
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/www'));
 });
 
+var zip;
 gulp.task('zip:compress', function () {
     var dest = '../zipCreatorTemp';
     var d = new Date(Date.now());
-    var zip = 'Cordova-' + d.getDate() + '_' + (d.getMonth()+1) + '_' + d.getFullYear() + '-' + d.getHours() + '_' + d.getMinutes() + '_' + d.getSeconds();
+    zip = 'Cordova-' + d.getDate() + '_' + (d.getMonth()+1) + '_' + d.getFullYear() + '-' + d.getHours() + '_' + d.getMinutes() + '_' + d.getSeconds();
     return gulp.src(dest + '/**/*')
         .pipe(plugins.zip(zip + '.zip'))
         .pipe(gulp.dest('../'));
 });
 
 gulp.task('zip:clean', function () {
+    //gulp.src('../' + zip + '.zip/**/lib??', { read: false })
+    //    .pipe(plugins.clean({ force: true }));
+    // Todo remove /lib folders    
     var dest = '../zipCreatorTemp';
     return gulp.src(dest, {read: false})
         .pipe(plugins.clean({force: true}))

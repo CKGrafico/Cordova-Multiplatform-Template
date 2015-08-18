@@ -18,6 +18,6 @@
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Apache Cordova Apps\Cordova-9_8_2015-15_55_6.zip" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Apache Cordova Apps\Cordova-18_8_2015-21_59_15.zip" />
   </Assets>
 </PackageManifest>
