@@ -159,15 +159,15 @@ gulp.task('zip:copy', function () {
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/res'));
         
-    gulp.src('../App/scss/**/*.*')
+    gulp.src(['../App/scss/**/*.*', '!../App/scss/lib/**/*.*'])
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/scss'));
         
-    gulp.src('../App/scripts/**/*.*')
+    gulp.src(['../App/scripts/**/*.*', '!../App/scripts/lib/**/*.*'])
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/scripts'));
         
-    return gulp.src('../App/www/**/*.*')
+    return gulp.src(['../App/www/**/*.*', '!../App/www/fonts/lib/**/*.*', '!../App/www/css/**/*.*', '!../App/www/scripts/appbundle.*'])
         .pipe(plugins.clone())
         .pipe(gulp.dest(dest + '/App/www'));
 });
@@ -182,10 +182,7 @@ gulp.task('zip:compress', function () {
         .pipe(gulp.dest('../'));
 });
 
-gulp.task('zip:clean', function () {
-    //gulp.src('../' + zip + '.zip/**/lib??', { read: false })
-    //    .pipe(plugins.clean({ force: true }));
-    // Todo remove /lib folders    
+gulp.task('zip:clean', function () {   
     var dest = '../zipCreatorTemp';
     return gulp.src(dest, {read: false})
         .pipe(plugins.clean({force: true}))

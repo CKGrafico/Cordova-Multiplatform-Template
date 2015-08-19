@@ -48,7 +48,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ProjectTemplates\Apache Cordova Apps\Cordova-18_8_2015-21_59_15.zip">
+    <Content Include="ProjectTemplates\Apache Cordova Apps\Cordova-18_8_2015-22_13_50.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
