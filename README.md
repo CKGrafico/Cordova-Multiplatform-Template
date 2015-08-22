@@ -1,6 +1,13 @@
 ##Cordova Multiplatform Template
 
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B10.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+**Download from:**
+
+[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B14.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+[![Ionic Market](https://img.shields.io/badge/Ionic%20Market◢-.starter-4087fb.svg)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/archive/master.zip)
+[![Github](https://img.shields.io/badge/Github◢-.zip-74C558.svg)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/archive/master.zip)
+
+**Project Stats:**
+
 [![forks](https://img.shields.io/github/forks/CKGrafico/Cordova-Multiplatform-Template.svg?label=Forks)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/fork)
 [![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg?label=Stars)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/)
 [![issues](https://img.shields.io/github/issues/CKGrafico/Cordova-Multiplatform-Template.svg?label=Issues)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/issues)
