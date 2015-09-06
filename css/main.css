@@ -110,6 +110,10 @@ a:hover, a:active {
         opacity: 0;
     }
     
+    80% {
+        opacity: 0;
+    }
+    
     100% {
         transform: rotate(-360deg);
         opacity: 1;
@@ -131,6 +135,10 @@ a:hover, a:active {
         opacity: 0;
     }
     
+    85% {
+        opacity: 0;
+    }
+    
     100% {
         transform: rotate(-360deg);
         opacity: 1;
@@ -149,6 +157,10 @@ a:hover, a:active {
     
     85% {
         transform: rotate(-180deg);
+        opacity: 0;
+    }
+    
+    90% {
         opacity: 0;
     }
     
