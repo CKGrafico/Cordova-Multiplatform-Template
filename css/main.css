@@ -38,16 +38,10 @@ a:hover, a:active {
 .header {
     background-color: #1AA8D0;
     color: white;
-    height: 100%;
+    height: auto;
+    min-height: 100%;
     text-align: center;
     width: 100%;
-}
-
-.header-logo {
-    background-color: red;
-    height: 200px;
-    margin-top: 50px;
-    width: 200px;
 }
 
 .header-title {
@@ -87,4 +81,83 @@ a:hover, a:active {
 
 .header-icon a::after {
     content: attr(title);
+}
+
+.logo-bg, .logo-android, .logo-apple, .logo-windows {
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 30px;
+    width: 200px;
+}
+
+.logo {
+    height: 200px;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+    width: 200px;
+}
+
+@keyframes logo-android {
+    50% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    75% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+
+.logo-android {
+    animation: logo-android 5s linear infinite;
+}
+
+@keyframes logo-windows {
+    55% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    80% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+
+.logo-windows {
+    animation: logo-windows 5s linear infinite;
+}
+
+@keyframes logo-apple {
+    60% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    
+    85% {
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    
+    100% {
+        transform: rotate(-360deg);
+        opacity: 1;
+    }
+}
+
+.logo-apple {
+    animation: logo-apple 5s linear infinite;
 }
