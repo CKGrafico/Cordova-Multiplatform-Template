@@ -1,4 +1,0 @@
-build\phone\bld\split.pri
-build\phone\bld\split.map.txt
-build\phone\bld\split.scale-100.pri
-build\phone\bld\split.scale-100.map.txt

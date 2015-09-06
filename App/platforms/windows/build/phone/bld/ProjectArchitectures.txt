@@ -1,1 +1,0 @@
-C:\Datos\Github\Cordova-Multiplatform-Template\App\platforms\windows\CordovaApp.Phone.jsproj;neutral
