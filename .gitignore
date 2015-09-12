@@ -42,3 +42,7 @@ App/taco.json
 =======
 >>>>>>> development
 *.njsproj
+App/node_modules/
+App/bower_components/DefinitelyTyped/pleasejs/please-tests.ts
+App/bower_components/
+App/scripts/lib/
