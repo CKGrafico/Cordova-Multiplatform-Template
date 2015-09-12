@@ -24,8 +24,6 @@ Visual Studio Template/bin/
 Visual Studio Template/obj/
 App/www/css/main.css
 App/www/css/platform.css
-
-<<<<<<< HEAD
 App.sln
 _TemplateIcon.ico
 CordovaMultiplatform.vstemplate
@@ -39,8 +37,6 @@ App/Cordova_App.vstemplate
 App/jsFileList.json
 App/Project_Readme.html
 App/taco.json
-=======
->>>>>>> development
 *.njsproj
 App/node_modules/
 App/bower_components/DefinitelyTyped/pleasejs/please-tests.ts
