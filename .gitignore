@@ -12,10 +12,7 @@ App/www/js/**/*.map
 App/www/fonts/lib
 App/www/scripts
 App/scss/lib
-Tasks/node_modules
-Tasks/.ntvs_analysis.dat
-Tasks/.ntvs_analysis.dat.temp
-Tasks/bower_components
+Test/obj/
 Test/node_modules
 Test/.ntvs_analysis.dat
 Test/.ntvs_analysis.dat.temp
@@ -24,5 +21,5 @@ Visual Studio Template/bin/
 Visual Studio Template/obj/
 App/www/css/main.css
 App/www/css/platform.css
-
-Test/obj/
+App/node_modules/gulp-typescript/node_modules/vinyl-fs/node_modules/
+App/node_modules/

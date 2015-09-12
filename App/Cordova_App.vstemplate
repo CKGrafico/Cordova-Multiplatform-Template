@@ -96,10 +96,6 @@
             <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-100.png">Wide310x150Logo.scale-100.png</ProjectItem>
             <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-240.png">Wide310x150Logo.scale-240.png</ProjectItem>
           </Folder>
-          <Folder Name="wp8" TargetFolderName="wp8">
-            <ProjectItem ReplaceParameters="false" TargetFileName="ApplicationIcon.png">ApplicationIcon.png</ProjectItem>
-            <ProjectItem ReplaceParameters="false" TargetFileName="Background.png">Background.png</ProjectItem>
-          </Folder>
         </Folder>
         <Folder Name="native" TargetFolderName="native">
           <Folder Name="android" TargetFolderName="android">
@@ -134,18 +130,12 @@
             <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-240.png">SplashScreen.scale-240.png</ProjectItem>
             <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreenPhone.scale-240.png">SplashScreenPhone.scale-240.png</ProjectItem>
           </Folder>
-          <Folder Name="wp8" TargetFolderName="wp8">
-            <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreenImage.jpg">SplashScreenImage.jpg</ProjectItem>
-          </Folder>
         </Folder>
       </Folder>
       <Folder Name="scss" TargetFolderName="scss">
         <Folder Name="helpers" TargetFolderName="helpers">
           <ProjectItem ReplaceParameters="false" TargetFileName="_variables.scss">_variables.scss</ProjectItem>
-        </Folder>
-        <Folder Name="themes" TargetFolderName="themes">
-          <ProjectItem ReplaceParameters="false" TargetFileName="_brand.scss">_brand.scss</ProjectItem>
-          <ProjectItem ReplaceParameters="false" TargetFileName="_custom.scss">_brand.scss</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="_overrides.scss">_overrides.scss</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="false" TargetFileName="main.scss">main.scss</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="platform.scss">platform.scss</ProjectItem>
@@ -157,7 +147,6 @@
         </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="App.ts">App.ts</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="imports.ts">imports.ts</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.ts">platformOverrides.ts</ProjectItem>
         <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
       </Folder>
       <Folder Name="www" TargetFolderName="www">
@@ -184,6 +173,9 @@
         <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="20" TargetFileName="index.html">index.html</ProjectItem>
       </Folder>
       <ProjectItem ReplaceParameters="true" TargetFileName="config.xml">config.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="gulpfile.js">gulpfile.js</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="bower.json">bower.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="taco.json">taco.json</ProjectItem>
     </Project>
   </TemplateContent>

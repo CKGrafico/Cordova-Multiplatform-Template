@@ -9,3 +9,13 @@ C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Stu
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.pdb
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\obj\Debug\extension.vsixmanifest
 C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Cordova-18_8_2015-22_13_50.zip
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\license.txt
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\thumbnail.PNG
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\__TemplateIcon.ico
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\Visual Studio Template.vsix
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\extension.vsixmanifest
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.csprojResolveAssemblyReference.cache
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.dll
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.pdb
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\extension.vsixmanifest
+C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Cordova-12_9_2015-18_38_6.zip

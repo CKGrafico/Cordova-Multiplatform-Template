@@ -17,7 +17,7 @@
 
 **[Download template from VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96) to use with Visual Studio 2015 RC** 
 
-**[Check the Demo](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
+**[Check the page](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
 
 **[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks) and follow first steps** 
 
