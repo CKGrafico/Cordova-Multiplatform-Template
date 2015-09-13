@@ -1,0 +1,7 @@
+App/node_modules/
+App/bower_components/
+App/platforms/
+App/scss/lib/
+App/
+*.config
+*.sln
