@@ -1,0 +1,26 @@
+{
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-load-plugins": "*",
+    "gulp-clean": "~0.2.4",
+    "gulp-htmlbuild": "*",
+    "gulp-concat": "*",
+    "gulp-clone": "*",
+    "gulp-rename": "*",
+    "gulp-inject": "*",
+    "gulp-minify-css": "*",
+    "gulp-minify-html": "~0.1.0",
+    "gulp-sass": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*",
+    "gulp-usemin": "~0.3.2",
+    "gulp-bower": "*",
+    "gulp-zip": "*",
+    "main-bower-files": "*",
+    "gulp-typescript": "*",
+	"run-sequence": "~1.0.1"
+  },
+  "main": "gulpfile.js"
+}
