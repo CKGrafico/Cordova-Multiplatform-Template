@@ -5,17 +5,14 @@ App/*.sln.ide
 App/Appp.v14.suo
 App/*.jsproj.user
 App/.vs/
-App/ts/lib
+App/scripts/lib
 App/platforms
 App/www/js/**/*.js
 App/www/js/**/*.map
 App/www/fonts/lib
 App/www/scripts
 App/scss/lib
-Tasks/node_modules
-Tasks/.ntvs_analysis.dat
-Tasks/.ntvs_analysis.dat.temp
-Tasks/bower_components
+Test/obj/
 Test/node_modules
 Test/.ntvs_analysis.dat
 Test/.ntvs_analysis.dat.temp
@@ -24,21 +21,11 @@ Visual Studio Template/bin/
 Visual Studio Template/obj/
 App/www/css/main.css
 App/www/css/platform.css
-App.sln
-_TemplateIcon.ico
-CordovaMultiplatform.vstemplate
-Visual Studio Template/
-Tasks/Cordova_Node.vstemplate
-Tasks/Tasks.njsproj
-App/App.jsproj
-App/Apps.jsproj.user
-App/changeList.json
-App/Cordova_App.vstemplate
-App/jsFileList.json
-App/Project_Readme.html
-App/taco.json
-*.njsproj
+App/node_modules/gulp-typescript/node_modules/vinyl-fs/node_modules/
 App/node_modules/
-App/bower_components/DefinitelyTyped/pleasejs/please-tests.ts
 App/bower_components/
-App/scripts/lib/
+*.vstemplate
+App/changeList.json
+*.sln
+*.jsproj
+App/jsFileList.json
