@@ -39,9 +39,8 @@ a:hover, a:active {
     background-color: #1AA8D0;
     color: white;
     height: auto;
-    min-height: 100%;
+    min-height: 510px;
     text-align: center;
-    width: 100%;
 }
 
 .header-title {
@@ -172,4 +171,33 @@ a:hover, a:active {
 
 .logo-apple {
     animation: logo-apple 5s linear infinite;
+}
+
+.content {
+    background: #F5F5F5;
+    border-top: 4px solid white;
+}
+
+.card {
+    display: block;
+    margin: 0 auto;
+    max-width: 980px;
+    width: 100%;
+}
+
+.platforms-row {
+    list-style: none;
+}
+
+.platforms-title {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.platforms-image {
+    background-repeat: no-repeat;
+}
+
+.platforms-image--tabsAndroid {
+    background-image: url('images/samples/tabs-android.png');
 }
