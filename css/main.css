@@ -222,8 +222,6 @@ a:hover, a:active {
 }
 
 .platforms-image {
-    background-position: center 0;
-    background-repeat: no-repeat;
     display: none;
     height: 760px;
     overflow: hidden;
@@ -231,54 +229,154 @@ a:hover, a:active {
     width: 400px;
 }
 
+.platforms-image::before, .platforms-image::after {
+    background-position: center 0;
+    background-repeat: no-repeat;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    opacity: 0.35;
+    top: 0;
+    width: 100%;
+}
+
+.platforms-image::after {
+    opacity: 1;
+}
+
+.platforms-image:hover:after {
+    background-position: center 0 !important;
+    height: 100% !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+}
+
 .platforms-image--selected {
     display: block;
 }
 
-.platforms-image--tabsAndroid {
+.platforms-image--tabsAndroid::before, .platforms-image--tabsAndroid::after {
     background-image: url('../images/samples/home_android.png');
 }
 
-.platforms-image--tabsIos {
+.platforms-image--tabsAndroid::after {
+    background-position-y: -90px;
+    height: 100px;
+    top: 90px;
+}
+
+.platforms-image--tabsIos::before, .platforms-image--tabsIos::after {
     background-image: url('../images/samples/home_ios.png');
 }
 
-.platforms-image--tabsWindows {
+.platforms-image--tabsIos::after {
+    background-position-y: -610px;
+    height: 90px;
+    top: 610px;
+}
+
+.platforms-image--tabsWindows::before, .platforms-image--tabsWindows::after {
     background-image: url('../images/samples/home_windows.png');
 }
 
-.platforms-image--slideAndroid {
+.platforms-image--tabsWindows::after {
+    background-position-y: -90px;
+    height: 100px;
+    top: 90px;
+}
+
+.platforms-image--slideAndroid::before, .platforms-image--slideAndroid::after {
     background-image: url('../images/samples/slide_android.png');
 }
 
-.platforms-image--slideIos {
+.platforms-image--slideAndroid::after {
+    background-position-x: 100px;
+    left: -100px;
+}
+
+.platforms-image--slideIos::before, .platforms-image--slideIos::after {
     background-image: url('../images/samples/slide_ios.png');
 }
 
-.platforms-image--slideWindows {
+.platforms-image--slideIos::after {
+    background-position-x: 100px;
+    left: -100px;
+}
+
+.platforms-image--slideWindows::before, .platforms-image--slideWindows::after {
     background-image: url('../images/samples/slide_windows.png');
 }
 
-.platforms-image--backAndroid {
+.platforms-image--slideWindows::after {
+    background-position-y: -90px;
+    height: 500px;
+    top: 90px;
+}
+
+.platforms-image--backAndroid::before, .platforms-image--backAndroid::after {
     background-image: url('../images/samples/back_android.png');
 }
 
-.platforms-image--backIos {
+.platforms-image--backAndroid::after {
+    background-position-y: -90px;
+    background-position-x: 300px;
+    height: 70px;
+    top: 90px;
+    left: -300px;
+}
+
+.platforms-image--backIos::before, .platforms-image--backIos::after {
     background-image: url('../images/samples/back_ios.png');
 }
 
-.platforms-image--backWindows {
+.platforms-image--backIos::after {
+    background-position-y: -90px;
+    background-position-x: 300px;
+    height: 70px;
+    top: 90px;
+    left: -300px;
+}
+
+.platforms-image--backWindows::before, .platforms-image--backWindows::after {
     background-image: url('../images/samples/back_windows.png');
 }
 
-.platforms-image--actionAndroid {
+.platforms-image--backWindows::after {
+    background-position-y: -670px;
+    background-position-x: 280px;
+    height: 70px;
+    top: 670px;
+    left: -280px;
+}
+
+.platforms-image--actionAndroid::before, .platforms-image--actionAndroid::after {
     background-image: url('../images/samples/actions_android.png');
 }
 
-.platforms-image--actionIos {
+.platforms-image--actionAndroid::after {
+    background-position-y: -90px;
+    height: 60px;
+    top: 90px;
+}
+
+.platforms-image--actionIos::before, .platforms-image--actionIos::after {
     background-image: url('../images/samples/actions_ios.png');
 }
 
-.platforms-image--actionWindows {
+.platforms-image--actionIos::after {
+    background-position-y: -90px;
+    height: 60px;
+    top: 90px;
+}
+
+.platforms-image--actionWindows::before, .platforms-image--actionWindows::after {
     background-image: url('../images/samples/actions_windows.png');
+}
+
+.platforms-image--actionWindows::after {
+    background-position-y: -610px;
+    height: 70px;
+    top: 610px;
 }
