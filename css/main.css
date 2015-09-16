@@ -176,13 +176,23 @@ a:hover, a:active {
 .content {
     background: #F5F5F5;
     border-top: 4px solid white;
+    padding-top: 20px;
 }
 
 .card {
     display: block;
     margin: 0 auto;
-    max-width: 980px;
+    max-width: 1260px;
     width: 100%;
+}
+
+.card-title {
+    font-size: 2.4em;
+    margin-bottom: 20px;
+}
+
+.card-title::before {
+    content: '- ';
 }
 
 .platforms-row {
@@ -191,13 +201,84 @@ a:hover, a:active {
 
 .platforms-title {
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2.1em;
+}
+
+.platforms-item {
+    border-radius: 15px;
+    color: #616161;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.platforms-item--selected {
+    color: #3E3E3E;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.platforms-feature {
+    font-size: 1.3em;
 }
 
 .platforms-image {
+    background-position: center 0;
     background-repeat: no-repeat;
+    display: none;
+    height: 760px;
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+}
+
+.platforms-image--selected {
+    display: block;
 }
 
 .platforms-image--tabsAndroid {
-    background-image: url('images/samples/tabs-android.png');
+    background-image: url('../images/samples/home_android.png');
+}
+
+.platforms-image--tabsIos {
+    background-image: url('../images/samples/home_ios.png');
+}
+
+.platforms-image--tabsWindows {
+    background-image: url('../images/samples/home_windows.png');
+}
+
+.platforms-image--slideAndroid {
+    background-image: url('../images/samples/slide_android.png');
+}
+
+.platforms-image--slideIos {
+    background-image: url('../images/samples/slide_ios.png');
+}
+
+.platforms-image--slideWindows {
+    background-image: url('../images/samples/slide_windows.png');
+}
+
+.platforms-image--backAndroid {
+    background-image: url('../images/samples/back_android.png');
+}
+
+.platforms-image--backIos {
+    background-image: url('../images/samples/back_ios.png');
+}
+
+.platforms-image--backWindows {
+    background-image: url('../images/samples/back_windows.png');
+}
+
+.platforms-image--actionAndroid {
+    background-image: url('../images/samples/actions_android.png');
+}
+
+.platforms-image--actionIos {
+    background-image: url('../images/samples/actions_ios.png');
+}
+
+.platforms-image--actionWindows {
+    background-image: url('../images/samples/actions_windows.png');
 }
