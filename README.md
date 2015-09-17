@@ -19,7 +19,7 @@
 
 **[Check the page](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
 
-**[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks) and follow first steps** 
+**[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/App/README.md) and follow first steps** 
 
 ![Template UI](http://i.imgur.com/49FJsty.png)
 
