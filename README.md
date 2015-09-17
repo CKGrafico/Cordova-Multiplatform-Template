@@ -2,7 +2,7 @@
 
 **Download from:**
 
-[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B14.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+[![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B20.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 [![Ionic Market](https://img.shields.io/badge/Ionic%20Market◢-.starter-4087fb.svg)](http://market.ionic.io/starters/multiplatform)
 [![Github](https://img.shields.io/badge/Github◢-.zip-74C558.svg)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/archive/master.zip)
 
@@ -17,11 +17,11 @@
 
 **[Download template from VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96) to use with Visual Studio 2015 RC** 
 
-**[Check the Demo](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
+**[Check the page](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
 
 **[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks) and follow first steps** 
 
-![Template UI](http://i.imgur.com/yyW277j.png)
+![Template UI](http://i.imgur.com/49FJsty.png)
 
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)

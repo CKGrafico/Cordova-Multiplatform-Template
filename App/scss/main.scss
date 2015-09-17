@@ -1,10 +1,11 @@
-﻿// Lib
-@import 'lib/ionic/release/css/ionic';
-@import "helpers/variables";
+﻿// Overrides
+@import "helpers/overrides";
 
-// themes
-@import "themes/custom";
-@import "themes/brand";
+// Lib
+@import "lib/ionic/scss/ionic";
+
+// Helpers
+@import "helpers/variables";
 
 // Styles
 @font-face {

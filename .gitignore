@@ -24,8 +24,10 @@ App/www/css/platform.css
 App/node_modules/gulp-typescript/node_modules/vinyl-fs/node_modules/
 App/node_modules/
 App/bower_components/
-*.vstemplate
+**/*.vstemplate
 App/changeList.json
-*.sln
-*.jsproj
+**/*.sln
+**/*.jsproj
 App/jsFileList.json
+Visual Studio Template/
+__TemplateIcon.ico

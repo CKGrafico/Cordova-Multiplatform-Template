@@ -1,0 +1,10 @@
+{
+    "compilerOptions": { 
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": false,
+        "sourceMap": true,
+        "out": "www/scripts/appbundle.js",
+        "target": "es5"
+    }
+}
