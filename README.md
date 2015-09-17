@@ -21,7 +21,7 @@
 
 **[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/Tasks) and follow first steps** 
 
-![Template UI](http://i.imgur.com/yyW277j.png)
+![Template UI](http://i.imgur.com/49FJsty.png)
 
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)
