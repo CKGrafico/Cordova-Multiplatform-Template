@@ -25,23 +25,11 @@ var paths = {
     www: 'www'
 };
 
-function getCorrectPaths(folder, filesa, filesb) {
-    var cfiles = [];
-    for (var i = 0; i < filesa.length; i++) {
-        cfiles.push(folder + filesa[i]);
-    }
-    if (filesb) {
-        for (var j = 0; j < filesb.length; j++) {
-            cfiles.push(folder + filesb[j]);
-        }
-    }
-    return cfiles;
-}
-
 // Working without Visual Studio
     // 1.- npm install
     // 2.- gulp initialize
     // 3.- gulp watch
+    // 4.- ionic serve
 
 // Working with Visual Studio
     // 1.- npm install
@@ -217,3 +205,16 @@ function getCorrectPaths(folder, filesa, filesb) {
         return gulp.src(dest, {read: false})
             .pipe(plugins.clean({force: true}))
     });
+    
+    function getCorrectPaths(folder, filesa, filesb) {
+        var cfiles = [];
+        for (var i = 0; i < filesa.length; i++) {
+            cfiles.push(folder + filesa[i]);
+        }
+        if (filesb) {
+            for (var j = 0; j < filesb.length; j++) {
+                cfiles.push(folder + filesb[j]);
+            }
+        }
+        return cfiles;
+    }
