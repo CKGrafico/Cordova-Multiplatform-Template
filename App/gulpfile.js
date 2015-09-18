@@ -6,7 +6,7 @@ var mainBowerFiles = require('main-bower-files');
 var tsProject = plugins.typescript.createProject('scripts/tsconfig.json');
 
 var files = {
-    css: 'css/**/*.css',
+    css: ['css/**/*.css'],
     index: 'index.html',
     indexBkp: 'index.html.bkp',
     js: ['scripts/lib/**/*.js', 'scripts/appbundle.js'],
@@ -71,6 +71,12 @@ function getCorrectPaths(folder, filesa, filesb) {
     gulp.task('zip', function () {
         // Zip template (only for dev purposes)
         runSequence('zip:copy', 'zip:compress', 'zip:clean');
+    });
+    
+    gulp.task('watch', function () {
+        runSequence('default');
+        gulp.watch(paths.project + files.scss, ['default:scss']);
+        return gulp.watch(paths.project + files.ts, ['default:ts']);
     });
 
 // Tasks implementation
