@@ -1,9 +1,7 @@
 {
   "name": "App",
   "dependencies": {
-    "ionic": "1.0.0",
-    "DefinitelyTyped": "*",
-    "ionic-typescript-definitions": "*"
+    "ionic": "1.0.0"
   },
   "overrides": {
     "ionic": {
@@ -24,21 +22,6 @@
     },
     "angular-ui-router": {
       "ignore": true
-    },
-    "DefinitelyTyped": {
-      "main": [
-        "angularjs/angular.d.ts",
-        "jquery/jquery.d.ts",
-        "ionic/ionic.d.ts",
-        "angular-ui-router/angular-ui-router.d.ts",
-        "cordova/**/*.ts",
-        "cordova-ionic/**/*.ts"
-      ]
-    },
-    "ionic-typescript-definitions": {
-      "main": [
-        "**/beta14/ionic.d.ts"
-      ]
     }
   }
 }
