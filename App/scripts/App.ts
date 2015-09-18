@@ -3,7 +3,6 @@
 module App {
     'use strict';
 
-    document.addEventListener("deviceready", onDeviceReady, false);
     angular.module('App', ['ionic'])
         .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration])
         .config(['$httpProvider', httpLoadingInterceptor])
@@ -12,9 +11,9 @@ module App {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
     }]);
 
-    export function onDeviceReady() {
+    ionic.Platform.ready(function() {
         angular.bootstrap(document.querySelector('body'), ['App']);
-    }
+    });
 
     // Configure routes
     function statesConfiguration(
