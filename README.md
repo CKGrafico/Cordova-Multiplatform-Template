@@ -14,24 +14,24 @@
 - [Frequently Asked Questions (FAQ)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/wiki/Frequently-Asked-Questions-(FAQ)) 
 
 ###Instructions:
-- With text editor and command line:
-	- Dependencies:
+- #####With text editor and command line:
+	- ######Dependencies:
 		- Apache Cordova
 		- Ionic
 		- Nodejs
 		
-	- First steps:
+	- ######First steps:
 		- Download template from [Ionic Market](http://market.ionic.io/starters/multiplatform)
 		- `npm install` *download node packages* 
 		- `gulp initialize` *download bower and tsd dependencies*
 		- `gulp watch` *or only `gulp` to compile once*
 
-- With [Visual Studio](visualstudio.com)
-	- Dependencies
+- #####With [Visual Studio](visualstudio.com)
+	- ######Dependencies
 		- Visual Studio 2015
 		- Apache Cordova Tools *Check on Visual Studio installation process*
 		
-	- First steps:
+	- ######First steps:
 		- Download template from [VSGallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 		- Create a new project *Type: Typescript > Apache Cordova*
 		- Wait for automatic packages installation
