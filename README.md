@@ -24,18 +24,18 @@
 		- Nodejs
 		
 	- First steps:
-		- Download template from ![Ionic Market](http://market.ionic.io/starters/multiplatform)
+		- Download template from [Ionic Market](http://market.ionic.io/starters/multiplatform)
 		- `npm install` *download node packages* 
 		- `gulp initialize` *download bower and tsd dependencies*
 		- `gulp watch` *or only `gulp` to compile once*
 
-- With ![Visual Studio](visualstudio.com)
+- With [Visual Studio](visualstudio.com)
 	- Dependencies
 		- Visual Studio 2015
 		- Apache Cordova Tools *Check on Visual Studio installation process*
 		
 	- First steps:
-		- Download template from ![VSGallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+		- Download template from [VSGallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 		- Create a new project *Type: Typescript > Apache Cordova*
 		- Wait for automatic packages installation
 		- Build
