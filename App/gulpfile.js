@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='default-vs' />
+/// <binding BeforeBuild='initialize, default-vs' />
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
@@ -33,7 +33,6 @@ var paths = {
 
 // Working with Visual Studio
     // 1.- npm install
-    // 2.- gulp initialize
 
 // Tasks definition
     gulp.task('default', function () {
@@ -185,7 +184,7 @@ var paths = {
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/scripts'));
             
-        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/css/**/*.*', '!www/scripts/appbundle.*'])
+        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/scripts/lib/**/*.*', '!www/css/**/*.*', '!www/scripts/appbundle.*'])
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/www'));
     });

@@ -23,3 +23,5 @@ App/www/css/main.css
 App/www/css/platform.css
 App/node_modules/
 App/bower_components
+App/scripts/www/scripts/appbundle.js
+App/scripts/www/scripts/appbundle.js.map

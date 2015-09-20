@@ -30,14 +30,6 @@
             </Folder>
           </Folder>
         </Folder>
-        <Folder Name="ios" TargetFolderName="ios">
-          <Folder Name="templates" TargetFolderName="templates">
-            <Folder Name="partials" TargetFolderName="partials">
-              <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
-              <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
-            </Folder>
-          </Folder>
-        </Folder>
         <Folder Name="windows" TargetFolderName="windows">
           <Folder Name="css" TargetFolderName="css">
             <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
@@ -56,7 +48,7 @@
       <Folder Name="plugins" TargetFolderName="plugins">
         <ProjectItem ReplaceParameters="false" TargetFileName="android.json">android.json</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="windows.json">windows.json</ProjectItem>
-        <ProjectItem ReplaceParameters="false" TargetFileName="windows.json">fetch.json</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="fetch.json">fetch.json</ProjectItem>
       </Folder>
       <Folder Name="res" TargetFolderName="res">
         <Folder Name="icons" TargetFolderName="icons">
@@ -172,11 +164,12 @@
         </Folder>
         <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="20" TargetFileName="index.html">index.html</ProjectItem>
       </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="bower.json">bower.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="config.xml">config.xml</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="gulpfile.js">gulpfile.js</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="bower.json">bower.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="taco.json">taco.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="tsd.json">tsd.json</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>

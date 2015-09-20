@@ -44,7 +44,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ProjectTemplates\Apache Cordova Apps\Cordova-12_9_2015-18_38_6.zip">
+    <Content Include="ProjectTemplates\Apache Cordova Apps\Cordova-20_9_2015-23_14_19.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
