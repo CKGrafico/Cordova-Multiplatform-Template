@@ -35,3 +35,6 @@
 .icon-github:before {
 	content: "\e601";
 }
+.icon-docs:before {
+	content: "\e604";
+}
