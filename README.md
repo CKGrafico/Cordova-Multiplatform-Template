@@ -25,6 +25,7 @@
 		- `npm install` *download node packages* 
 		- `gulp initialize` *download bower and tsd dependencies*
 		- `gulp watch` *or only `gulp` to compile once*
+		- `ionic serve` or `cordova build 'platform'`
 
 - #####With [Visual Studio](visualstudio.com)
 	- ######Dependencies
