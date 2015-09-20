@@ -11,7 +11,7 @@ module App {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
     }]);
 
-    ionic.Platform.ready(function() {
+    window['ionic'].Platform.ready(function() {
         angular.bootstrap(document.querySelector('body'), ['App']);
     });
 
@@ -19,7 +19,7 @@ module App {
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider,
         $urlRouterProvider: ng.ui.IUrlRouterProvider,
-        $ionicConfigProvider: Ionic.IConfigProvider
+        $ionicConfigProvider: ionic.utility.IonicConfigProvider
         ): void {
 
         // force native scroll
@@ -103,7 +103,7 @@ module App {
     }
 
     // Configure interceptor actions
-    function httpLoadingInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: Ionic.ILoading) {
+    function httpLoadingInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: ionic.loading.IonicLoadingService) {
         $rootScope.$on('loading:show', function () {
             $ionicLoading.show({ templateUrl: "templates/partials/loading.html" })
         })

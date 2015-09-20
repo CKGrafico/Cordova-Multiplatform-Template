@@ -11,8 +11,8 @@ module App {
         ];
 
         constructor(
-            private $ionicHistory: Ionic.IHistory,
-            private $ionicTabsDelegate: Ionic.ITabsDelegate
+            private $ionicHistory: ionic.navigation.IonicHistoryService,
+            private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate
             ) {
 
             document.addEventListener('backbutton', e => this.checkBack(e), false);

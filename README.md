@@ -1,5 +1,7 @@
 ##Cordova Multiplatform Template
 
+**[Cordova Multiplatform Template Website](http://cordova-multiplatform-template.js.org)**
+
 **Download from:**
 
 [![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B20.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
@@ -13,28 +15,36 @@
 [![issues](https://img.shields.io/github/issues/CKGrafico/Cordova-Multiplatform-Template.svg?label=Issues)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/issues)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?label=License)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/blob/master/LICENSE)
 
-**[Download latest release](https://github.com/CKGrafico/Cordova-Multiplatform-Template/releases/latest) for Cordova / Phonegap / Ionic and any Editor**
+**Instructions:**
 
-**[Download template from VS Gallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96) to use with Visual Studio 2015 RC** 
+- With text editor and command line:
+	- Dependencies:
+		- Apache Cordova
+		- Ionic
+		- Nodejs
+		
+	- First steps:
+		- Download template from ![Ionic Market](http://market.ionic.io/starters/multiplatform)
+		- `npm install` *download node packages* 
+		- `gulp initialize` *download bower and tsd dependencies*
+		- `gulp watch` *or only `gulp` to compile once*
 
-**[Check the page](http://cordova-multiplatform-template.js.org) for iOS, Android, Windows Phone** 
-
-**[Check instructions](https://github.com/CKGrafico/Cordova-Multiplatform-Template/tree/master/App/README.md) and follow first steps** 
-
+- With ![Visual Studio](visualstudio.com)
+	- Dependencies
+		- Visual Studio 2015
+		- Apache Cordova Tools *Check on Visual Studio installation process*
+		
+	- First steps:
+		- Download template from ![VSGallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
+		- Create a new project *Type: Typescript > Apache Cordova*
+		- Wait for automatic packages installation
+		- Build
+		
 ![Template UI](http://i.imgur.com/49FJsty.png)
 
 ###Technology
 - [Apache Cordova](https://cordova.apache.org/)
 - [Ionic Framework](http://ionicframework.com/)
-
-###Dependencies
-- [GulpJS](http://gulpjs.com)
-	- [NodeJS](http://nodejs.com)
-- [Ionic Framework](http://ionicframework.com/)
-	- [Angular < 2.0](http://angularjs.org)
-- [SASS](http://sass-lang.com/)
-- [TypeScript](http://typescriptlang.com/)
-- [Visual Studio](http://visualstudio.com/free) (Optional)
 
 ###Collaborators
 - [Quique Fdez](http://twitter.com/ckgrafico)

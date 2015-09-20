@@ -1,4 +1,4 @@
-﻿/// <binding BeforeBuild='default-vs' />
+/// <binding BeforeBuild='initialize, default-vs' />
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
@@ -25,27 +25,14 @@ var paths = {
     www: 'www'
 };
 
-function getCorrectPaths(folder, filesa, filesb) {
-    var cfiles = [];
-    for (var i = 0; i < filesa.length; i++) {
-        cfiles.push(folder + filesa[i]);
-    }
-    if (filesb) {
-        for (var j = 0; j < filesb.length; j++) {
-            cfiles.push(folder + filesb[j]);
-        }
-    }
-    return cfiles;
-}
-
 // Working without Visual Studio
     // 1.- npm install
     // 2.- gulp initialize
     // 3.- gulp watch
+    // 4.- ionic serve
 
 // Working with Visual Studio
     // 1.- npm install
-    // 2.- gulp initialize
 
 // Tasks definition
     gulp.task('default', function () {
@@ -60,7 +47,7 @@ function getCorrectPaths(folder, filesa, filesb) {
     
     gulp.task('initialize', function () {
         // Download and install bower packages
-        runSequence('initialize:bower');
+        runSequence('initialize:tsd', 'initialize:bower');
     });
     
     gulp.task('build', function () {
@@ -85,6 +72,10 @@ function getCorrectPaths(folder, filesa, filesb) {
         return plugins.bower();
     });
     
+    gulp.task('initialize:tsd', function () {
+        return gulp.src('tsd.json').pipe(plugins.tsd());
+    });
+    
     // Move bower packages to each folder
     gulp.task('initialize:bower', ['initialize:bower:install'], function () {
         gulp.src(mainBowerFiles('**/*.scss'), { base: 'bower_components' })
@@ -92,10 +83,7 @@ function getCorrectPaths(folder, filesa, filesb) {
             
         gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
             .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
-        
-        gulp.src(mainBowerFiles('**/*.d.ts'), { base: 'bower_components' })
-            .pipe(gulp.dest(paths.project + paths.ts + '/lib/typings'));
-        
+
         return gulp.src(mainBowerFiles('**/fonts/**.*'), { base: 'bower_components' })
             .pipe(gulp.dest(paths.project + paths.www + '/fonts/lib'));
         
@@ -196,7 +184,7 @@ function getCorrectPaths(folder, filesa, filesb) {
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/scripts'));
             
-        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/css/**/*.*', '!www/scripts/appbundle.*'])
+        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/scripts/lib/**/*.*', '!www/css/**/*.*', '!www/scripts/appbundle.*'])
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/www'));
     });
@@ -216,3 +204,16 @@ function getCorrectPaths(folder, filesa, filesb) {
         return gulp.src(dest, {read: false})
             .pipe(plugins.clean({force: true}))
     });
+    
+    function getCorrectPaths(folder, filesa, filesb) {
+        var cfiles = [];
+        for (var i = 0; i < filesa.length; i++) {
+            cfiles.push(folder + filesa[i]);
+        }
+        if (filesb) {
+            for (var j = 0; j < filesb.length; j++) {
+                cfiles.push(folder + filesb[j]);
+            }
+        }
+        return cfiles;
+    }
