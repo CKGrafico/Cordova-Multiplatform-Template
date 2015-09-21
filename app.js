@@ -1,4 +1,4 @@
-(function($){
+(function(g, $){
 	'use strict';
 	
 	var classes = {
@@ -6,6 +6,7 @@
 		image: 'platforms-image--selected'
 	};
 	
+	// Items hover
 	$('.platforms-item').on('click, mouseover', function() {
 		var $this = $(this);
 		var $platforms = $this.closest('.platforms');
@@ -23,4 +24,25 @@
 			.eq(index)
 				.addClass(classes.image);
 	});
-})(jQuery);
+	
+	// Preload images
+	var images = ['actions', 'back', 'home', 'slide'];
+	var platforms = ['android', 'ios', 'windows'];
+	var l = images.length;
+	var m = platforms.length;
+	var iterations = l * m;
+	var doneIterations = 0;
+	
+	for(var i = 0; i < l; i++) {
+		for(var j = 0; j < m; j++) {
+			$('<img/>').attr('src', 'images/samples/' + images[i] + '_' + platforms[j] + '.png').on('load', function() {
+				doneIterations++;
+				if(doneIterations === iterations) {
+					$('.loading').removeClass('loading--active');
+				}
+				$(this).remove(); 
+			});
+		}
+	}
+	
+})(this, jQuery);

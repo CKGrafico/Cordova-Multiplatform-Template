@@ -221,6 +221,32 @@ a:hover, a:active {
     font-size: 1.3em;
 }
 
+.loading {
+    color: transparent;
+    position: relative;
+    width: 400px;
+}
+
+.loading--active::before {
+    color: #616161;
+    font-size: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    top: 50%;
+    animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
 .platforms-image {
     display: none;
     height: 760px;

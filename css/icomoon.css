@@ -38,3 +38,7 @@
 .icon-docs:before {
 	content: "\e604";
 }
+.icon-spinner:before {
+	content: "\e605";
+}
+
