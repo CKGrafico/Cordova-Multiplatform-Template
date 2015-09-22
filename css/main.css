@@ -277,6 +277,7 @@ a:hover, a:active {
     left: 0 !important;
     top: 0 !important;
     width: 100% !important;
+    transition: height 0.4s;
 }
 
 .platforms-image--selected {
