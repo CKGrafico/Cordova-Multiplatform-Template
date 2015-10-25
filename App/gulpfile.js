@@ -3,16 +3,16 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var mainBowerFiles = require('main-bower-files');
-var tsProject = plugins.typescript.createProject('scripts/tsconfig.json');
+var tsProject = plugins.typescript.createProject('modules/tsconfig.json');
 
 var files = {
     css: ['css/**/*.css'],
     index: 'index.html',
     indexBkp: 'index.html.bkp',
-    js: ['scripts/lib/**/*.js', 'scripts/appbundle.js'],
-    maps: ['scripts/appbundle.js.map'],
+    js: ['modules/lib/**/*.js', 'modules/appbundle.js'],
+    maps: ['modules/appbundle.js.map'],
     scss: 'scss/*.scss',
-    ts: 'scripts/**/*.ts'
+    ts: 'modules/**/*.ts'
 };
 
 var paths = {
@@ -20,8 +20,8 @@ var paths = {
     css: 'css',
     project: '',
     scss: 'scss',
-    ts: 'scripts',
-    js: 'scripts',
+    ts: 'modules',
+    js: 'modules',
     www: 'www'
 };
 
@@ -135,7 +135,7 @@ var paths = {
         return gulp.src(paths.project + paths.www + '/' + files.index)
             .pipe(plugins.inject(
             gulp.src(getCorrectPaths(paths.project + paths.www + '/', files.js))
-                    .pipe(plugins.concat('scripts/build.min.js'))
+                    .pipe(plugins.concat('modules/build.min.js'))
                     .pipe(plugins.uglify())
                     .pipe(gulp.dest(paths.project + paths.www)),
                 {
@@ -180,11 +180,11 @@ var paths = {
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/scss'));
             
-        gulp.src(['scripts/**/*.*', '!scripts/lib/**/*.*'])
+        gulp.src(['modules/**/*.*', '!modules/lib/**/*.*'])
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/scripts'));
             
-        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/scripts/lib/**/*.*', '!www/css/**/*.*', '!www/scripts/appbundle.*'])
+        return gulp.src(['www/**/*.*', '!www/fonts/lib/**/*.*', '!www/modules/lib/**/*.*', '!www/css/**/*.*', '!www/modules/appbundle.*'])
             .pipe(plugins.clone())
             .pipe(gulp.dest(dest + '/App/www'));
     });

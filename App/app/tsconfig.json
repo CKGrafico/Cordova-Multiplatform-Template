@@ -4,7 +4,7 @@
         "noEmitOnError": true,
         "removeComments": false,
         "sourceMap": true,
-        "out": "www/scripts/appbundle.js",
+        "out": "../www/modules/appbundle.js",
         "target": "es5"
     }
 }

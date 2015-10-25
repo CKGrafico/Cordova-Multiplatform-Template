@@ -25,3 +25,5 @@ App/node_modules/
 App/bower_components
 App/scripts/www/scripts/appbundle.js
 App/scripts/www/scripts/appbundle.js.map
+App/app/typings/
+App/www/modules/

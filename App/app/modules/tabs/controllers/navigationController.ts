@@ -1,6 +1,4 @@
-﻿/// <reference path="../imports.ts" />
-
-module App {
+﻿module Tabs {
     'use strict';
 
     export class NavigationController {
@@ -46,7 +44,8 @@ module App {
         }
     }
 
-    angular.module('App').controller('navigationController', NavigationController);
+    angular.module(Constants.Paths.Tabs)
+        .controller('navigationController', NavigationController);
 
 } 
 

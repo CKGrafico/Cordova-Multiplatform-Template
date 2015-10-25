@@ -1,6 +1,4 @@
-﻿/// <reference path="../imports.ts" />
-
-module App {
+﻿module Actions {
     'use strict';
 
     export class ActionsController {
@@ -25,6 +23,7 @@ module App {
         }
     }
 
-    angular.module('App').controller('actionsController', ActionsController);
+    angular.module(Constants.Paths.Actions.Main.Uri)
+        .controller('actionsController', ActionsController);
 } 
 
