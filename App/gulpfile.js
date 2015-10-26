@@ -9,7 +9,7 @@ var files = {
     css: ['css/**/*.css'],
     index: 'index.html',
     indexBkp: 'index.html.bkp',
-    js: ['modules/lib/**/*.js', 'modules/appbundle.js'],
+    js: ['lib/**/*.js', 'modules/appbundle.js'],
     maps: ['modules/appbundle.js.map'],
     scss: 'scss/*.scss',
     ts: 'modules/**/*.ts'
@@ -79,13 +79,13 @@ var paths = {
     // Move bower packages to each folder
     gulp.task('initialize:bower', ['initialize:bower:install'], function () {
         gulp.src(mainBowerFiles('**/*.scss'), { base: 'bower_components' })
-            .pipe(gulp.dest(paths.project + paths.scss + '/lib'));
+            .pipe(gulp.dest(paths.project + paths.scss + '/vendor'));
             
         gulp.src(mainBowerFiles('**/*.js'), { base: 'bower_components' })
-            .pipe(gulp.dest(paths.project + paths.www + '/' + paths.js + '/lib'));
+            .pipe(gulp.dest(paths.project + paths.www + '/lib/js'));
 
         return gulp.src(mainBowerFiles('**/fonts/**.*'), { base: 'bower_components' })
-            .pipe(gulp.dest(paths.project + paths.www + '/fonts/lib'));
+            .pipe(gulp.dest(paths.project + paths.www + '/lib/fonts'));
         
         //return gulp.src(mainBowerFiles(['**/*.css', '**/*.scss']), { base: 'bower_components' })
             //.pipe(plugins.minifyCss({ keepSpecialComments: 0 }))// Because sass import fails with variables in comments
