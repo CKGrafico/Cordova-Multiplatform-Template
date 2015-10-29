@@ -1,19 +1,40 @@
 ﻿var root = './';
+var www = root + 'www/';
 
 module.exports = {
+    root: root,
 
     index: {
-        path: root + 'www/',
-        source: root + 'www/index.html',
-        backup: root + 'www/index.html.bkp'
+        path: www,
+        source: www + 'index.html'
+    },
+
+    css: {
+        path: {
+            debug: www + 'debug/',
+            release: www + 'release/'
+        },
+        sources: {
+            debug: www + 'debug/**/*.css',
+            release: www + 'release/**/*.css'
+        }
     },
 
     fonts: {
-        bower: root + 'www/fonts/'
+        bower: www + 'fonts/'
     },
 
     js: {
-        bower: root + 'www/lib/'
+        path: {
+            bower: www + 'libs/',
+            debug: www + 'debug/',
+            release: www + 'release/'
+        },
+        sources: {
+            bower: www + 'libs/**/*.js',
+            debug: www + 'debug/**/*.js',
+            release: www + 'release/**/*.js'
+        }
     },
 
     scss: {
@@ -30,6 +51,7 @@ module.exports = {
     ts: {
         path: root,
         sources: [root + 'app.ts', root + 'constants/**/.ts', root + 'modules/**/.ts'],
-        tsd: root + 'tsd.json'
+        tsd: root + 'tsd.json',
+        tsconfig: root + 'tsconfig.json'
     }
 };

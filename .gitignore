@@ -27,3 +27,8 @@ App/scripts/www/scripts/appbundle.js
 App/scripts/www/scripts/appbundle.js.map
 App/app/typings/
 App/www/modules/
+App/typings/
+App/www/fonts/
+App/scss/vendor/
+App/www/libs/
+App/www/debug/

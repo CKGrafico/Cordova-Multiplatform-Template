@@ -1,6 +1,7 @@
 ﻿var gulp = require('gulp');
-var paths = require('paths');
+var paths = require('./paths');
 var plugins = require('gulp-load-plugins')();
+var mainBowerFiles = require('main-bower-files');
 var base = 'bower_components';
 
 // Download bower dependencies
@@ -18,7 +19,7 @@ gulp.task('initialize:bower', ['initialize:bower:install'], function () {
         .pipe(gulp.dest(paths.scss.bower));
 
     gulp.src(mainBowerFiles('**/*.js'), { base: base })
-        .pipe(gulp.dest(paths.js.bower));
+        .pipe(gulp.dest(paths.js.path.bower));
 
     return gulp.src(mainBowerFiles('**/fonts/**.*'), { base: base })
         .pipe(gulp.dest(paths.fonts.bower));

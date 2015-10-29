@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,9 +6,10 @@
     <title>My App</title>
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/platform.css">
+    <link rel="stylesheet" href="debug/main.css">
     <!-- endinject -->
+
+    <link href="platform.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -25,16 +26,13 @@
         </ion-side-menu>
     </ion-side-menus>
 
-
-
     <!-- JS dependencies -->
     <script src="cordova.js"></script>
-    <script src="scripts/platformOverrides.js"></script>
+    <script src="platformOverrides.js"></script>
 
     <!-- inject:js -->
-    <script src="modules/lib/ionic/release/js/ionic.bundle.js"></script>
-    <script src="modules/appbundle.js"></script>
+    <script src="libs/ionic/release/js/ionic.bundle.js"></script>
+    <script src="debug/app.js"></script>
     <!-- endinject -->
-
 </body>
 </html>
