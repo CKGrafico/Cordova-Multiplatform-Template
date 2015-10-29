@@ -1,8 +1,8 @@
 ﻿module Side {
     'use strict';
 
-    angular.module(Constants.Paths.Side.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Side.Module, [])
+        .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
@@ -12,7 +12,7 @@
                 url: '/' + Constants.Paths.Side.Main.Uri,
                 views: {
                     'left-tab': {
-                        templateUrl: 'views/' + Constants.Paths.Side.Main.Uri + '.html'
+                        templateUrl: Constants.Paths.Modules + 'side/views/' + Constants.Paths.Side.Main.Uri + '.html'
                     }
                 }
             });

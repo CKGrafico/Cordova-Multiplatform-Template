@@ -44,7 +44,10 @@ module.exports = {
     },
 
     templates: {
-        path: root + 'modules/',
+        path: {
+            debug: root + 'modules/',
+            release: www + 'modules/'
+        },
         sources: root + 'modules/**/*.html'
     },
 

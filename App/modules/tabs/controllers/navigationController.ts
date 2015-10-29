@@ -3,11 +3,6 @@
 
     export class NavigationController {
 
-        public static $inject = [
-            '$ionicHistory',
-            '$ionicTabsDelegate'
-        ];
-
         constructor(
             private $ionicHistory: ionic.navigation.IonicHistoryService,
             private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate

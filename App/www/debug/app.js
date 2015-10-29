@@ -1,3 +1,45 @@
+var Constants;
+(function (Constants) {
+    'use strict';
+    var base = 'tabs';
+    Constants.Paths = {
+        Tabs: base,
+        Modules: '../modules/',
+        Side: {
+            Module: 'side',
+            Main: {
+                Path: base + '.left',
+                Uri: 'left'
+            }
+        },
+        Home: {
+            Module: 'home',
+            Main: {
+                Path: base + '.home',
+                Uri: 'home'
+            },
+            Scroll: {
+                Path: base + '.scroll',
+                Uri: 'scroll'
+            }
+        },
+        Actions: {
+            Module: 'actions',
+            Main: {
+                Path: base + '.actions',
+                Uri: 'actions'
+            },
+        },
+        Buttons: {
+            Module: 'buttons',
+            Main: {
+                Path: base + '.buttons',
+                Uri: 'buttons'
+            }
+        }
+    };
+})(Constants || (Constants = {}));
+/// <reference path="constants/paths.ts" />
 var App;
 (function (App) {
     'use strict';
@@ -5,18 +47,18 @@ var App;
         .module('app', [
         'ionic',
         'core',
-        'tabs',
-        'side',
-        'home',
-        'actions',
-        'buttons'
+        Constants.Paths.Tabs,
+        Constants.Paths.Side.Module,
+        Constants.Paths.Home.Module,
+        Constants.Paths.Actions.Module,
+        Constants.Paths.Buttons.Module
     ])
-        .config(['$httpProvider', httpLoadingInterceptor])
-        .run(['$rootScope', '$ionicLoading', httpLoadingInterceptorActions])
-        .config(['$compileProvider', function ($compileProvider) {
-            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/)
-                .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration]);
-        }]);
+        .config(httpLoadingInterceptor)
+        .run(httpLoadingInterceptorActions)
+        .config(["$compileProvider", function ($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
+    }])
+        .config(statesConfiguration);
     window['ionic'].Platform.ready(function () {
         angular.bootstrap(document.querySelector('body'), ['app']);
     });
@@ -27,6 +69,7 @@ var App;
         configProvider.scrolling.jsScrolling(false);
         $urlRouterProvider.otherwise('/tabs/home');
     }
+    statesConfiguration.$inject = ["$urlRouterProvider", "$ionicConfigProvider"];
     // Configure interceptor
     function httpLoadingInterceptor($httpProvider) {
         $httpProvider.interceptors.push(['$rootScope', function ($rootScope) {
@@ -42,52 +85,18 @@ var App;
                 };
             }]);
     }
+    httpLoadingInterceptor.$inject = ["$httpProvider"];
     // Configure interceptor actions
     function httpLoadingInterceptorActions($rootScope, $ionicLoading) {
         $rootScope.$on('loading:show', function () {
-            $ionicLoading.show({ templateUrl: 'modules/tabs/templates/loading.html' });
+            $ionicLoading.show({ templateUrl: Constants.Paths.Modules + 'tabs/templates/loading.html' });
         });
         $rootScope.$on('loading:hide', function () {
             $ionicLoading.hide();
         });
     }
+    httpLoadingInterceptorActions.$inject = ["$rootScope", "$ionicLoading"];
 })(App || (App = {}));
-var Constants;
-(function (Constants) {
-    'use strict';
-    var base = 'tabs';
-    Constants.Paths = {
-        Tabs: base,
-        Side: {
-            Main: {
-                Path: base + '.left',
-                Uri: 'left'
-            }
-        },
-        Home: {
-            Main: {
-                Path: base + '.home',
-                Uri: 'home'
-            },
-            Scroll: {
-                Path: base + '.scroll',
-                Uri: 'scroll'
-            }
-        },
-        Actions: {
-            Main: {
-                Path: base + '.actions',
-                Uri: 'actions'
-            },
-        },
-        Buttons: {
-            Main: {
-                Path: base + '.buttons',
-                Uri: 'buttons'
-            }
-        }
-    };
-})(Constants || (Constants = {}));
 var Constants;
 (function (Constants) {
     'use strict';
@@ -97,36 +106,38 @@ var Constants;
 var Actions;
 (function (Actions) {
     'use strict';
-    angular.module(Constants.Paths.Actions.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Actions.Module, [])
+        .config(statesConfiguration);
     function statesConfiguration($stateProvider) {
         $stateProvider
             .state(Constants.Paths.Actions.Main.Path, {
             url: '/' + Constants.Paths.Actions.Main.Uri,
             views: {
                 'actions-tab': {
-                    templateUrl: 'views/' + Constants.Paths.Actions.Main.Uri + '.html'
+                    templateUrl: Constants.Paths.Modules + 'actions/views/' + Constants.Paths.Actions.Main.Uri + '.html'
                 }
             }
         });
     }
+    statesConfiguration.$inject = ["$stateProvider"];
 })(Actions || (Actions = {}));
 var Buttons;
 (function (Buttons) {
     'use strict';
-    angular.module(Constants.Paths.Buttons.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Buttons.Module, [])
+        .config(statesConfiguration);
     function statesConfiguration($stateProvider) {
         $stateProvider
             .state(Constants.Paths.Buttons.Main.Path, {
             url: '/' + Constants.Paths.Buttons.Main.Uri,
             views: {
                 'buttons-tab': {
-                    templateUrl: 'views/' + Constants.Paths.Buttons.Main.Uri + '.html'
+                    templateUrl: Constants.Paths.Modules + 'buttons/views/' + Constants.Paths.Buttons.Main.Uri + '.html'
                 }
             }
         });
     }
+    statesConfiguration.$inject = ["$stateProvider"];
 })(Buttons || (Buttons = {}));
 var Core;
 (function (Core) {
@@ -136,15 +147,15 @@ var Core;
 var Home;
 (function (Home) {
     'use strict';
-    angular.module(Constants.Paths.Home.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Home.Module, [])
+        .config(statesConfiguration);
     function statesConfiguration($stateProvider) {
         $stateProvider
             .state(Constants.Paths.Home.Main.Path, {
             url: '/' + Constants.Paths.Home.Main.Uri,
             views: {
                 'home-tab': {
-                    templateUrl: 'views/' + Constants.Paths.Home.Main.Uri + '.html'
+                    templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Main.Uri + '.html'
                 }
             }
         })
@@ -152,42 +163,45 @@ var Home;
             url: '/' + Constants.Paths.Home.Main.Uri,
             views: {
                 'home-tab': {
-                    templateUrl: 'views/' + Constants.Paths.Home.Scroll.Uri + '.html'
+                    templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Scroll.Uri + '.html'
                 }
             }
         });
     }
+    statesConfiguration.$inject = ["$stateProvider"];
 })(Home || (Home = {}));
 var Side;
 (function (Side) {
     'use strict';
-    angular.module(Constants.Paths.Side.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Side.Module, [])
+        .config(statesConfiguration);
     function statesConfiguration($stateProvider) {
         $stateProvider
             .state(Constants.Paths.Side.Main.Path, {
             url: '/' + Constants.Paths.Side.Main.Uri,
             views: {
                 'left-tab': {
-                    templateUrl: 'views/' + Constants.Paths.Side.Main.Uri + '.html'
+                    templateUrl: Constants.Paths.Modules + 'side/views/' + Constants.Paths.Side.Main.Uri + '.html'
                 }
             }
         });
     }
+    statesConfiguration.$inject = ["$stateProvider"];
 })(Side || (Side = {}));
 var Tabs;
 (function (Tabs) {
     'use strict';
     angular.module(Constants.Paths.Tabs, [])
-        .config(['$stateProvider', statesConfiguration]);
+        .config(statesConfiguration);
     function statesConfiguration($stateProvider) {
         $stateProvider
             .state(Constants.Paths.Tabs, {
             url: '/' + Constants.Paths.Tabs,
             abstract: true,
-            templateUrl: 'templates/' + Constants.Paths.Tabs + '.html'
+            templateUrl: Constants.Paths.Modules + 'tabs/templates/' + Constants.Paths.Tabs + '.html'
         });
     }
+    statesConfiguration.$inject = ["$stateProvider"];
 })(Tabs || (Tabs = {}));
 var Actions;
 (function (Actions) {
@@ -200,12 +214,10 @@ var Actions;
                 console.log(result);
             });
         }
+        ActionsController.$inject = ["$http"];
         ActionsController.prototype.exampleAction = function () {
             this.property = 'Random ' + Math.floor(Math.random() * 100 + 1);
         };
-        ActionsController.$inject = [
-            '$http'
-        ];
         return ActionsController;
     })();
     Actions.ActionsController = ActionsController;
@@ -222,6 +234,7 @@ var Tabs;
             this.$ionicTabsDelegate = $ionicTabsDelegate;
             document.addEventListener('backbutton', function (e) { return _this.checkBack(e); }, false);
         }
+        NavigationController.$inject = ["$ionicHistory", "$ionicTabsDelegate"];
         NavigationController.prototype.goBack = function () {
             this.$ionicHistory.goBack();
         };
@@ -247,10 +260,6 @@ var Tabs;
         NavigationController.prototype.onSwipeRight = function () {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
         };
-        NavigationController.$inject = [
-            '$ionicHistory',
-            '$ionicTabsDelegate'
-        ];
         return NavigationController;
     })();
     Tabs.NavigationController = NavigationController;

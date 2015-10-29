@@ -1,22 +1,24 @@
-﻿module App {
+﻿/// <reference path="constants/paths.ts" />
+
+module App {
     'use strict';
 
     angular
         .module('app', [
             'ionic',
             'core',
-            'tabs',
-            'side',
-            'home',
-            'actions',
-            'buttons'
+            Constants.Paths.Tabs,
+            Constants.Paths.Side.Module,
+            Constants.Paths.Home.Module,
+            Constants.Paths.Actions.Module,
+            Constants.Paths.Buttons.Module
         ])
-        .config(['$httpProvider', httpLoadingInterceptor])
-        .run(['$rootScope', '$ionicLoading', httpLoadingInterceptorActions])
-        .config(['$compileProvider', function ($compileProvider) {
+        .config(httpLoadingInterceptor)
+        .run(httpLoadingInterceptorActions)
+        .config(function ($compileProvider) {
             $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/)
-        .config(['$stateProvider', '$urlRouterProvider', '$ionicConfigProvider', statesConfiguration]);
-    }]);
+        })
+        .config(statesConfiguration);
 
     window['ionic'].Platform.ready(function() {
         angular.bootstrap(document.querySelector('body'), ['app']);
@@ -54,7 +56,7 @@
     // Configure interceptor actions
     function httpLoadingInterceptorActions($rootScope: ng.IRootScopeService, $ionicLoading: ionic.loading.IonicLoadingService) {
         $rootScope.$on('loading:show', function () {
-            $ionicLoading.show({ templateUrl: 'modules/tabs/templates/loading.html' })
+            $ionicLoading.show({ templateUrl: Constants.Paths.Modules + 'tabs/templates/loading.html' })
         })
 
         $rootScope.$on('loading:hide', function () {

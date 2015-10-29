@@ -1,3 +1,4 @@
+/// <binding BeforeBuild='default' ProjectOpened='initialize' />
 require('require-dir')('tasks');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
@@ -9,11 +10,12 @@ var runSequence = require('run-sequence');
     // 4.- ionic serve
 
 // Working with Visual Studio
-    // 1.- npm install
+    // 1.- Open your project and wait auto npm installation
+    // 2.- Compile
 
 gulp.task('default', function () {
     // Compile Sass, TypeScript and inject files into index.html
-    runSequence('default:scss', 'default:ts', 'default:inject');
+    runSequence('default:scss', 'default:ts', 'default:html', 'default:inject');
 });
     
 gulp.task('default-vs', function () {

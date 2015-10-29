@@ -3,10 +3,6 @@
 
     export class ActionsController {
 
-        public static $inject = [
-            '$http'
-        ];
-
         private property: string = 'Void';
 
         constructor(

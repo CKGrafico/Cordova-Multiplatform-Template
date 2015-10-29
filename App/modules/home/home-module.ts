@@ -1,8 +1,8 @@
 ﻿module Home {
     'use strict';
 
-    angular.module(Constants.Paths.Home.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Home.Module, [])
+        .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
@@ -12,7 +12,7 @@
                 url: '/' + Constants.Paths.Home.Main.Uri,
                 views: {
                     'home-tab': {
-                        templateUrl: 'views/' + Constants.Paths.Home.Main.Uri + '.html'
+                        templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Main.Uri + '.html'
                     }
                 }
             })
@@ -21,7 +21,7 @@
                 url: '/' + Constants.Paths.Home.Main.Uri,
                 views: {
                     'home-tab': {
-                        templateUrl: 'views/' + Constants.Paths.Home.Scroll.Uri + '.html'
+                        templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Scroll.Uri + '.html'
                     }
                 }
             });

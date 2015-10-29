@@ -5,13 +5,16 @@
 
     export let Paths: IPaths = {
         Tabs: base,
+        Modules: '../modules/',
         Side: {
+            Module: 'side',
             Main: {
                 Path: base + '.left',
                 Uri: 'left'
             }
         },
         Home: {
+            Module: 'home',
             Main: {
                 Path: base + '.home',
                 Uri: 'home'
@@ -22,12 +25,14 @@
             }
         },
         Actions: {
+            Module: 'actions',
             Main: {
                 Path: base + '.actions',
                 Uri: 'actions'
             },
         },
         Buttons: {
+            Module: 'buttons',
             Main: {
                 Path: base + '.buttons',
                 Uri: 'buttons'

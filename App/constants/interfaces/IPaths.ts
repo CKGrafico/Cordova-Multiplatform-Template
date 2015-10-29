@@ -7,6 +7,7 @@
     };
 
     interface IPage {
+        Module: string,
         Main: ISubPage,
     };
 
@@ -16,6 +17,7 @@
 
     export interface IPaths {
         Tabs: string,
+        Modules: string,
         Side: IPage,
         Home: IHomePage,
         Actions: IPage,

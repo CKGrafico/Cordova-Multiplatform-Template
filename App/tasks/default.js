@@ -18,7 +18,15 @@ gulp.task('default:scss', function () {
 gulp.task('default:ts', function () {
     return tsProject.src()
         .pipe(plugins.typescript(tsProject))
+        .pipe(plugins.ngAnnotate())
         .pipe(gulp.dest(paths.root));
+});
+
+// Move templates and minify
+gulp.task('default:html', function () {
+    return gulp.src(paths.templates.sources)
+        .pipe(plugins.minifyHtml())
+        .pipe(gulp.dest(paths.templates.path.release));
 });
 
 // Inject files into index

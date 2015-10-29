@@ -1,8 +1,8 @@
 ﻿module Buttons {
     'use strict';
 
-    angular.module(Constants.Paths.Buttons.Main.Uri, [])
-        .config(['$stateProvider', statesConfiguration]);
+    angular.module(Constants.Paths.Buttons.Module, [])
+        .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
@@ -12,7 +12,7 @@
                 url: '/' + Constants.Paths.Buttons.Main.Uri,
                 views: {
                     'buttons-tab': {
-                        templateUrl: 'views/' + Constants.Paths.Buttons.Main.Uri + '.html'
+                        templateUrl: Constants.Paths.Modules + 'buttons/views/' + Constants.Paths.Buttons.Main.Uri + '.html'
                     }
                 }
             });
