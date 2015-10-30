@@ -4,7 +4,7 @@ var Constants;
     var base = 'tabs';
     Constants.Paths = {
         Tabs: base,
-        Modules: '../modules/',
+        Modules: '/modules/',
         Side: {
             Module: 'side',
             Main: {
@@ -55,9 +55,9 @@ var App;
     ])
         .config(httpLoadingInterceptor)
         .run(httpLoadingInterceptorActions)
-        .config(["$compileProvider", function ($compileProvider) {
+        .config(function ($compileProvider) {
         $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
-    }])
+    })
         .config(statesConfiguration);
     window['ionic'].Platform.ready(function () {
         angular.bootstrap(document.querySelector('body'), ['app']);
@@ -69,7 +69,6 @@ var App;
         configProvider.scrolling.jsScrolling(false);
         $urlRouterProvider.otherwise('/tabs/home');
     }
-    statesConfiguration.$inject = ["$urlRouterProvider", "$ionicConfigProvider"];
     // Configure interceptor
     function httpLoadingInterceptor($httpProvider) {
         $httpProvider.interceptors.push(['$rootScope', function ($rootScope) {
@@ -85,7 +84,6 @@ var App;
                 };
             }]);
     }
-    httpLoadingInterceptor.$inject = ["$httpProvider"];
     // Configure interceptor actions
     function httpLoadingInterceptorActions($rootScope, $ionicLoading) {
         $rootScope.$on('loading:show', function () {
@@ -95,7 +93,6 @@ var App;
             $ionicLoading.hide();
         });
     }
-    httpLoadingInterceptorActions.$inject = ["$rootScope", "$ionicLoading"];
 })(App || (App = {}));
 var Constants;
 (function (Constants) {
@@ -119,7 +116,26 @@ var Actions;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
+})(Actions || (Actions = {}));
+var Actions;
+(function (Actions) {
+    'use strict';
+    var ActionsController = (function () {
+        function ActionsController($http) {
+            this.$http = $http;
+            this.property = 'Void';
+            $http.jsonp('http://api.openbeerdatabase.com/v1/breweries.json?callback=JSON_CALLBACK').then(function (result) {
+                console.log(result);
+            });
+        }
+        ActionsController.prototype.exampleAction = function () {
+            this.property = 'Random ' + Math.floor(Math.random() * 100 + 1);
+        };
+        return ActionsController;
+    })();
+    Actions.ActionsController = ActionsController;
+    angular.module(Constants.Paths.Actions.Main.Uri)
+        .controller('actionsController', ActionsController);
 })(Actions || (Actions = {}));
 var Buttons;
 (function (Buttons) {
@@ -137,7 +153,6 @@ var Buttons;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Buttons || (Buttons = {}));
 var Core;
 (function (Core) {
@@ -160,7 +175,7 @@ var Home;
             }
         })
             .state(Constants.Paths.Home.Scroll.Path, {
-            url: '/' + Constants.Paths.Home.Main.Uri,
+            url: '/' + Constants.Paths.Home.Scroll.Uri,
             views: {
                 'home-tab': {
                     templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Scroll.Uri + '.html'
@@ -168,7 +183,6 @@ var Home;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Home || (Home = {}));
 var Side;
 (function (Side) {
@@ -186,7 +200,6 @@ var Side;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Side || (Side = {}));
 var Tabs;
 (function (Tabs) {
@@ -201,29 +214,7 @@ var Tabs;
             templateUrl: Constants.Paths.Modules + 'tabs/templates/' + Constants.Paths.Tabs + '.html'
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Tabs || (Tabs = {}));
-var Actions;
-(function (Actions) {
-    'use strict';
-    var ActionsController = (function () {
-        function ActionsController($http) {
-            this.$http = $http;
-            this.property = 'Void';
-            $http.jsonp('http://api.openbeerdatabase.com/v1/breweries.json?callback=JSON_CALLBACK').then(function (result) {
-                console.log(result);
-            });
-        }
-        ActionsController.$inject = ["$http"];
-        ActionsController.prototype.exampleAction = function () {
-            this.property = 'Random ' + Math.floor(Math.random() * 100 + 1);
-        };
-        return ActionsController;
-    })();
-    Actions.ActionsController = ActionsController;
-    angular.module(Constants.Paths.Actions.Main.Uri)
-        .controller('actionsController', ActionsController);
-})(Actions || (Actions = {}));
 var Tabs;
 (function (Tabs) {
     'use strict';
@@ -234,7 +225,6 @@ var Tabs;
             this.$ionicTabsDelegate = $ionicTabsDelegate;
             document.addEventListener('backbutton', function (e) { return _this.checkBack(e); }, false);
         }
-        NavigationController.$inject = ["$ionicHistory", "$ionicTabsDelegate"];
         NavigationController.prototype.goBack = function () {
             this.$ionicHistory.goBack();
         };
@@ -266,3 +256,4 @@ var Tabs;
     angular.module(Constants.Paths.Tabs)
         .controller('navigationController', NavigationController);
 })(Tabs || (Tabs = {}));
+//# sourceMappingURL=app.js.map

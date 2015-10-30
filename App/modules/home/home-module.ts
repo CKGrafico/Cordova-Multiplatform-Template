@@ -18,7 +18,7 @@
             })
 
             .state(Constants.Paths.Home.Scroll.Path, {
-                url: '/' + Constants.Paths.Home.Main.Uri,
+                url: '/' + Constants.Paths.Home.Scroll.Uri,
                 views: {
                     'home-tab': {
                         templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Scroll.Uri + '.html'

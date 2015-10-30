@@ -35,7 +35,6 @@
 	- ######First steps:
 		- Download template from [VSGallery](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
 		- Create a new project *Type: Typescript > Apache Cordova*
-		- Wait for automatic packages installation
 		- Build
 		
 ![Template UI](http://i.imgur.com/49FJsty.png)

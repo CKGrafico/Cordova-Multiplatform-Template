@@ -37,3 +37,9 @@ gulp.task('default:inject', function () {
                     { read: false, addRootSlash: false, relative: true }))
         .pipe(gulp.dest(paths.index.path));
 });
+
+// Default Clean
+gulp.task('default:clean', function () {
+    return gulp.src([paths.templates.path.release, paths.js.path.release], { read: false })
+        .pipe(plugins.clean({ force: true }));
+});

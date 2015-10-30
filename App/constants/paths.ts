@@ -5,7 +5,7 @@
 
     export let Paths: IPaths = {
         Tabs: base,
-        Modules: '../modules/',
+        Modules: '/modules/',
         Side: {
             Module: 'side',
             Main: {
