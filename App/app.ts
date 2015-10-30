@@ -15,9 +15,9 @@ module App {
         ])
         .config(httpLoadingInterceptor)
         .run(httpLoadingInterceptorActions)
-        .config(function ($compileProvider) {
-            $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/)
-        })
+        //.config(function ($compileProvider) {
+        //    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/)
+        //})
         .config(statesConfiguration);
 
     window['ionic'].Platform.ready(function() {

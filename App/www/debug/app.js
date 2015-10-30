@@ -4,7 +4,7 @@ var Constants;
     var base = 'tabs';
     Constants.Paths = {
         Tabs: base,
-        Modules: '/modules/',
+        Modules: 'modules/',
         Side: {
             Module: 'side',
             Main: {
@@ -55,9 +55,6 @@ var App;
     ])
         .config(httpLoadingInterceptor)
         .run(httpLoadingInterceptorActions)
-        .config(function ($compileProvider) {
-        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|mailto|ms-appx):/);
-    })
         .config(statesConfiguration);
     window['ionic'].Platform.ready(function () {
         angular.bootstrap(document.querySelector('body'), ['app']);
@@ -111,6 +108,7 @@ var Actions;
             url: '/' + Constants.Paths.Actions.Main.Uri,
             views: {
                 'actions-tab': {
+                    controller: 'actionsController as vm',
                     templateUrl: Constants.Paths.Modules + 'actions/views/' + Constants.Paths.Actions.Main.Uri + '.html'
                 }
             }

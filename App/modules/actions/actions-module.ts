@@ -7,11 +7,13 @@
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
     ): void {
+
         $stateProvider
             .state(Constants.Paths.Actions.Main.Path, {
                 url: '/' + Constants.Paths.Actions.Main.Uri,
                 views: {
                     'actions-tab': {
+                        controller: 'actionsController as vm',
                         templateUrl: Constants.Paths.Modules + 'actions/views/' + Constants.Paths.Actions.Main.Uri + '.html'
                     }
                 }
