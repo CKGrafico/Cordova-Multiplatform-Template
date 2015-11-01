@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='default:clean' AfterBuild='defaultVS' ProjectOpened='initialize' />
+/// <binding BeforeBuild='default:clean' AfterBuild='default' ProjectOpened='initialize' />
 require('require-dir')('tasks');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
@@ -17,12 +17,7 @@ gulp.task('default', function () {
     // Compile Sass, TypeScript and inject files into index.html
     runSequence('default:clean', 'default:scss', 'default:ts', 'default:html', 'default:inject');
 });
-    
-gulp.task('defaultVS', function () {
-    // Compile Sass, inject files into index.html (for Visual Studio)
-    runSequence('default:scss', 'default:html', 'default:inject');
-});
-    
+
 gulp.task('initialize', function () {
     // Download and install bower packages
     runSequence('initialize:tsd', 'initialize:bower');
@@ -30,5 +25,5 @@ gulp.task('initialize', function () {
     
 gulp.task('build', function () {
     // Build project
-    runSequence('default', 'build:files', 'build:clean');
+    runSequence('build:files', 'build:html', 'build:clean');
 });

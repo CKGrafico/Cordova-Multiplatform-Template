@@ -21,8 +21,15 @@ gulp.task('build:files', function () {
     .pipe(gulp.dest(paths.index.path))
 });
 
+// Move templates and minify
+gulp.task('build:html', function () {
+    return gulp.src(paths.templates.sources)
+        .pipe(plugins.minifyHtml())
+        .pipe(gulp.dest(paths.templates.path.release));
+});
+
 // Build Clean
 gulp.task('build:clean', function () {
-    return gulp.src([paths.js.path.debug], { read: false })
+    return gulp.src([paths.js.sources.debug, paths.templates.path.debug, paths.css.sources.debug], { read: false })
         .pipe(plugins.clean({ force: true }));
 });

@@ -23,8 +23,5 @@
     "angular-ui-router": {
       "ignore": true
     }
-  },
-  "resolutions": {
-    "angular": "1.4"
   }
 }

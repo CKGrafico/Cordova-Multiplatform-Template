@@ -45,7 +45,7 @@ module.exports = {
 
     templates: {
         path: {
-            debug: root + 'modules/',
+            debug: www + 'modules/',
             release: www + 'modules/'
         },
         sources: root + 'modules/**/*.html'

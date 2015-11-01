@@ -26,7 +26,7 @@ gulp.task('default:ts', function () {
 gulp.task('default:html', function () {
     return gulp.src(paths.templates.sources)
         .pipe(plugins.minifyHtml())
-        .pipe(gulp.dest(paths.templates.path.release));
+        .pipe(gulp.dest(paths.templates.path.debug));
 });
 
 // Inject files into index
@@ -40,6 +40,6 @@ gulp.task('default:inject', function () {
 
 // Default Clean
 gulp.task('default:clean', function () {
-    return gulp.src([paths.templates.path.release, paths.js.path.release], { read: false })
+    return gulp.src([paths.templates.path.release, paths.js.sources.release, paths.css.sources.release], { read: false })
         .pipe(plugins.clean({ force: true }));
 });
