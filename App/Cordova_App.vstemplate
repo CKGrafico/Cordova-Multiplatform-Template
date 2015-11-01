@@ -15,39 +15,89 @@
   </TemplateData>
   <TemplateContent>
     <Project TargetFileName="App.jsproj" File="App.jsproj" ReplaceParameters="true">
+      <Folder Name="constants" TargetFolderName="constants">
+        <Folder Name="interfaces" TargetFolderName="interfaces">
+          <ProjectItem ReplaceParameters="true" TargetFileName="IPaths.ts">IPaths.ts</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="paths.ts">paths.ts</ProjectItem>
+      </Folder>
       <Folder Name="merges" TargetFolderName="merges">
         <Folder Name="android" TargetFolderName="android">
-          <Folder Name="css" TargetFolderName="css">
-            <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
-          </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
-            <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
-          </Folder>
-          <Folder Name="templates" TargetFolderName="templates">
-            <Folder Name="partials" TargetFolderName="partials">
-              <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
-              <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+          <Folder Name="modules" TargetFolderName="modules">
+            <Folder Name="tabs" TargetFolderName="tabs">
+              <Folder Name="templates" TargetFolderName="templates">
+                <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+              </Folder>
             </Folder>
           </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
         </Folder>
         <Folder Name="windows" TargetFolderName="windows">
-          <Folder Name="css" TargetFolderName="css">
-            <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
-          </Folder>
-          <Folder Name="scripts" TargetFolderName="scripts">
-            <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
-          </Folder>
-          <Folder Name="templates" TargetFolderName="templates">
-            <Folder Name="partials" TargetFolderName="partials">
-              <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
-              <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+          <Folder Name="modules" TargetFolderName="modules">
+            <Folder Name="tabs" TargetFolderName="tabs">
+              <Folder Name="templates" TargetFolderName="templates">
+                <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+              </Folder>
             </Folder>
           </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
+        </Folder>
+      </Folder>
+      <Folder Name="modules" TargetFolderName="modules">
+        <Folder Name="actions" TargetFolderName="actions">
+          <Folder Name="controllers" TargetFolderName="controllers">
+            <ProjectItem ReplaceParameters="true" TargetFileName="actionsController.ts">actionsController.ts</ProjectItem>
+          </Folder>
+          <Folder Name="views" TargetFolderName="views">
+            <ProjectItem ReplaceParameters="true" TargetFileName="actions.html">actions.html</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="actions-module.ts">actions-module.ts</ProjectItem>
+        </Folder>
+        <Folder Name="buttons" TargetFolderName="buttons">
+          <Folder Name="views" TargetFolderName="views">
+            <ProjectItem ReplaceParameters="true" TargetFileName="buttons.html">buttons.html</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="buttons-module.ts">buttons-module.ts</ProjectItem>
+        </Folder>
+        <Folder Name="core" TargetFolderName="core">
+          <Folder Name="interfaces" TargetFolderName="interfaces">
+            <ProjectItem ReplaceParameters="true" TargetFileName="iLoadingService.ts">iLoadingService.ts</ProjectItem>
+          </Folder>
+          <Folder Name="services" TargetFolderName="services">
+            <ProjectItem ReplaceParameters="true" TargetFileName="loadingService.ts">loadingService.ts</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="core-module.ts">core-module.ts</ProjectItem>
+        </Folder>
+        <Folder Name="home" TargetFolderName="home">
+          <Folder Name="views" TargetFolderName="views">
+            <ProjectItem ReplaceParameters="true" TargetFileName="home.html">home.html</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="scroll.html">scroll.html</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="home-module.ts">home-module.ts</ProjectItem>
+        </Folder>
+        <Folder Name="side" TargetFolderName="side">
+          <Folder Name="views" TargetFolderName="views">
+            <ProjectItem ReplaceParameters="true" TargetFileName="left.html">left.html</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="side-module.ts">side-module.ts</ProjectItem>
+        </Folder>
+        <Folder Name="tabs" TargetFolderName="tabs">
+          <Folder Name="controllers" TargetFolderName="controllers">
+            <ProjectItem ReplaceParameters="true" TargetFileName="navigationController.ts">navigationController.ts</ProjectItem>
+          </Folder>
+          <Folder Name="templates" TargetFolderName="templates">
+            <ProjectItem ReplaceParameters="true" TargetFileName="loading.html">loading.html</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+          </Folder>
+          <ProjectItem ReplaceParameters="true" TargetFileName="tabs-module.ts">tabs-module.ts</ProjectItem>
         </Folder>
       </Folder>
       <Folder Name="plugins" TargetFolderName="plugins">
-        <ProjectItem ReplaceParameters="false" TargetFileName="android.json">android.json</ProjectItem>
-        <ProjectItem ReplaceParameters="false" TargetFileName="windows.json">windows.json</ProjectItem>
         <ProjectItem ReplaceParameters="false" TargetFileName="fetch.json">fetch.json</ProjectItem>
       </Folder>
       <Folder Name="res" TargetFolderName="res">
@@ -126,50 +176,32 @@
       </Folder>
       <Folder Name="scss" TargetFolderName="scss">
         <Folder Name="helpers" TargetFolderName="helpers">
-          <ProjectItem ReplaceParameters="false" TargetFileName="_variables.scss">_variables.scss</ProjectItem>
           <ProjectItem ReplaceParameters="false" TargetFileName="_overrides.scss">_overrides.scss</ProjectItem>
+          <ProjectItem ReplaceParameters="false" TargetFileName="_variables.scss">_variables.scss</ProjectItem>
         </Folder>
         <ProjectItem ReplaceParameters="false" TargetFileName="main.scss">main.scss</ProjectItem>
-        <ProjectItem ReplaceParameters="false" TargetFileName="platform.scss">platform.scss</ProjectItem>
       </Folder>
-      <Folder Name="scripts" TargetFolderName="scripts">
-        <Folder Name="controllers" TargetFolderName="controllers">
-          <ProjectItem ReplaceParameters="true" TargetFileName="actionsController.ts">actionsController.ts</ProjectItem>
-          <ProjectItem ReplaceParameters="true" TargetFileName="navigationController.ts">navigationController.ts</ProjectItem>
-        </Folder>
-        <ProjectItem ReplaceParameters="true" TargetFileName="App.ts">App.ts</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="imports.ts">imports.ts</ProjectItem>
-        <ProjectItem ReplaceParameters="true" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
+      <Folder Name="tasks" TargetFolderName="tasks">
+        <ProjectItem ReplaceParameters="true" TargetFileName="build.js">build.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="default.js">default.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="initialize.js">initialize.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="paths.js">paths.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="watch.js">watch.js</ProjectItem>
       </Folder>
       <Folder Name="www" TargetFolderName="www">
-        <Folder Name="css" TargetFolderName="css" />
-        <Folder Name="fonts" TargetFolderName="fonts" />
-        <Folder Name="images" TargetFolderName="images" />
-        <Folder Name="scripts" TargetFolderName="scripts">
-          <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
-        </Folder>
-        <Folder Name="templates" TargetFolderName="templates">
-          <Folder Name="pages" TargetFolderName="pages">
-            <ProjectItem ReplaceParameters="true" TargetFileName="actions.html">actions.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="buttons.html">buttons.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="home.html">home.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="left.html">left.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="scroll.html">scroll.html</ProjectItem>
-          </Folder>
-          <Folder Name="partials" TargetFolderName="partials">
-            <ProjectItem ReplaceParameters="true" TargetFileName="loading.html">loading.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
-            <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
-          </Folder>
-        </Folder>
-        <ProjectItem ReplaceParameters="true" OpenInEditor="true" OpenOrder="20" TargetFileName="index.html">index.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="platform.css">platform.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="platformOverrides.js">platformOverrides.js</ProjectItem>
       </Folder>
-      <ProjectItem ReplaceParameters="true" TargetFileName="bower.json">bower.json</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="app.ts">app.ts</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="bower.json">bower.json</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="config.xml">config.xml</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="gulpfile.js">gulpfile.js</ProjectItem>
-      <ProjectItem ReplaceParameters="true" TargetFileName="package.json">package.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="package.json">package.json</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="taco.json">taco.json</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="tsconfig.json">tsconfig.json</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="tsd.json">tsd.json</ProjectItem>
     </Project>
+
   </TemplateContent>
 </VSTemplate>

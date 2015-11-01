@@ -17,4 +17,4 @@ C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Temp
 C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\Visual Studio Template.pdb
 C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\obj\Debug\extension.vsixmanifest
 C:\Projects\Quique\CordovaMultipltform\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Cordova-12_9_2015-18_38_6.zip
-C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\Cordova-20_9_2015-23_14_19.zip
+C:\Datos\Github\Cordova-Multiplatform-Template\Visual Studio Template\Visual Studio Template\bin\Debug\ProjectTemplates\Apache Cordova Apps\MultiplatformCordova_1_0_0.zip

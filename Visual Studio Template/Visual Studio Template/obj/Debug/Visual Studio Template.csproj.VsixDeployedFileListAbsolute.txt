@@ -72,3 +72,9 @@ C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico
 C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.8.5\\__TemplateIcon.ico
 C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.8.5\ProjectTemplates\\Cordova-20_9_2015-23_14_19.zip
 C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\0.8.5\ProjectTemplates\Apache Cordova Apps\\Cordova-20_9_2015-23_14_19.zip
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\\extension.vsixmanifest
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\ProjectTemplates\\MultiplatformCordova_1_0_0.zip
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\\license.txt
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\\thumbnail.PNG
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\\__TemplateIcon.ico
+C:\Users\enriq\AppData\Local\Microsoft\VisualStudio\14.0Exp\Extensions\CKGrafico\Cordova Multiplatform Template\1.0.0\ProjectTemplates\Apache Cordova Apps\\MultiplatformCordova_1_0_0.zip

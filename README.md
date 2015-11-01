@@ -3,6 +3,7 @@
 [![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg?label=Stars)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/)
 [![issues](https://img.shields.io/github/issues/CKGrafico/Cordova-Multiplatform-Template.svg?label=Issues)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/issues)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg?label=License)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/blob/master/LICENSE)
+[![taco](https://img.shields.io/badge/taco.tools-compatible-E58225.svg)](http://taco.tools/)
 
 ###Download from:
 [![Visual Studio](https://img.shields.io/badge/Visual%20Studio◢-%2B30.000-9b4f96.svg)](https://visualstudiogallery.msdn.microsoft.com/407fc1f8-538b-4beb-b2b2-69afcb6fbd96)
