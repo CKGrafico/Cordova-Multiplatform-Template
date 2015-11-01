@@ -17,7 +17,6 @@
         }
 
         public checkBack(e: Event) {
-            console.log(1111111111111111111111111111);
             var page = this.$ionicHistory.currentStateName();
             if (page === 'tabs.home') {
                 var nav: any = navigator;
