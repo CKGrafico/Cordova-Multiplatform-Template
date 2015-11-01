@@ -1,35 +1,15 @@
-App/bld/
 .vs/
+App/bld/
 App/bin/
-App/*.sln.ide
-App/Appp.v14.suo
-App/*.jsproj.user
-App/.vs/
-App/scripts/lib
-App/platforms
-App/www/js/**/*.js
-App/www/js/**/*.map
-App/www/fonts/lib
-App/www/scripts
-App/scss/lib
-Test/obj/
-Test/node_modules
-Test/.ntvs_analysis.dat
-Test/.ntvs_analysis.dat.temp
-Test/bower_components
-Visual Studio Template/bin/
-Visual Studio Template/obj/
-App/www/css/main.css
-App/www/css/platform.css
-App/node_modules/gulp-typescript/node_modules/vinyl-fs/node_modules/
+App/platforms/
 App/node_modules/
 App/bower_components/
-**/*.vstemplate
-App/changeList.json
-**/*.sln
-**/*.jsproj
-App/jsFileList.json
-Visual Studio Template/
-__TemplateIcon.ico
-App/scripts/www/scripts/appbundle.js
-App/scripts/www/scripts/appbundle.js.map
+App/typings/
+App/scss/vendor/
+App/www/debug/
+App/www/release/
+App/www/modules/
+App/www/libs/
+App/www/fonts/
+Visual Studio Template/bin/
+Visual Studio Template/obj/

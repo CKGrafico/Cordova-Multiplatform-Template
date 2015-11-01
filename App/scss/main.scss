@@ -1,17 +1,8 @@
 ﻿// Overrides
 @import "helpers/overrides";
 
-// Lib
-@import "lib/ionic/scss/ionic";
+// Vendor
+@import "vendor/ionic/scss/ionic";
 
 // Helpers
 @import "helpers/variables";
-
-// Styles
-@font-face {
-  font-family: Ionicons;
-  src: url(../fonts/lib/ionic/release/fonts/ionicons.eot?v=1.4.1);
-  src: url(../fonts/lib/ionic/release/fonts/ionicons.eot?v=1.4.1#iefix) format("embedded-opentype"), url(../fonts/lib/ionic/release/fonts/ionicons.ttf?v=1.4.1) format("truetype"), url(../fonts/lib/ionic/release/fonts/ionicons.woff?v=1.4.1) format("woff"), url(../fonts/lib/ionic/release/fonts/ionicons.svg?v=1.4.1#Ionicons) format("svg");
-  font-weight: 400;
-  font-style: normal; 
-}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "out": "www/debug/app.js",
+    "target": "es5"
+  },
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "platforms"
+  ]
+}
