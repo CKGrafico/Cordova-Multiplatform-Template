@@ -4,8 +4,9 @@
     let base = 'tabs';
 
     export let Paths: IPaths = {
-        Tabs: base,
+        Core: 'core',
         Modules: 'modules/',
+        Tabs: base,
         Side: {
             Module: 'side',
             Main: {

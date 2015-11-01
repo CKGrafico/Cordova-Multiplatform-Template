@@ -3,8 +3,9 @@ var Constants;
     'use strict';
     var base = 'tabs';
     Constants.Paths = {
-        Tabs: base,
+        Core: 'core',
         Modules: 'modules/',
+        Tabs: base,
         Side: {
             Module: 'side',
             Main: {
@@ -46,53 +47,22 @@ var App;
     angular
         .module('app', [
         'ionic',
-        'core',
+        Constants.Paths.Core,
         Constants.Paths.Tabs,
         Constants.Paths.Side.Module,
         Constants.Paths.Home.Module,
         Constants.Paths.Actions.Module,
         Constants.Paths.Buttons.Module
     ])
-        .config(httpLoadingInterceptor)
-        .run(httpLoadingInterceptorActions)
         .config(statesConfiguration);
     window['ionic'].Platform.ready(function () {
         angular.bootstrap(document.querySelector('body'), ['app']);
     });
     // Configure routes
     function statesConfiguration($urlRouterProvider, $ionicConfigProvider) {
-        // force native scroll
-        var configProvider = $ionicConfigProvider;
-        configProvider.scrolling.jsScrolling(false);
+        $ionicConfigProvider.scrolling.jsScrolling(false);
         $urlRouterProvider.otherwise('/tabs/home');
     }
-    statesConfiguration.$inject = ["$urlRouterProvider", "$ionicConfigProvider"];
-    // Configure interceptor
-    function httpLoadingInterceptor($httpProvider) {
-        $httpProvider.interceptors.push(['$rootScope', function ($rootScope) {
-                return {
-                    request: function (config) {
-                        $rootScope.$broadcast('loading:show');
-                        return config;
-                    },
-                    response: function (response) {
-                        $rootScope.$broadcast('loading:hide');
-                        return response;
-                    }
-                };
-            }]);
-    }
-    httpLoadingInterceptor.$inject = ["$httpProvider"];
-    // Configure interceptor actions
-    function httpLoadingInterceptorActions($rootScope, $ionicLoading) {
-        $rootScope.$on('loading:show', function () {
-            $ionicLoading.show({ templateUrl: Constants.Paths.Modules + 'tabs/templates/loading.html' });
-        });
-        $rootScope.$on('loading:hide', function () {
-            $ionicLoading.hide();
-        });
-    }
-    httpLoadingInterceptorActions.$inject = ["$rootScope", "$ionicLoading"];
 })(App || (App = {}));
 var Constants;
 (function (Constants) {
@@ -117,7 +87,29 @@ var Actions;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
+})(Actions || (Actions = {}));
+var Actions;
+(function (Actions) {
+    'use strict';
+    var ActionsController = (function () {
+        function ActionsController(loadingService) {
+            this.loadingService = loadingService;
+            this.text = '';
+            this.addTextAsync();
+        }
+        ActionsController.prototype.addTextAsync = function () {
+            var _this = this;
+            this.loadingService.show();
+            window.setTimeout(function () {
+                _this.text += '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt lacinia augue vehicula molestie. Proin a dui dignissim, ornare nulla ut, venenatis nisi. Proin accumsan tortor purus, a venenatis augue vestibulum porta. In faucibus ligula eu metus tempor, a ornare enim finibus. Donec ullamcorper risus sem, quis laoreet mauris pharetra in. Vestibulum tempus ipsum eget dolor ornare auctor. Ut pulvinar ac nibh ac lobortis.</p>';
+                _this.loadingService.hide();
+            }, Math.floor(Math.random() * 3000));
+        };
+        return ActionsController;
+    })();
+    Actions.ActionsController = ActionsController;
+    angular.module(Constants.Paths.Actions.Main.Uri)
+        .controller('actionsController', ActionsController);
 })(Actions || (Actions = {}));
 var Buttons;
 (function (Buttons) {
@@ -135,12 +127,37 @@ var Buttons;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Buttons || (Buttons = {}));
 var Core;
 (function (Core) {
     'use strict';
     angular.module('core', []);
+})(Core || (Core = {}));
+var Core;
+(function (Core) {
+    'use strict';
+})(Core || (Core = {}));
+var Core;
+(function (Core) {
+    'using strict';
+    var LoadingService = (function () {
+        function LoadingService($ionicLoading) {
+            this.$ionicLoading = $ionicLoading;
+        }
+        LoadingService.prototype.show = function () {
+            var options = {
+                templateUrl: Constants.Paths.Modules + 'tabs/templates/loading.html'
+            };
+            this.$ionicLoading.show(options);
+        };
+        LoadingService.prototype.hide = function () {
+            this.$ionicLoading.hide();
+        };
+        return LoadingService;
+    })();
+    Core.LoadingService = LoadingService;
+    angular.module('core')
+        .service('loadingService', LoadingService);
 })(Core || (Core = {}));
 var Home;
 (function (Home) {
@@ -166,7 +183,6 @@ var Home;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Home || (Home = {}));
 var Side;
 (function (Side) {
@@ -184,7 +200,6 @@ var Side;
             }
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Side || (Side = {}));
 var Tabs;
 (function (Tabs) {
@@ -199,29 +214,7 @@ var Tabs;
             templateUrl: Constants.Paths.Modules + 'tabs/templates/' + Constants.Paths.Tabs + '.html'
         });
     }
-    statesConfiguration.$inject = ["$stateProvider"];
 })(Tabs || (Tabs = {}));
-var Actions;
-(function (Actions) {
-    'use strict';
-    var ActionsController = (function () {
-        function ActionsController($http) {
-            this.$http = $http;
-            this.property = 'Void';
-            $http.jsonp('http://api.openbeerdatabase.com/v1/breweries.json?callback=JSON_CALLBACK').then(function (result) {
-                console.log(result);
-            });
-        }
-        ActionsController.$inject = ["$http"];
-        ActionsController.prototype.exampleAction = function () {
-            this.property = 'Random ' + Math.floor(Math.random() * 100 + 1);
-        };
-        return ActionsController;
-    })();
-    Actions.ActionsController = ActionsController;
-    angular.module(Constants.Paths.Actions.Main.Uri)
-        .controller('actionsController', ActionsController);
-})(Actions || (Actions = {}));
 var Tabs;
 (function (Tabs) {
     'use strict';
@@ -233,14 +226,12 @@ var Tabs;
             this.$ionicPlatform = $ionicPlatform;
             $ionicPlatform.registerBackButtonAction(function (e) { return _this.checkBack(e); }, 100);
         }
-        NavigationController.$inject = ["$ionicHistory", "$ionicTabsDelegate", "$ionicPlatform"];
         NavigationController.prototype.goBack = function () {
             this.$ionicHistory.goBack();
         };
         NavigationController.prototype.checkBack = function (e) {
-            console.log(1111111111111111111111111111);
             var page = this.$ionicHistory.currentStateName();
-            if (page === 'tabs.home') {
+            if (page === Constants.Paths.Home.Main.Path) {
                 var nav = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();
@@ -266,3 +257,4 @@ var Tabs;
     angular.module(Constants.Paths.Tabs)
         .controller('navigationController', NavigationController);
 })(Tabs || (Tabs = {}));
+//# sourceMappingURL=app.js.map

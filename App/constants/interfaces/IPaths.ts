@@ -16,8 +16,9 @@
     }
 
     export interface IPaths {
-        Tabs: string,
+        Core: string,
         Modules: string,
+        Tabs: string,
         Side: IPage,
         Home: IHomePage,
         Actions: IPage,
