@@ -226,17 +226,19 @@ var Tabs;
 (function (Tabs) {
     'use strict';
     var NavigationController = (function () {
-        function NavigationController($ionicHistory, $ionicTabsDelegate) {
+        function NavigationController($ionicHistory, $ionicTabsDelegate, $ionicPlatform) {
             var _this = this;
             this.$ionicHistory = $ionicHistory;
             this.$ionicTabsDelegate = $ionicTabsDelegate;
-            document.addEventListener('backbutton', function (e) { return _this.checkBack(e); }, false);
+            this.$ionicPlatform = $ionicPlatform;
+            $ionicPlatform.registerBackButtonAction(function (e) { return _this.checkBack(e); }, 100);
         }
-        NavigationController.$inject = ["$ionicHistory", "$ionicTabsDelegate"];
+        NavigationController.$inject = ["$ionicHistory", "$ionicTabsDelegate", "$ionicPlatform"];
         NavigationController.prototype.goBack = function () {
             this.$ionicHistory.goBack();
         };
         NavigationController.prototype.checkBack = function (e) {
+            console.log(1111111111111111111111111111);
             var page = this.$ionicHistory.currentStateName();
             if (page === 'tabs.home') {
                 var nav = navigator;

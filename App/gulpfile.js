@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='default:clean' AfterBuild='default' ProjectOpened='initialize' />
+/// <binding BeforeBuild='default' ProjectOpened='initialize' />
 require('require-dir')('tasks');
 var gulp = require('gulp');
 var runSequence = require('run-sequence');

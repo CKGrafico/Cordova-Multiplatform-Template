@@ -5,10 +5,11 @@
 
         constructor(
             private $ionicHistory: ionic.navigation.IonicHistoryService,
-            private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate
+            private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate,
+            private $ionicPlatform: ionic.platform.IonicPlatformService
             ) {
 
-            document.addEventListener('backbutton', e => this.checkBack(e), false);
+            $ionicPlatform.registerBackButtonAction(e => this.checkBack(e), 100);
         }
 
         public goBack(): void {
@@ -16,6 +17,7 @@
         }
 
         public checkBack(e: Event) {
+            console.log(1111111111111111111111111111);
             var page = this.$ionicHistory.currentStateName();
             if (page === 'tabs.home') {
                 var nav: any = navigator;

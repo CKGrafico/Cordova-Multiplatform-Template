@@ -7,14 +7,9 @@
 window.CustomEvent = function () { var e = function (e, t) { var n; t = t || { bubbles: !1, cancelable: !1, detail: void 0 }; try { n = document.createEvent("CustomEvent"), n.initCustomEvent(e, t.bubbles, t.cancelable, t.detail) } catch (o) { n = document.createEvent("Event"); for (var a in t) n[a] = t[a]; n.initEvent(e, t.bubbles, t.cancelable) } return n }; return e.prototype = window.Event.prototype, e }();
 
 // Back button windows
-if (window.Windows && Windows.Phone && Windows.Phone.UI.Input.HardwareButtons && document.createEvent) { var newEvent = document.createEvent("Event"); newEvent.initEvent("backbutton", !0, !0), Windows.Phone.UI.Input.HardwareButtons.addEventListener("backpressed", function (n) { n.handled = !0, document.dispatchEvent(newEvent) }) }
+if (window.Windows && Windows.Phone && Windows.Phone.UI.Input.HardwareButtons && document.createEvent) { var newEvent = document.createEvent("Event"); newEvent.initEvent("backbutton", !0, !0); Windows.Phone.UI.Input.HardwareButtons.addEventListener("backpressed", function (n) { n.handled = !0; document.dispatchEvent(newEvent); }) }
 
-// Check appbar status maybe we will do this better in the future
-var onDeviceReady = function () {
-    window.requestAnimationFrame(checkScroll);
-}
-document.addEventListener("deviceready", onDeviceReady, false);
-
+// Appbar
 var lastScroll = 0;
 var frame = 0;
 function checkScroll() {
@@ -52,3 +47,9 @@ function checkScroll() {
     frame++;
     requestAnimationFrame(checkScroll);
 }
+
+// Check appbar status maybe we will do this better in the future
+var onDeviceReady = function () {
+    window.requestAnimationFrame(checkScroll);
+}
+document.addEventListener("deviceready", onDeviceReady, false);
