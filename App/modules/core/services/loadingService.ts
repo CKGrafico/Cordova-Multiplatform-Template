@@ -20,6 +20,6 @@
         }
     }
 
-    angular.module('core')
+    angular.module(Constants.Paths.Core)
         .service('loadingService', LoadingService);
 }

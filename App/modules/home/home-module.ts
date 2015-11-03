@@ -1,29 +1,34 @@
 ﻿module Home {
     'use strict';
 
-    angular.module(Constants.Paths.Home.Module, [])
+    import Paths = Constants.Paths;
+    let Page = Paths.Home; 
+
+    angular.module(Page.Base, [])
         .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
     ): void {
+
         $stateProvider
-            .state(Constants.Paths.Home.Main.Path, {
-                url: '/' + Constants.Paths.Home.Main.Uri,
+            .state(Paths.Tabs + '.' + Page.Base, {
+                url: '/' + Page.Base,
                 views: {
                     'home-tab': {
-                        templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Main.Uri + '.html'
+                        templateUrl: Paths.Modules + 'home/views/home.html'
                     }
                 }
             })
 
-            .state(Constants.Paths.Home.Scroll.Path, {
-                url: '/' + Constants.Paths.Home.Scroll.Uri,
+            .state(Paths.Tabs + '.' + Page.Scroll, {
+                url: '/' + Page.Base,
                 views: {
                     'home-tab': {
-                        templateUrl: Constants.Paths.Modules + 'home/views/' + Constants.Paths.Home.Scroll.Uri + '.html'
+                        templateUrl: Paths.Modules + 'home/views/scroll.html'
                     }
                 }
-            });
+            }
+        );
     }
 }

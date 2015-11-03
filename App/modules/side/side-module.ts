@@ -1,20 +1,25 @@
 ﻿module Side {
     'use strict';
 
-    angular.module(Constants.Paths.Side.Module, [])
+    import Paths = Constants.Paths;
+    let Page = Paths.Side;
+
+    angular.module(Page.Base, [])
         .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
     ): void {
+
         $stateProvider
-            .state(Constants.Paths.Side.Main.Path, {
-                url: '/' + Constants.Paths.Side.Main.Uri,
+            .state(Paths.Tabs + '.' + Page.Left, {
+                url: '/' + Page.Left,
                 views: {
                     'left-tab': {
-                        templateUrl: Constants.Paths.Modules + 'side/views/' + Constants.Paths.Side.Main.Uri + '.html'
+                        templateUrl: Paths.Modules + 'side/views/left.html'
                     }
                 }
-            });
+            }
+        );
     }
 }

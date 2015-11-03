@@ -21,7 +21,7 @@
         }
     }
 
-    angular.module(Constants.Paths.Actions.Main.Uri)
+    angular.module(Constants.Paths.Actions.Base)
         .controller('actionsController', ActionsController);
 } 
 
