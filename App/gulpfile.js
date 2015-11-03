@@ -15,7 +15,7 @@ var runSequence = require('run-sequence');
 
 gulp.task('default', function () {
     // Compile Sass, TypeScript and inject files into index.html
-    runSequence('default:clean', 'default:scss', 'default:ts', 'default:html', 'default:inject');
+    runSequence('default:clean', 'default:html', 'default:scss', 'default:ts', 'default:inject');
 });
 
 gulp.task('initialize', function () {
@@ -25,5 +25,5 @@ gulp.task('initialize', function () {
     
 gulp.task('build', function () {
     // Build project
-    runSequence('build:files', 'build:html', 'build:clean');
+    runSequence('build:clean', 'build:html', 'build:files');
 });
