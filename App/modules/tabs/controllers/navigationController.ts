@@ -1,4 +1,4 @@
-﻿module Tabs {
+module Tabs {
     'use strict';
 
     export class NavigationController {
@@ -18,8 +18,8 @@
 
         public checkBack(e: Event) {
             var page = this.$ionicHistory.currentStateName();
-            if (page === Constants.Paths.Home.Base) {
-                var nav: any = navigator;
+            if (page === Constants.Paths.Todos.Base) {
+                let nav: any = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();
                 } else {
@@ -30,13 +30,20 @@
             }
         }
 
-        // On Windows phone
+
+        private disableSwipe(e: Event) {
+            e.stopPropagation();
+        }
+
         public onSwipeLeft() {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() + 1);
         }
 
         public onSwipeRight() {
-            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
+            let index: number = this.$ionicTabsDelegate.selectedIndex();
+            if (index > 0) {
+                this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
+            }
         }
     }
 
@@ -44,4 +51,3 @@
         .controller('navigationController', NavigationController);
 
 } 
-
