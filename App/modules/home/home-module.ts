@@ -22,7 +22,7 @@
             })
 
             .state(Paths.Tabs + '.' + Page.Scroll, {
-                url: '/' + Page.Base,
+                url: '/' + Page.Scroll,
                 views: {
                     'home-tab': {
                         templateUrl: Paths.Modules + 'home/views/scroll.html'

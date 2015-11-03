@@ -17,7 +17,9 @@
 
         <!-- Main content -->
         <ion-side-menu-content drag-content="false"
-                               ng-controller="navigationController as nav">
+                               ng-controller="navigationController as nav"
+                               on-swipe-left="nav.onSwipeLeft()"
+                               on-swipe-right="nav.onSwipeRight()">
             <div ng-include src="'modules/tabs/templates/wrapper.html'"></div>
         </ion-side-menu-content>
 

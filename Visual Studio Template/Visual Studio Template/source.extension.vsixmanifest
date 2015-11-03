@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" ?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="Cordova_Multiplatform_Template..a4cf3f3f-aa92-4409-9824-bad447a7f6a0" Version="1.0.0" Language="en-US" Publisher="CKGrafico" />
+    <Identity Id="Cordova_Multiplatform_Template..a4cf3f3f-aa92-4409-9824-bad447a7f6a0" Version="1.0.1" Language="en-US" Publisher="CKGrafico" />
     <DisplayName>Cordova Multiplatform Template</DisplayName>
     <Description xml:space="preserve">HTML5 Apps for [Windows, IOS, Android] with Apache Cordova more info -&gt; http://cordova-multiplatform-template.js.org</Description>
     <MoreInfo>http://cordova-multiplatform-template.js.org/</MoreInfo>
@@ -18,6 +18,6 @@
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
   </Dependencies>
   <Assets>
-    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Apache Cordova Apps\MultiplatformCordova_1_0_0.zip" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Apache Cordova Apps\MultiplatformCordova_1_0_1.zip" />
   </Assets>
 </PackageManifest>
