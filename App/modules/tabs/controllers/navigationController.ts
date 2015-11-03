@@ -30,8 +30,8 @@ module Tabs {
             }
         }
 
-
         private disableSwipe(e: Event) {
+            // For example on <ion-list>
             e.stopPropagation();
         }
 
