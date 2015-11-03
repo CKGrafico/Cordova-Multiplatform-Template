@@ -1,7 +1,10 @@
 ﻿module Actions {
     'use strict';
 
-    angular.module(Constants.Paths.Actions.Module, [])
+    import Paths = Constants.Paths;
+    let Page = Paths.Actions;
+
+    angular.module(Page.Base, [])
         .config(statesConfiguration);
 
     function statesConfiguration(
@@ -9,14 +12,15 @@
     ): void {
 
         $stateProvider
-            .state(Constants.Paths.Actions.Main.Path, {
-                url: '/' + Constants.Paths.Actions.Main.Uri,
+            .state(Paths.Tabs + '.' + Page.Base, {
+                url: '/' + Page.Base,
                 views: {
                     'actions-tab': {
                         controller: 'actionsController as vm',
-                        templateUrl: Constants.Paths.Modules + 'actions/views/' + Constants.Paths.Actions.Main.Uri + '.html'
+                        templateUrl: Paths.Modules + 'actions/views/actions.html'
                     }
                 }
-            });
+            }
+        );
     }
 }

@@ -1,5 +1,5 @@
 ﻿module Core {
     'use strict';
 
-    angular.module('core', []);
+    angular.module(Constants.Paths.Core, []);
 }

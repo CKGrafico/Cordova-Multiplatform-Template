@@ -8,10 +8,10 @@ module App {
             'ionic',
             Constants.Paths.Core,
             Constants.Paths.Tabs,
-            Constants.Paths.Side.Module,
-            Constants.Paths.Home.Module,
-            Constants.Paths.Actions.Module,
-            Constants.Paths.Buttons.Module
+            Constants.Paths.Side.Base,
+            Constants.Paths.Home.Base,
+            Constants.Paths.Actions.Base,
+            Constants.Paths.Buttons.Base
         ])
         .config(statesConfiguration);
 

@@ -2,6 +2,7 @@
 App/bld/
 App/bin/
 App/platforms/
+App/plugins/
 App/node_modules/
 App/bower_components/
 App/typings/

@@ -1,43 +1,23 @@
 ﻿module Constants {
     'use strict';
 
-    let base = 'tabs';
-
     export let Paths: IPaths = {
         Core: 'core',
         Modules: 'modules/',
-        Tabs: base,
+        Tabs: 'tabs',
         Side: {
-            Module: 'side',
-            Main: {
-                Path: base + '.left',
-                Uri: 'left'
-            }
+            Base: 'side',
+            Left: 'left'
         },
         Home: {
-            Module: 'home',
-            Main: {
-                Path: base + '.home',
-                Uri: 'home'
-            },
-            Scroll: {
-                Path: base + '.scroll',
-                Uri: 'scroll'
-            }
+            Base: 'home',
+            Scroll: 'scroll'
         },
         Actions: {
-            Module: 'actions',
-            Main: {
-                Path: base + '.actions',
-                Uri: 'actions'
-            },
+            Base: 'actions'
         },
         Buttons: {
-            Module: 'buttons',
-            Main: {
-                Path: base + '.buttons',
-                Uri: 'buttons'
-            }
+            Base: 'buttons'
         }
     };
-}
+};

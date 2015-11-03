@@ -8,82 +8,85 @@
     "path": "./typings",
     "installed": {
         "angularjs/angular.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "jquery/jquery.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "ionic/ionic.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "angular-ui-router/angular-ui-router.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Camera.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Device.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/DeviceMotion.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Contacts.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/cordova.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/DeviceOrientation.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/FileTransfer.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Dialogs.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Globalization.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/FileSystem.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Media.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/MediaCapture.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/NetworkInformation.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Push.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/BatteryStatus.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/StatusBar.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/WebSQL.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Splashscreen.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/Vibration.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova/plugins/InAppBrowser.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova-ionic/cordova-ionic.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         },
         "cordova-ionic/plugins/keyboard.d.ts": {
-            "commit": "eb59a40d3c2f3257e34ec2ede181046230814a41"
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
+        },
+        "cordova/plugins/Keyboard.d.ts": {
+            "commit": "0dd29bf8253536ae24e61c109524e924ea510046"
         }
     }
 }

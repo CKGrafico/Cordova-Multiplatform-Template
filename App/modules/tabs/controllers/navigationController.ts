@@ -18,7 +18,7 @@
 
         public checkBack(e: Event) {
             var page = this.$ionicHistory.currentStateName();
-            if (page === Constants.Paths.Home.Main.Path) {
+            if (page === Constants.Paths.Home.Base) {
                 var nav: any = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();

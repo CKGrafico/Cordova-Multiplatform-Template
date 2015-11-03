@@ -1,20 +1,25 @@
 ﻿module Buttons {
     'use strict';
 
-    angular.module(Constants.Paths.Buttons.Module, [])
+    import Paths = Constants.Paths;
+    let Page = Paths.Buttons;
+
+    angular.module(Page.Base, [])
         .config(statesConfiguration);
 
     function statesConfiguration(
         $stateProvider: ng.ui.IStateProvider
     ): void {
+
         $stateProvider
-            .state(Constants.Paths.Buttons.Main.Path, {
-                url: '/' + Constants.Paths.Buttons.Main.Uri,
+            .state(Paths.Tabs + '.' + Page.Base, {
+                url: '/' + Page.Base,
                 views: {
                     'buttons-tab': {
-                        templateUrl: Constants.Paths.Modules + 'buttons/views/' + Constants.Paths.Buttons.Main.Uri + '.html'
+                        templateUrl: Paths.Modules + 'buttons/views/buttons.html'
                     }
                 }
-            });
+            }
+        );
     }
 }
