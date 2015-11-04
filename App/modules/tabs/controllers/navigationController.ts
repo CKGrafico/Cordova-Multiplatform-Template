@@ -7,8 +7,7 @@ module Tabs {
             private $ionicHistory: ionic.navigation.IonicHistoryService,
             private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate,
             private $ionicPlatform: ionic.platform.IonicPlatformService
-            ){
-
+        ){
             $ionicPlatform.registerBackButtonAction(e => this.checkBack(e), 100);
         }
 
@@ -16,9 +15,9 @@ module Tabs {
             this.$ionicHistory.goBack();
         }
 
-        public checkBack(e: Event) {
+        public checkBack(e: Event): void {
             var page = this.$ionicHistory.currentStateName();
-            if (page === Constants.Paths.Todos.Base) {
+            if (page === Constants.Paths.Home.Base) {
                 let nav: any = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();
@@ -30,16 +29,16 @@ module Tabs {
             }
         }
 
-        private disableSwipe(e: Event) {
+        private disableSwipe(e: Event): void {
             // For example on <ion-list>
             e.stopPropagation();
         }
 
-        public onSwipeLeft() {
+        public onSwipeLeft(): void {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() + 1);
         }
 
-        public onSwipeRight() {
+        public onSwipeRight(): void {
             let index: number = this.$ionicTabsDelegate.selectedIndex();
             if (index > 0) {
                 this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);

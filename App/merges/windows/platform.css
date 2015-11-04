@@ -36,6 +36,11 @@ ion-header-bar .buttons-right.hidden {
     transition: all 0.5s;
 }
 
+ion-header-bar .buttons-right.disabled {
+    visibility: hidden;
+    top: 100vh !important;
+}
+
 @media only screen and (orientation: landscape) {
 
     ion-header-bar .buttons-right {

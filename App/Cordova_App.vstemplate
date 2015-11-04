@@ -16,9 +16,6 @@
   <TemplateContent>
     <Project TargetFileName="App.jsproj" File="App.jsproj" ReplaceParameters="true">
       <Folder Name="constants" TargetFolderName="constants">
-        <Folder Name="interfaces" TargetFolderName="interfaces">
-          <ProjectItem ReplaceParameters="true" TargetFileName="IPaths.ts">IPaths.ts</ProjectItem>
-        </Folder>
         <ProjectItem ReplaceParameters="true" TargetFileName="paths.ts">paths.ts</ProjectItem>
       </Folder>
       <Folder Name="merges" TargetFolderName="merges">
@@ -28,6 +25,11 @@
               <Folder Name="templates" TargetFolderName="templates">
                 <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
                 <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="home" TargetFolderName="home">
+              <Folder Name="views" TargetFolderName="views">
+                <ProjectItem ReplaceParameters="true" TargetFileName="home.html">home.html</ProjectItem>
               </Folder>
             </Folder>
           </Folder>
@@ -40,6 +42,11 @@
               <Folder Name="templates" TargetFolderName="templates">
                 <ProjectItem ReplaceParameters="true" TargetFileName="tabs.html">tabs.html</ProjectItem>
                 <ProjectItem ReplaceParameters="true" TargetFileName="wrapper.html">wrapper.html</ProjectItem>
+              </Folder>
+            </Folder>
+            <Folder Name="home" TargetFolderName="home">
+              <Folder Name="views" TargetFolderName="views">
+                <ProjectItem ReplaceParameters="true" TargetFileName="home.html">home.html</ProjectItem>
               </Folder>
             </Folder>
           </Folder>
@@ -96,9 +103,6 @@
           </Folder>
           <ProjectItem ReplaceParameters="true" TargetFileName="tabs-module.ts">tabs-module.ts</ProjectItem>
         </Folder>
-      </Folder>
-      <Folder Name="plugins" TargetFolderName="plugins">
-        <ProjectItem ReplaceParameters="false" TargetFileName="fetch.json">fetch.json</ProjectItem>
       </Folder>
       <Folder Name="res" TargetFolderName="res">
         <Folder Name="icons" TargetFolderName="icons">
