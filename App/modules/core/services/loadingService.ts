@@ -5,8 +5,7 @@
 
         constructor(
             private $ionicLoading: ionic.loading.IonicLoadingService
-            ){
-        }
+        ){}
 
         public show(): void {
             let options: ionic.loading.IonicLoadingOptions = {

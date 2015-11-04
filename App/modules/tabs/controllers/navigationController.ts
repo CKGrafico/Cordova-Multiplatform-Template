@@ -1,4 +1,4 @@
-﻿module Tabs {
+module Tabs {
     'use strict';
 
     export class NavigationController {
@@ -7,8 +7,7 @@
             private $ionicHistory: ionic.navigation.IonicHistoryService,
             private $ionicTabsDelegate: ionic.tabs.IonicTabsDelegate,
             private $ionicPlatform: ionic.platform.IonicPlatformService
-            ){
-
+        ){
             $ionicPlatform.registerBackButtonAction(e => this.checkBack(e), 100);
         }
 
@@ -16,10 +15,10 @@
             this.$ionicHistory.goBack();
         }
 
-        public checkBack(e: Event) {
+        public checkBack(e: Event): void {
             var page = this.$ionicHistory.currentStateName();
             if (page === Constants.Paths.Home.Base) {
-                var nav: any = navigator;
+                let nav: any = navigator;
                 if (nav.app && nav.app.exitApp) {
                     nav.app.exitApp();
                 } else {
@@ -30,13 +29,20 @@
             }
         }
 
-        // On Windows phone
-        public onSwipeLeft() {
+        private disableSwipe(e: Event): void {
+            // For example on <ion-list>
+            e.stopPropagation();
+        }
+
+        public onSwipeLeft(): void {
             this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() + 1);
         }
 
-        public onSwipeRight() {
-            this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
+        public onSwipeRight(): void {
+            let index: number = this.$ionicTabsDelegate.selectedIndex();
+            if (index > 0) {
+                this.$ionicTabsDelegate.select(this.$ionicTabsDelegate.selectedIndex() - 1);
+            }
         }
     }
 
@@ -44,4 +50,3 @@
         .controller('navigationController', NavigationController);
 
 } 
-

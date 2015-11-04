@@ -7,8 +7,7 @@
 
         constructor(
             private loadingService: Core.ILoadingService
-            ){
-
+        ) {
             this.addTextAsync();
         }
 

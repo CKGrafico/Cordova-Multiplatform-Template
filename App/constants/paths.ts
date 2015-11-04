@@ -1,7 +1,7 @@
 ﻿module Constants {
     'use strict';
 
-    export let Paths: IPaths = {
+    export let Paths = {
         Core: 'core',
         Modules: 'modules/',
         Tabs: 'tabs',

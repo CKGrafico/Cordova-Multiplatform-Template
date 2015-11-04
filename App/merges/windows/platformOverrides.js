@@ -13,7 +13,7 @@ if (window.Windows && Windows.Phone && Windows.Phone.UI.Input.HardwareButtons &&
 var lastScroll = 0;
 var frame = 0;
 function checkScroll() {
-    if (frame === 30) {
+    if (frame === 20) {
         frame = 0;
         var s = document.querySelectorAll('.overflow-scroll');
         var sum = 0;
@@ -32,6 +32,12 @@ function checkScroll() {
                         b[i].addEventListener('click', function () {
                             this.clicked = !this.clicked;
                         }, false);
+                    }
+
+                    if (b[i].querySelectorAll('button').length < 1) {
+                        b[i].classList.add('disabled');
+                    } else {
+                        b[i].classList.remove('disabled');
                     }
 
                     if (sum < 15 || b[i].clicked) {
