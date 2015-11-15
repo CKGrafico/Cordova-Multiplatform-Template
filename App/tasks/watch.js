@@ -7,3 +7,9 @@ gulp.task('watch', function () {
     gulp.watch(paths.scss.sources, ['default:scss']);
     return gulp.watch(paths.ts.sources, ['default:ts']);
 });
+
+gulp.task('watch:test', function () {
+    runSequence('default');
+    gulp.watch(paths.scss.sources, ['default:scss']);
+    return gulp.watch(paths.ts.sources, ['default:ts:test']);
+});

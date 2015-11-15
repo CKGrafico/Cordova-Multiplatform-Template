@@ -1,7 +1,7 @@
 ﻿var gulp = require('gulp');
 var paths = require('./paths');
 var plugins = require('gulp-load-plugins')();
-var tsProject = plugins.typescript.createProject(paths.ts.tsconfig);
+var tsProject;
 
 // Compile Sass
 gulp.task('default:scss', function () {
@@ -14,8 +14,18 @@ gulp.task('default:scss', function () {
         .pipe(gulp.dest(paths.css.path.debug));
 });
 
-// Compile Typescript
+// Compile Typescript with tests
+gulp.task('default:ts:test', function () {
+    tsProject = plugins.typescript.createProject(paths.ts.tsconfig);
+    return tsProject.src()
+        .pipe(plugins.typescript(tsProject))
+        .pipe(plugins.ngAnnotate())
+        .pipe(gulp.dest(paths.root));
+});
+
+// Compile Typescript without tests
 gulp.task('default:ts', function () {
+    tsProject = plugins.typescript.createProject(paths.ts.tsNoTestConfig);
     return tsProject.src()
         .pipe(plugins.typescript(tsProject))
         .pipe(plugins.ngAnnotate())

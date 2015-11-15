@@ -55,6 +55,7 @@ module.exports = {
         path: root,
         sources: [root + 'app.ts', root + 'constants/**/.ts', root + 'modules/**/.ts'],
         tsd: root + 'tsd.json',
-        tsconfig: root + 'tsconfig.json'
+        tsconfig: root + 'tsconfig.json',
+        tsNoTestConfig: root + 'tsconfig.notest.json'
     }
 };

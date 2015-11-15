@@ -11,8 +11,9 @@ module Tabs {
             $ionicPlatform.registerBackButtonAction(e => this.checkBack(e), 100);
         }
 
-        public goBack(): void {
+        public goBack(): string {
             this.$ionicHistory.goBack();
+            return 'f';
         }
 
         public checkBack(e: Event): void {
