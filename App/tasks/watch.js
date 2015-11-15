@@ -1,10 +1,11 @@
 ﻿var gulp = require('gulp');
 var paths = require('./paths');
 var runSequence = require('run-sequence');
+var o = require('open');
 
 gulp.task('watch', function () {
-    runSequence('default');
     gulp.watch(paths.scss.sources, ['default:scss']);
+    gulp.watch(paths.templates.sources, ['default:html']);
     return gulp.watch(paths.ts.sources, ['default:ts']);
 });
 

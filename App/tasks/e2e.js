@@ -2,9 +2,10 @@
 
 var path = require('path');
 var gulp = require('gulp');
-//var conf = require('./conf');
+var Q = require('q');
 
-//var browserSync = require('browser-sync');
+var conf = require('./paths');
+
 
 var $ = require('gulp-load-plugins')();
 
@@ -13,13 +14,20 @@ gulp.task('webdriver-update', $.protractor.webdriver_update);
 
 gulp.task('webdriver-standalone', $.protractor.webdriver_standalone);
 
-function runProtractor (done) {
+function runProtractor (mode) {
+  var deferred = Q.defer();
   var params = process.argv;
   var args = params.length > 3 ? [params[3], params[4]] : [];
-
-  gulp.src(path.join(conf.paths.e2e, '/**/*.js'))
+  var config;
+  if (mode === 'ionic'){
+    config = 'protractor.conf.js'
+  }
+  if (mode === 'ripple'){
+    config = 'protractor.conf.ripple.js'
+  }
+  gulp.src(conf.e2e)
     .pipe($.protractor.protractor({
-      configFile: 'protractor.conf.js',
+      configFile: config,
       args: args
     }))
     .on('error', function (err) {
@@ -27,12 +35,20 @@ function runProtractor (done) {
       throw err;
     })
     .on('end', function () {
-      // Close browser sync server
-      //browserSync.exit();
-      done();
+      deferred.resolve();
     });
+    return deferred.promise;
 }
 
-gulp.task('protractor', ['protractor:src']);
-gulp.task('protractor:src', ['serve:e2e', 'webdriver-update'], runProtractor);
-gulp.task('protractor:dist', ['serve:e2e-dist', 'webdriver-update'], runProtractor);
+gulp.task('protractor', ['protractor:ionic', 'serve:test:stop']);
+gulp.task('protractor:ionic', ['serve:test', 'webdriver-update'], function(done){
+  runProtractor('ionic').then(function(){
+    done(); //some sort of bug, you must manually stop it by pressing ctrl+c
+  });
+});
+gulp.task('protractor:ripple', ['serve:test:ripple', 'webdriver-update'], function(done){
+  runProtractor('ripple').then(function(){
+    done(); //some sort of bug, you must manually stop it by pressing ctrl+c
+  });
+});
+
