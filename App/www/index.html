@@ -9,20 +9,23 @@
     <link rel="stylesheet" href="debug/main.css">
     <!-- endinject -->
 
-    <link href="platform.css" rel="stylesheet">
+    <link href="platform.css" rel="stylesheet" />
 </head>
 <body>
 
     <ion-side-menus enable-menu-with-back-views="false">
 
         <!-- Main content -->
-        <ion-side-menu-content drag-content="false" ng-controller="navigationController as nav" on-swipe-left="nav.onSwipeLeft()" on-swipe-right="nav.onSwipeRight()">
-            <div ng-include="" src="&apos;modules/tabs/templates/wrapper.html&apos;"></div>
+        <ion-side-menu-content drag-content="false" 
+        ng-controller="navigationController as nav" 
+        on-swipe-left="nav.onSwipeLeft()" 
+        on-swipe-right="nav.onSwipeRight()">
+            <div ng-include="" src="'modules/tabs/templates/wrapper.html'"></div>
         </ion-side-menu-content>
 
         <!-- Left menu -->
         <ion-side-menu side="left" expose-aside-when="large">
-            <div ng-include="" src="&apos;modules/side/views/left.html&apos;"></div>
+            <div ng-include="" src="'modules/side/views/left.html'"></div>
         </ion-side-menu>
     </ion-side-menus>
 
