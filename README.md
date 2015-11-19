@@ -50,6 +50,7 @@
 
 ###Collaborators
 - [Quique Fdez](http://twitter.com/ckgrafico)
+- [Volkovsky Dima](https://github.com/dimkk)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/CKGrafico/cordova-multiplatform-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
