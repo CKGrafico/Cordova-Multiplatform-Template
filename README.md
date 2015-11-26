@@ -13,6 +13,7 @@
 ###Important links
 - [Cordova Multiplatform Template Website](http://cordova-multiplatform-template.js.org)
 - [Frequently Asked Questions (FAQ)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/wiki/Frequently-Asked-Questions-(FAQ)) 
+- [Example: Todo App](https://github.com/bcnmobilegroup/TodoAppCordova)
 
 ###Instructions:
 - #####With text editor and command line:
