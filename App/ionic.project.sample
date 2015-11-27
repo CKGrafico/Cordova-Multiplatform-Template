@@ -1,0 +1,9 @@
+{
+  "name": "App",
+  "app_id": "",
+  "gulpStartupTasks": ["watch"],
+  "watchPatterns": [
+    "./www/debug/app.js",
+    "./www/debug/app.css",
+    "./www/modules/**/*.html" ]
+}

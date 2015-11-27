@@ -25,9 +25,12 @@
 	- ######First steps:
 		- Download template from [Ionic Market](http://market.ionic.io/starters/multiplatform)
 		- `npm install` *download node packages* 
-		- `gulp initialize` *download bower and tsd dependencies*
-		- `gulp watch` *or only `gulp` to compile once*
-		- `ionic serve` or `cordova build 'platform'`
+		- `bower install` *will download bower packages* (ionic is depending on 1.4.3 of angular and mock is on 1.4.7 which leads to conflict, so manual install) 
+		- `gulp initialize` *download tsd dependencies*
+		- `gulp` to compile once*
+		- `ionic serve` or `cordova build 'platform'`, in order to get nice reload experience with serve you should create ionic-project file in app folder - you can take ionic-project-sample to start
+		- `gulp test` for one test run of unit-tests in tests folder, `gulp test:auto` for continious runs (in develop)
+		- `gulp protractor` for e2e tests from e2e folder in ionic and `gulp protractor:ripple` for ripple - in develop 
 
 - #####With [Visual Studio](visualstudio.com)
 	- ######Dependencies
@@ -48,6 +51,7 @@
 
 ###Collaborators
 - [Quique Fdez](http://twitter.com/ckgrafico)
+- [Volkovsky Dima](https://github.com/dimkk)
 
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/CKGrafico/cordova-multiplatform-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
