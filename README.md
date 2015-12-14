@@ -12,7 +12,7 @@
 
 ###Important links
 - [Cordova Multiplatform Template Website](http://cordova-multiplatform-template.js.org)
-- [Frequently Asked Questions (FAQ)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/wiki/Frequently-Asked-Questions-(FAQ)) 
+- [Frequently Asked Questions (FAQ)](https://github.com/CKGrafico/Cordova-Multiplatform-Template/wiki/Frequently-Asked-Questions-(FAQ))
 - [Example: Todo App](https://github.com/bcnmobilegroup/TodoAppCordova)
 
 ###Instructions:
@@ -46,5 +46,10 @@
 - [Apache Cordova](https://cordova.apache.org/)
 - [Ionic Framework](http://ionicframework.com/)
 
-###Collaborators
+###Authors
 - [Quique Fdez](http://twitter.com/ckgrafico)
+
+###Collaborators
+- [Volkovsky Dima](https://github.com/dimkk)
+- AntonAm
+
