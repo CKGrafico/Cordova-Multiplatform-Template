@@ -53,7 +53,7 @@ module.exports = {
 
     ts: {
         path: root,
-        sources: [root + 'app.ts', root + 'constants/**/.ts', root + 'modules/**/.ts'],
+        sources: [root + 'app.ts', root + 'constants/**/*.ts', root + 'modules/**/*.ts'],
         tsd: root + 'tsd.json',
         tsconfig: root + 'tsconfig.json'
     }
