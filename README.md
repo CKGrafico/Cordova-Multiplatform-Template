@@ -46,9 +46,10 @@
 - [Apache Cordova](https://cordova.apache.org/)
 - [Ionic Framework](http://ionicframework.com/)
 
-###Collaborators
+###Authors
 - [Quique Fdez](http://twitter.com/ckgrafico)
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/CKGrafico/cordova-multiplatform-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+###Collaborators
+- [Volkovsky Dima](https://github.com/dimkk)
+- AntonAm
 
