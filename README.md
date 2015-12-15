@@ -51,5 +51,4 @@
 
 ###Collaborators
 - [Volkovsky Dima](https://github.com/dimkk)
-- AntonAm
-
+- [Anton Miniailo](https://github.com/AntonAM)
