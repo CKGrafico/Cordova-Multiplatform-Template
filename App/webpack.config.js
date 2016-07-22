@@ -15,6 +15,13 @@ module.exports = {
         filename: config.files.output.js
     },
     module: {
+        preLoaders: [
+            {
+                test: /\.ts$/,
+                loader: 'tslint'
+            }
+        ],
+
         loaders: [
             {
                 test: /\.ts$/,
