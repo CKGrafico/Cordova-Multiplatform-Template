@@ -5,9 +5,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/main.ts',
-        vendor: ['./node_modules/ionic-angular/release/js/ionic.bundle.js'],
-        scss: require('./src/main.scss')
+        app: './src/index.js',
+        vendor: ['./node_modules/ionic-angular/release/js/ionic.bundle.js']
     },
     output: {
         path: './www',
@@ -15,15 +14,22 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.ts$/, loader: 'ts' },
+            {
+                test: /\.ts$/,
+                loader: 'ts'
+            },
             {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(['css', 'sass'])
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: ['file?name=images/[name].[ext]', 'img']
             }
         ]
     },
     resolve: {
-        extensions: ['', '.js', '.ts', '.scss']
+        extensions: ['', '.js']
     },
     plugins: [
         new HtmlWebPackPlugin({
