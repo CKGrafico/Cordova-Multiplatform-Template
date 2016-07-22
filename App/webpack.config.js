@@ -1,16 +1,18 @@
-﻿// TO DO improve
-var webpack = require('webpack');
+﻿var webpack = require('webpack');
+var config = require('./src/app.config.js');
+
+// Plugins
 var HtmlWebPackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     entry: {
-        app: './src/index.js',
-        vendor: ['./node_modules/ionic-angular/release/js/ionic.bundle.js']
+        app: config.files.app,
+        vendor: config.files.vendor
     },
     output: {
-        path: './www',
-        filename: '[name].bundle.js'
+        path: config.folders.dist,
+        filename: config.files.output.js
     },
     module: {
         loaders: [
@@ -24,17 +26,14 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
-                loaders: ['file?name=images/[name].[ext]', 'img']
+                loaders: ['file?name=' + config.files.output.images, 'img']
             }
         ]
     },
-    resolve: {
-        extensions: ['', '.js']
-    },
     plugins: [
         new HtmlWebPackPlugin({
-            template: './src/index.html'
+            template: config.files.index
         }),
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin(config.files.output.css)
     ]
 };

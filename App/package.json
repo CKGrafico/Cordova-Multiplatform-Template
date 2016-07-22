@@ -1,8 +1,8 @@
 {
   "scripts": {
     "postinstall": "typings install",
-    "build": "webpack --progress",
-    "build:prod": "webpack -p --progress"
+    "build": "rimraf www && webpack --progress",
+    "build:prod": "rimraf www && webpack -p --progress"
   },
   "dependencies": {
     "extract-text-webpack-plugin": "^1.0.1",
