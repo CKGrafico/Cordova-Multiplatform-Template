@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160720071806",
+    "angular-animate": "registry:dt/angular-animate#1.5.0+20160709061515",
+    "angular-sanitize": "registry:dt/angular-sanitize#1.3.0+20160317120654",
+    "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160707113237",
+    "ionic": "registry:dt/ionic#0.0.0+20160501155303",
+    "ng-cordova/tsd": "registry:dt/ng-cordova/tsd#0.0.0+20151202000610"
+  }
+}

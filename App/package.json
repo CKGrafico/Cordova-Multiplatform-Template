@@ -1,4 +1,12 @@
 {
-  "dependencies": {},
-  "devDependencies": {}
+  "scripts": {
+    "postinstall": "typings install"
+  },
+  "dependencies": {
+    "ionic-angular": "^1.3.1",
+    "ng-cordova": "^0.1.27-alpha"
+  },
+  "devDependencies": {
+    "webpack": "^1.13.1"
+  }
 }
