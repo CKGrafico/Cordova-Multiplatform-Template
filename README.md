@@ -1,3 +1,5 @@
+I'M CREATING A NEW VERSION WITH ANGULAR 1.5 CHECK THE ISSUES
+
 ##Cordova Multiplatform Template
 [![forks](https://img.shields.io/github/forks/CKGrafico/Cordova-Multiplatform-Template.svg?label=Forks)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/fork)
 [![stars](https://img.shields.io/github/stars/CKGrafico/Cordova-Multiplatform-Template.svg?label=Stars)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/)
