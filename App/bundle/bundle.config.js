@@ -3,17 +3,15 @@
 };
 
 var files = {
-    app: './src/webpack.js',
+    app: './bundle/bundle.app.js',
+    vendor: './bundle/bundle.vendor.js',
     index: './src/index.html',
     output: {
         js: './js/[name].bundle.js',
         css: './css/[name].css',
-        images: 'images/[name].[ext]',
-        fonts: 'fonts/[name]/[name].[ext]'
-    },
-    vendor: [
-        './node_modules/ionic-angular/release/js/ionic.bundle.js'
-    ]
+        images: './images/[name].[ext]',
+        fonts: './fonts/[name]/[name].[ext]'
+    }
 };
 
 module.exports = {

@@ -1,5 +1,5 @@
 ﻿var webpack = require('webpack');
-var config = require('./src/app.config.js');
+var config = require('./bundle/bundle.config.js');
 
 // Plugins
 var HtmlWebPackPlugin = require('html-webpack-plugin');
@@ -35,19 +35,19 @@ module.exports = {
                 // 1.- Sass transpilation
                 // 2.- CSS to Webpack
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract(['css', 'sass'])
-            },
-            {
-                // 1.- Minify images
-                // 3.- Extract images
-                test: /(images).*\.(jpe?g|png|gif|svg)$/i,
-                loaders: ['file?name=' + config.files.output.images, 'img']
+                loader: ExtractTextPlugin.extract(['css', 'resolve-url', 'sass?sourceMap'])
             },
             {
                 // 1.- Extract fonts
-                test: /(fonts).*\.(eot|svg|ttf|woff)$/i,
+                test: /\.(eot|svg|ttf|woff)$/,
                 loader: 'file?name=' + config.files.output.fonts
             },
+            {
+                // 1.- Minify images
+                // 2.- Extract images
+                test: /\.(jpe?g|png|gif)$/,
+                loaders: ['file?name=' + config.files.output.images, 'img']
+            }
         ]
     },
     plugins: [
