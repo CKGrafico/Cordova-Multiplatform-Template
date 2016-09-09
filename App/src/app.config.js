@@ -3,12 +3,13 @@
 };
 
 var files = {
-    app: './src/app.js',
+    app: './src/webpack.js',
     index: './src/index.html',
     output: {
         js: './js/[name].bundle.js',
         css: './css/[name].css',
-        images: 'images/[name].[ext]'
+        images: 'images/[name].[ext]',
+        fonts: 'fonts/[name]/[name].[ext]'
     },
     vendor: [
         './node_modules/ionic-angular/release/js/ionic.bundle.js'

@@ -25,29 +25,37 @@ module.exports = {
 
         loaders: [
             {
-                // Transpile TypeScript
-                // Add angular annotations
+                // 1.- TypeScript transpilation
+                // 2.- Angular annotations
+                // Chainning is right to left
                 test: /\.ts$/,
-                loader: ['ts']
+                loaders: ['ng-annotate', 'ts']
             },
             {
-                // Transpile SCSS
+                // 1.- Sass transpilation
+                // 2.- CSS to Webpack
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(['css', 'sass'])
             },
             {
-                // Move images
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                // 1.- Minify images
+                // 3.- Extract images
+                test: /(images).*\.(jpe?g|png|gif|svg)$/i,
                 loaders: ['file?name=' + config.files.output.images, 'img']
-            }
+            },
+            {
+                // 1.- Extract fonts
+                test: /(fonts).*\.(eot|svg|ttf|woff)$/i,
+                loader: 'file?name=' + config.files.output.fonts
+            },
         ]
     },
     plugins: [
-        // Inject into HTML
+        // Inject files into index
         new HtmlWebPackPlugin({
             template: config.files.index
         }),
-        // Create css bundle
+        // Extract css to a bundle
         new ExtractTextPlugin(config.files.output.css)
     ]
 };
