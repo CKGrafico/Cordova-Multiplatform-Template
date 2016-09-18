@@ -1,5 +1,3 @@
-﻿const a = 1;
-angular.module('app', []).
-    run(Servicetest => {
-        console.log('test');
-    });
+﻿import a from './core/index.ts';
+
+console.log((new a()).a === 1);

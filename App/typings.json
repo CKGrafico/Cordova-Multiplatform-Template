@@ -6,5 +6,11 @@
     "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160707113237",
     "ionic": "registry:dt/ionic#0.0.0+20160501155303",
     "ng-cordova/tsd": "registry:dt/ng-cordova/tsd#0.0.0+20151202000610"
+  },
+  "ambientDependencies": {
+    "angular": "github:DefinitelyTyped/DefinitelyTyped/angularjs/angular.d.ts#17f7f965f515e7085e085b42f7137c06f50f70e9",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#493d44982e5a935e29c79ac933761001211c9ef8",
+    "ionic": "github:DefinitelyTyped/DefinitelyTyped/ionic/ionic.d.ts#a773c2bc8185eb1b098f958befb891622da1f971",
+    "jquery": "github:DefinitelyTyped/DefinitelyTyped/jquery/jquery.d.ts#5c7d1fcbea9b14df54fc4554d94cb67dfabffd9a"
   }
 }

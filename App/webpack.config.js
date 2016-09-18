@@ -27,6 +27,11 @@ module.exports = {
                 // TypeScript Linting
                 test: /\.ts$/,
                 loader: 'tslint'
+            },
+            {
+                // Bagagge config for templates cache
+                test: /\.js$/,
+                loader: 'baggage?[file].html'
             }
         ],
 
@@ -45,6 +50,12 @@ module.exports = {
                 loader: ExtractTextPlugin.extract(['css', 'resolve-url', 'sass?sourceMap', 'postcss-loader'])
             },
             {
+                // 1.- Generate templates cache
+                test: /\.html$/,
+                loader: 'ngtemplate?relativeTo=!html',
+                exclude: /index\.html$/,
+            },
+            {
                 // 1.- Extract fonts
                 test: /(fonts).*\.(eot|svg|ttf|woff)$/,
                 loader: 'file?name=' + config.files.output.fonts
@@ -60,6 +71,7 @@ module.exports = {
     plugins: [
         // Inject files into index
         new HtmlWebPackPlugin({
+            hash: false,
             template: config.files.index
         }),
         // Extract css to a bundle

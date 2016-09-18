@@ -1,5 +1,6 @@
 ﻿var folders = {
-    dist: './www'
+    dist: './www',
+    src: './src'
 };
 
 var files = {
