@@ -1,5 +1,5 @@
 ﻿// Sass input
-require('../src/scss/vendor.scss');
+require('../src/scss/vendor/vendor.scss');
 
 // Ionic
 require('../node_modules/ionic-angular/release/js/ionic.bundle.js');

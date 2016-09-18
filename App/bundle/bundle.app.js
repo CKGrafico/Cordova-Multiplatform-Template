@@ -1,5 +1,5 @@
 ﻿// Sass input
-require('../src/scss/app.scss');
+require.context('../src/scss/app', true, /\.scss$/);
 
 // TypeScript input
 require('../src/modules/main.ts');

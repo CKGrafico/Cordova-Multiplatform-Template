@@ -5,6 +5,13 @@ var config = require('./bundle/bundle.config.js');
 var HtmlWebPackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+// PostCSS
+var postcss = {
+    autoprefixer: require('autoprefixer'),
+    stylelint: require('stylelint'),
+    scss: require('postcss-scss')
+};
+
 module.exports = {
     entry: {
         app: config.files.app,
@@ -35,18 +42,18 @@ module.exports = {
                 // 1.- Sass transpilation
                 // 2.- CSS to Webpack
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract(['css', 'resolve-url', 'sass?sourceMap'])
+                loader: ExtractTextPlugin.extract(['css', 'resolve-url', 'sass?sourceMap', 'postcss-loader'])
             },
             {
                 // 1.- Extract fonts
-                test: /\.(eot|svg|ttf|woff)$/,
+                test: /(fonts).*\.(eot|svg|ttf|woff)$/,
                 loader: 'file?name=' + config.files.output.fonts
             },
             {
                 // 1.- Minify images
                 // 2.- Extract images
-                test: /\.(jpe?g|png|gif)$/,
-                loaders: ['file?name=' + config.files.output.images, 'img']
+                test: /(images).*\.(jpe?g|png|gif|svg)$/,
+                loaders: ['file?name=' + config.files.output.images, 'img?minimize']
             }
         ]
     },
@@ -57,5 +64,13 @@ module.exports = {
         }),
         // Extract css to a bundle
         new ExtractTextPlugin(config.files.output.css)
-    ]
+    ],
+    postcss: function () {
+        return {
+            // 1.- SCSS Linting
+            // 2.- Add Browser prefixes
+            plugins: [postcss.stylelint, postcss.autoprefixer],
+            syntax: postcss.scss
+        };
+    }
 };
