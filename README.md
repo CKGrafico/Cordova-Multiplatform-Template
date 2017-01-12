@@ -1,4 +1,4 @@
-Ionic 2.0 supoprts windows, If you want to work with Ionic 2.0 and Angular 2.0 probably you don't need this template.
+Ionic 2.0 supports windows, If you want to work with Ionic 2.0 and Angular 2.0 probably you don't need this template.
 
 ##Cordova Multiplatform Template
 [![forks](https://img.shields.io/github/forks/CKGrafico/Cordova-Multiplatform-Template.svg?label=Forks)](https://github.com/ckgrafico/Cordova-Multiplatform-Template/fork)
